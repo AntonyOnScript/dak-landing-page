@@ -71,9 +71,9 @@ h3{
 .textos-hero h3{
     position: relative;
     margin-bottom: 35px;
-    z-index: 100;
+    z-index: 1000;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: 3;
