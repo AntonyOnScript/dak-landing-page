@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap');
+:root{
+    --cor-primaria:#1c547a;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font: normal 16pt "Montserrat";
+    font-weight: 400;
 }
 header{
-    min-height: 990px;
+    min-height: 100vh;
     background-image: url(../imgs/slide01_01.png);
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 .logo{
@@ -15,4 +22,35 @@ header{
     margin-top: 75px;
     margin-left: 135px;
     width: 287px;
+}
+.textos{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+}
+.textos div{
+    margin: auto 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 243px;
+    color: var(--cor-primaria);
+    width: 700px;
+}
+.textos h1{
+    font-weight: 700;
+    font-size: 43px;
+}
+.textos h3{
+    margin-bottom: 35px;
+}
+button.assista-agora{
+    font-size: 14px;
+    margin-top: 53px;
+    text-transform: uppercase;
+    width: 161px;
+    height: 51px;
+    border: none;
+    color: white;
+    background-color: var(--cor-primaria);
 }
