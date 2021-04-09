@@ -175,3 +175,60 @@ button.assista-agora{
 .novo-visual p{
     margin-top: 20px;
 }
+hr{
+    margin: 68px 0px 79px 0px;
+    width: 530px;
+    border: solid .1px #e2e2e2;
+    background-color: #e2e2e2;
+}
+.article-container{
+    display: flex;
+    justify-content: center;
+    width: 530px;
+    background-color: #ffff;
+}
+article{
+    position: relative;
+    text-align: left;
+    border: solid 1px #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 59px 48px 50px;
+}
+article img{
+    margin: 0 auto;
+    margin-top: -30px;
+}
+hr[green]{
+    position: absolute;
+    bottom: 180px;
+    width: 1px;
+    height: 328px;
+    background-color: #8ec341;
+}
+.seletor-slide-02{
+    display: flex;
+    justify-content: center;
+}
+.seletor-slide-02 ul{
+    display: flex;
+    list-style-type: none;
+}
+.seletor-slide-02 ul li {
+    padding: 50px 10px 0px 10px;
+}
+.seletor-slide-02 ul li div{
+    width: 30px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+}
+.seta{
+    align-self: center;
+    font-size: 120px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.42;
+    padding: 0px 20px;
+}
