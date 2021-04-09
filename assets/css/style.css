@@ -9,6 +9,10 @@
     font: normal 16pt "Montserrat";
     font-weight: 400;
 }
+a{
+    text-decoration: none;
+    color:#143d58;
+}
 header{
     position: relative;
     display: flex;
@@ -188,6 +192,7 @@ hr{
     background-color: #ffff;
 }
 article{
+    width: 100%;
     position: relative;
     text-align: left;
     border: solid 1px #e2e2e2;
@@ -231,4 +236,7 @@ hr[green]{
     font-style: normal;
     line-height: 0.42;
     padding: 0px 20px;
+}
+.conteudo{
+
 }
