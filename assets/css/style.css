@@ -8,6 +8,8 @@
     box-sizing: border-box;
     font: normal 16pt "Montserrat";
     font-weight: 400;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 a{
     text-decoration: none;
@@ -191,7 +193,7 @@ hr{
     width: 530px;
     background-color: #ffff;
 }
-article{
+.article-novo-visual{
     width: 100%;
     position: relative;
     text-align: left;
@@ -201,7 +203,7 @@ article{
     align-items: flex-start;
     padding: 0px 59px 48px 50px;
 }
-article img{
+.article-novo-visual img{
     margin: 0 auto;
     margin-top: -30px;
 }
@@ -238,5 +240,47 @@ hr[green]{
     padding: 0px 20px;
 }
 .conteudo{
-
+    padding-top: 100px;
+}
+.conteudo-azul h1,.conteudo-azul h2 ,.conteudo-azul h3,.conteudo-azul p{
+    color: white;
+    padding: 0px 50px;
+}
+.conteudo-azul{
+    padding: 38px 135px;
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articles-conteudo{
+    margin-top: 46px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+.articles-conteudo article{
+    position: relative;
+}
+.articles-conteudo article::before{
+    position: absolute;
+    content: "";
+    top: 70px;
+    left: 25px;
+    width: 1px;
+    height: 233px;
+    background-color: #fdb745;
+}
+.articles-conteudo article img{
+    width: 100%;
+}
+.articles-conteudo h3{
+    padding-top: 20px;
+    color: #fdb745;
+}
+.articles-conteudo article h1{
+    font-size: 18px;
+    letter-spacing: 2.52px;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
