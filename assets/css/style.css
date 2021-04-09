@@ -8,6 +8,8 @@
     box-sizing: border-box;
     font: normal 16pt "Montserrat";
     font-weight: 400;
+}
+p{
     word-wrap: break-word;
     hyphens: auto;
 }
@@ -182,6 +184,11 @@ button.assista-agora{
     margin-top: 20px;
 }
 hr{
+    width: 530px;
+    border: solid .1px #e2e2e2;
+    background-color: #e2e2e2;
+}
+.novo-visual hr{
     margin: 68px 0px 79px 0px;
     width: 530px;
     border: solid .1px #e2e2e2;
@@ -244,7 +251,7 @@ hr[green]{
 }
 .conteudo-azul h1,.conteudo-azul h2 ,.conteudo-azul h3,.conteudo-azul p{
     color: white;
-    padding: 0px 50px;
+    padding-left: 50px;
 }
 .conteudo-azul{
     padding: 38px 135px;
@@ -283,4 +290,22 @@ hr[green]{
     letter-spacing: 2.52px;
     line-height: 20px;
     margin-bottom: 10px;
+}
+.desenvolvimento{
+    display: flex;
+    flex-direction: column;
+}
+.desenvolvimento img {
+    padding: 134px 338px 0px 338px;
+}
+.textos-desenvolvimento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 556px;
+    text-align: center;
+}
+.textos-desenvolvimento hr{
+    margin-top: 30px;
+    margin-bottom: 35px;
 }
