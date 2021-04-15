@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Dakhia</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="header">
+        <div class="background-hero">
+            <div class="slider">
+                <img src="assets/imgs/slide01_01.png" class="slide-01-01" id="slide01-01">
+                <img src="assets/imgs/slide01_02.png" class="slide-01-02" id="slide01-02">
+                <img src="assets/imgs/slide01_03.png" class="slide-01-03" id="slide01-03">
+            </div>
+        </div>
         <div class="logo">
-            <img src="assets/imgs/logo_colorido.svg" alt="">
+            <img src="assets/imgs/logo_colorido.svg">
         </div>
         <div class="textos-hero">
             <div>
@@ -20,13 +28,13 @@
         </div>
         <div class="seletor-slide-01">
             <ul>
-                <li><div></div></li>
-                <li><div></div></li>
-                <li><div></div></li>
+                <li class="area-botao-slider-01-01"><div class="botao-slider-01-01"></div></li>
+                <li class="area-botao-slider-01-02"><div class="botao-slider-01-02"></div></li>
+                <li class="area-botao-slider-01-03"><div class="botao-slider-01-03"></div></li>
             </ul>
         </div>
     </header>
-    <section class="sobre">
+    <section class="sobre" id="sobre-nos">
         <div class="container-sobre">
             <div class="textos-sobre">
                 <h3>sobre nós</h3>
@@ -50,9 +58,9 @@
             <hr>
         </div>
         <div class="article-container">
-            <h1 class="seta">&laquo;</h1>
-            <article class="article-novo-visual">
-                <img src="assets/imgs/setaverde.png" alt="">
+            <h1 class="seta seta-01">&laquo;</h1>
+            <article class="article-novo-visual slide-02-01" id="article-01">
+                <img src="assets/imgs/setaverde.png" alt="" >
                 <hr green>
                 <div class="textos-article">
                     <h3 style="color:#8ec341;">verde</h3>
@@ -60,17 +68,35 @@
                     <p style="color:var(--cor-primaria);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci dolore temporibus odit labore. Quasi porro obcaecati quisquam a dolorum dolorem suscipit veniam </p>
                 </div>
             </article>
-            <h1 class="seta" style="transform: scale(-1, 1);">&laquo;</h1>
+            <article class="article-novo-visual slide-02-02" id="article-02">
+                <img src="assets/imgs/setaverde.png" alt="">
+                <hr green>
+                <div class="textos-article">
+                    <h3 style="color:#fdb745;">Amarelo</h3>
+                    <h1 titulo-de-seção>Colaboração</h1>
+                    <p style="color:var(--cor-primaria);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci dolore temporibus odit labore. Quasi porro obcaecati quisquam a dolorum dolorem suscipit veniam </p>
+                </div>
+            </article>
+            <article class="article-novo-visual slide-02-03" id="article-03">
+                <img src="assets/imgs/setaverde.png" alt="">
+                <hr green>
+                <div class="textos-article">
+                    <h3 style="color:#c34541;">verde</h3>
+                    <h1 titulo-de-seção>Colaboração</h1>
+                    <p style="color:var(--cor-primaria);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci dolore temporibus odit labore. Quasi porro obcaecati quisquam a dolorum dolorem suscipit veniam </p>
+                </div>
+            </article>
+            <h1 class="seta seta-02" style="transform: scale(-1, 1);">&laquo;</h1>
         </div>
         <div class="seletor-slide-02">
             <ul>
-                <li><div></div></li>
-                <li><div></div></li>
-                <li><div></div></li>
+                <li class="area-botao-slider-02-01"><div class="botao-slider-02-01"></div></li>
+                <li class="area-botao-slider-02-02"><div class="botao-slider-02-02"></div></li>
+                <li class="area-botao-slider-02-03"><div class="botao-slider-02-03"></div></li>
             </ul>
         </div>
     </section>
-    <section class="conteudo">
+    <section class="conteudo" id="economia">
         <div class="conteudo-azul">
             <h3>+conteúdo</h3>
             <h1 titulo-de-seção>Economia circular</h1>
@@ -105,7 +131,7 @@
             </div>
         </div>
     </section>
-    <section class="desenvolvimento">
+    <section class="desenvolvimento" id="nossos-produtos">
         <div class="moleculas"><img src="assets/imgs/moleculas.png"></div>
         <div class="textos-desenvolvimento">
             <h3>desenvolvimento</h3>
@@ -215,7 +241,7 @@
                 </div>
             </article>
     </section>
-    <section class="fale-conosco">
+    <section class="fale-conosco" id="contato">
         <h3>Contato</h3>
         <h1 titulo-de-seção>Fale conosco</h1>
         <form>
@@ -253,14 +279,15 @@
             <div>
                 <h3>navegação</h3>
                 <div class="links">
-                    <a href="">/ Home</a>
-                    <a href="">/ Sobre Nós</a>
-                    <a href="">/ Blog de Economia Circular</a>
-                    <a href="">/ Nossos Produtos</a>
-                    <a href="">/ Contato</a>
+                    <a href="#header"><span>/</span> Home</a>
+                    <a href="#sobre-nos"><span>/</span> Sobre Nós</a>
+                    <a href="#economia"><span>/</span> Blog de Economia Circular</a>
+                    <a href="#nossos-produtos"><span>/</span> Nossos Produtos</a>
+                    <a href="#contato"><span>/</span> Contato</a>
                 </div>
             </div>
         </div>
     </footer>
+    <a href="#header" class="back-to-top">&#10137;</a>
 </body>
 </html>

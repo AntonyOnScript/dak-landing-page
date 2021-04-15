@@ -1,3 +1,4 @@
+/*ARRUMAR MARGIN AO PASSAR SLIDE 02*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900;1000&display=swap');
 :root{
     --cor-primaria:#1c547a;
@@ -5,22 +6,23 @@
     --espaço-padding-2:135px;
 }
 *{
+    outline: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font: normal 16pt "Montserrat";
     font-weight: 400;
+    scroll-behavior: smooth;
 }
 p{
     word-wrap: break-word;
     hyphens: auto;
     font-size: 16px;
-    line-height: 29px;
-    font-weight: 550;
+    line-height: 26px;
+    font-weight: 450;
 }
 a{
     text-decoration: none;
-    color:#143d58;
 }
 header{
     position: relative;
@@ -28,18 +30,31 @@ header{
     flex-direction: column;
     min-height: 100vh;
 }
-header::before{
-    content: "";
+header .background-hero{
     position: absolute;
     top: 0; 
     left: 0;
-    width: 100%; 
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     height: 100%;
-    background-image: url(../imgs/slide01_01.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     filter: grayscale(45%);
-    z-index: -1000;
+    z-index: -1000; /*ALTERAR PAARA NEGATIVO*/
+}
+header .background-hero .slider{
+    display: flex;
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+}
+.background-hero .slider img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-height: 100%;
+    min-width: 100%;
 }
 .logo{
     width: 100%;
@@ -65,6 +80,7 @@ header::before{
     margin-bottom: 15%;
 }
 h1{
+    z-index: 1000;
     font-weight: 900;
     font-size: 43px;
     line-height: 50px;
@@ -73,9 +89,8 @@ h1{
     color: var(--cor-primaria);
 }
 h2{
-    font-weight: 500;
+    font-weight: 400;
     font-size: 36px;
-    text-transform: uppercase;
 }
 h3{
     text-transform: uppercase;
@@ -83,7 +98,8 @@ h3{
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    line-height: 48px;
+    margin-bottom: 10px;
+    line-height: normal;
     letter-spacing: 3.2px;
     color: var(--cor-primaria);
 }
@@ -95,7 +111,6 @@ h3{
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    line-height: 3;
     letter-spacing: 3.2px;
     text-align: left;
     color: var(--cor-primaria);
@@ -103,7 +118,7 @@ h3{
 .textos-hero div h3::before{
     height: 204px;
     position: absolute;
-    content: "01";
+    content: attr(data-content);
     font-weight: 900;
     font-size: 204px;
     z-index: -1000;
@@ -121,6 +136,13 @@ button.assista-agora{
     border: none;
     color: white;
     background-color: var(--cor-primaria);
+    transition: color .3s, background-color .3s;
+    cursor: pointer;
+}
+button.assista-agora:hover{
+    background-color: white;
+    color: var(--cor-primaria);
+    animation: links .8s 1;
 }
 .seletor-slide-01{
     height: 100%;
@@ -133,12 +155,17 @@ button.assista-agora{
     display: flex;
     list-style-type: none;
 }
-.seletor-slide-01 ul li {
+.seletor-slide-01 ul li{
     padding: 100px 10px;
+    cursor:pointer;
 }
 .seletor-slide-01 ul li div{
     width: 30px;
     height: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color .3s;
+}
+.seletor-slide-01 ul li:hover div{
     background-color: var(--cor-primaria);
 }
 .container-sobre{
@@ -154,14 +181,11 @@ button.assista-agora{
     margin-bottom: 10px;
 }
 .textos-sobre h2{
-    font-weight: 500;
+    font-weight: 400;
     font-size: 36px;
     line-height: 40px;
     text-align: left;
     margin-bottom: 20px;
-}
-.textos-sobre h3{
-    margin-bottom: -10px;
 }
 .container-youtube{
     max-width: 100%;
@@ -198,9 +222,6 @@ button.assista-agora{
 .novo-visual h1{
     margin-bottom: 15px;
 }
-.novo-visual h3{
-    margin-bottom: -8px;
-}
 .novo-visual p{
     margin-top: 20px;
 }
@@ -220,7 +241,7 @@ hr{
     justify-content: center;
     max-width: 100%;
 }
-.article-novo-visual{
+.article-novo-visual, #article-02, #article-03{
     width: 100%;
     max-width: 530px;
     position: relative;
@@ -232,9 +253,12 @@ hr{
     align-items: flex-start;
     padding: 0px 59px 48px 50px;
 }
-.article-novo-visual img{
+.article-novo-visual img, .article-container article img,  #article-02 img, #article-03 img{
     margin: 0 auto;
     margin-top: -30px;
+}
+#article-02, #article-03{
+    display: none;
 }
 hr[green]{
     position: absolute;
@@ -251,13 +275,16 @@ hr[green]{
     display: flex;
     list-style-type: none;
 }
-.seletor-slide-02 ul li {
+.seletor-slide-02 ul li{
     padding: 50px 10px 0px 10px;
+    cursor: pointer;
 }
 .seletor-slide-02 ul li div{
     width: 30px;
     height: 4px;
-    background-color: var(--cor-primaria);
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s;
 }
 .seta{
     align-self: center;
@@ -267,6 +294,11 @@ hr[green]{
     font-style: normal;
     line-height: 0.42;
     padding: 0px 20px;
+    transition: color .3s;
+    cursor: pointer;
+}
+.seta:hover{
+    color: #143d58;
 }
 .conteudo{
     padding-top: 100px;
@@ -343,7 +375,6 @@ hr[green]{
 }
 .textos-desenvolvimento h3{
     margin-top: 20px;
-    margin-bottom: 5px;
     line-height: normal;
 }
 .textos-desenvolvimento h1{
@@ -351,7 +382,7 @@ hr[green]{
 }
 .prime-sustentavel{
     display: flex;
-    padding: 60px var(--espaço-padding-2) 30px var(--espaço-padding-2);
+    padding: 4px var(--espaço-padding-2) 30px var(--espaço-padding-2);
     justify-content: center;
 }
 .prime img{
@@ -368,7 +399,7 @@ h4{
     padding-bottom: 20px;
 }
 .sustentavel{
-    padding-left: 70px;
+    margin-left: 70px;
 }
 .sustentavel, .prime{
     max-width: 469px;
@@ -430,7 +461,6 @@ h4{
     align-items: center;
 }
 .fale-conosco h3{
-    margin-bottom: 10px;
     line-height: normal;
 }
 .fale-conosco h1{
@@ -479,6 +509,13 @@ h4{
     border: none;
     color: white;
     background-color: var(--cor-primaria);
+    transition: color .3s, background-color .3s;
+    cursor: pointer;
+}
+.fale-conosco form .submit:hover{
+    background-color: white;
+    color: var(--cor-primaria);
+    animation: links .8s 1;
 }
 .fale-conosco form div span{
     float: left;
@@ -487,10 +524,11 @@ h4{
     margin-bottom: 8px;
 }
 footer{
+    display: flex;
+    justify-content: center;
     background-color: var(--cor-primaria);
 }
 .footer-container{
-    margin: 0 auto;
     display: flex;
     color: white;
     justify-content: space-between;
@@ -509,6 +547,9 @@ footer{
     color: white;
     font-size: 16px;
 }
+.footer-container a:hover span{
+    padding-right: 5px;
+}
 .footer-container h3{
     color: white;
     font-size: 18px;
@@ -519,6 +560,7 @@ footer{
 }
 .footer-container div{
     width: 275px;
+    max-width: 100%;
 }
 .footer-container img{
     max-width: 100%;
@@ -527,6 +569,26 @@ footer{
 .novo-visual .textos-article h1{
     margin-bottom: 0px;
     line-height: normal;
+}
+.back-to-top{
+    font-size: 30px;
+    transform: rotate(-90deg);
+    color:white;
+    background-color: var(--cor-primaria);
+    padding: 20px 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    transition: color .3s, background-color .3s;
+}
+.back-to-top:hover {
+    background-color: white;
+    color: var(--cor-primaria);
+    animation: links .8s 1;
+}
+span{
+    font-size: 16px;
+    transition: padding-right .3s;
 }
 /*MEDIA QUERIES*/
 @media only screen and (max-width:1880px){
@@ -575,6 +637,7 @@ footer{
     }
     [titulo-de-seção]{
         font-size: 33px;
+        line-height: 40px;
     }
     .articles-conteudo img{
         max-width: 240px;
@@ -590,12 +653,12 @@ footer{
         padding: 0px var(--espaço-padding-2);
     }
     .prime-sustentavel{
-        padding: 60px var(--espaço-padding-2) 30px var(--espaço-padding-2);
+        padding: 4px var(--espaço-padding-2) 30px var(--espaço-padding-2);
         flex-direction: column;
         row-gap: 20px;
     }
     .sustentavel{
-        padding: 0;
+        margin: 0;
     }
     .fale-conosco{
         padding: 70px 0px;
@@ -607,6 +670,7 @@ footer{
     }
     .textos-sobre h2, h2{
         font-size: 26px;
+        line-height: 30px;
     }
     .seta{
         display: none;
@@ -643,24 +707,21 @@ footer{
         --espaço-padding-2:40px;
     }
     hr[green]{
-        height: 60%;
+        height: 50%;
         bottom: 160px;
     }
     p{
         font-size: 14px;
     }
-    .article-novo-visual{
-        padding: 0px 49px 0px 40px;
+    .article-novo-visual, .article-container article, #article-03, #article-02{
+        padding: 0px 49px 30px 40px;
     }
-    .article-novo-visual img{
+    .article-novo-visual img, .article-container article img, #article-03 img, #article-02 img{
         width: 60%;
     }
     .textos-hero h1{
         font-size: 33px;
         line-height: 30px;
-    }
-    .textos-hero h3{
-        margin-bottom: 25px;
     }
     .textos-hero button.assista-agora{
         margin-top: 60px;
@@ -672,40 +733,47 @@ footer{
         grid-column: span 2;
         max-width: 100%;
     }
-    .article-novo-visual{
+    .article-novo-visual, .article-container article, #article-03, #article-02{
         max-width: 80%;
     }
-    [titulo-de-seção], .conteudo-azul [titulo-de-seção], .article-novo-visual h1{
+    [titulo-de-seção], .conteudo-azul [titulo-de-seção], .article-novo-visual h1,.article-container article h1{
         font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 5px;
     }
     .fale-conosco form{
         padding: 0px 10px;
     }
 }
-@media only screen and (max-width:443px){
+@media only screen and (max-width:448px){
     hr[green]{
-        height: 50%;
         bottom: 120px;
     }
     .prime-sustentavel{
-        padding: 30px 10px 30px 10px;
+        padding: 4px 10px 30px 10px;
     }
     .container-sobre h2, h2{
-        font-size: 9px;
+        font-size: 16px;
         line-height: 18px;
+    }
+    .textos-hero div h3::before{
+        font-size: 120px;
+        top: -30px;
     }
     h3, .textos-hero h3{
         font-size: 10px;
     }
     [titulo-de-seção], .conteudo-azul [titulo-de-seção], .article-novo-visual h1{
-        font-size: 14px;
+        font-size: 16px;
         line-height: normal;
+        letter-spacing: 3px;
     }
     .prime img, .sustentavel img{
         max-width: 22px;
     }
     .icone-texto{
         padding-left: 30px;
+        padding-bottom: 4px;
     }
     h4{
         font-size: 18px;
@@ -715,7 +783,27 @@ footer{
         line-height: 20px;
     }
     .prime-sustentavel p{
-        padding-right: 20px;
+        padding-left: 72px;
+    }
+}
+@media only screen and (max-width:390px){
+    :root{
+        --espaço-padding-2:10px;
+    }
+    .logo img{
+        max-width:100%;
+        margin-left:0px;
+    }
+    .textos-hero h1{
+        font-size: 18px;
+        line-height: normal;
+    }
+    .article-novo-visual, .article-container article, #article-03, #article-02 {
+        padding: 0px 15px 20px 15px;
+    }
+    .article-novo-visual h1, #article-03 h1, #article-02 h1{
+        font-size: 18px;
+        word-break: break-all;
     }
 }
 @media only screen and (max-width:370px){
@@ -723,8 +811,8 @@ footer{
         --espaço-padding-2:20px;
     }
     hr[green]{
-        height: 40%;
-        bottom:100px;
+        height: 50%;
+        bottom:110px;
     }
     .elementos-article{
         grid-template-columns: 1fr;
@@ -734,22 +822,14 @@ footer{
         max-width: 190px;
     }
     .prime-sustentavel{
-        padding: 60px 0px 30px 0px;
+        padding: 4px 0px 30px 0px;
     }
 }
-@media only screen and (max-width:320px){
-    :root{
-        --espaço-padding-2:10px;
-    }
-    .logo img{
-        max-width:100%;
-        margin-left:2px;
-    }
-    .textos-hero h1{
-        font-size: 18px;
-        line-height: normal;
-    }
-    .article-novo-visual{
-        padding: 0px 10px;
-    }
+@keyframes animacao{
+    from{opacity: 0;}
+    to{opacity:1;}
+}
+@keyframes links{
+    from{border:solid 1px var(--cor-primaria);}
+    to{border:solid 1px white;}
 }
