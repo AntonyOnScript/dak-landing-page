@@ -38,13 +38,12 @@ passaSlideAutomatico(slide_02_03, slide_02_01, slide_02_02)
 function passaSlide(e){
     acaoDosBotoes(e.target)
 }
-/*
 // a cada 5.5 segundos passa o slide do hero automaticamente
 setInterval(() => {
     passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03)
     passaSlideAutomatico(slide_02_01, slide_02_02, slide_02_03)
 }, 5500);
-*/
+
 // verifica qual número vai ser apresentado no hero
 function checkBefore(){
     if(slide_01_01.style.display!=="none"){
