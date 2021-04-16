@@ -222,6 +222,20 @@ button.assista-agora:hover{
 .novo-visual h1{
     margin-bottom: 10px;
 }
+.listra-hr{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.listra-hr div{
+    background-color: var(--cor-primaria);
+    width: 40px;
+    height: 6px;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: calc(50% - 9px);
+}
 hr{
     width: 60%;
     height:1px;
@@ -254,7 +268,7 @@ hr{
 .article-novo-visual h1{
     font-size: 40px;
 }
-.article-novo-visual img, .article-container article img,  #article-02 img, #article-03 img{
+.article-novo-visual img, #article-02 img, #article-03 img{
     max-width: 264px;
     max-height: 331px;
     min-width: 264px;
@@ -730,16 +744,8 @@ span{
         --espaço-padding-2:40px;
     }
     hr[verde]{
-        bottom: 54%;
-        height: 50%;
-    }
-    hr[amarelo]{
-        height: 52%;
-        bottom: 52%;
-    }
-    hr[vermelho]{
-        bottom: 58%;
-        height: 46%;
+        bottom: 60%;
+        height: 44%;
     }
     h3{
         letter-spacing: 2px;
@@ -754,14 +760,14 @@ span{
     p{
         font-size: 14px;
     }
-    .article-novo-visual, .article-container article, #article-03, #article-02{
+    .article-novo-visual, #article-03, #article-02{
         padding: 0px 49px 30px 40px;
     }
-    .article-novo-visual img, .article-container article img, #article-03 img, #article-02 img{
-        max-width: 60%;
-        max-height: 60%;
-        min-width: 60%;
-        min-height: 60%;
+    .article-novo-visual img, #article-03 img, #article-02 img{
+        min-width: 180px;
+        min-height: 180px;
+        max-width: 180px;
+        max-height: 180px;
     }
     .textos-hero h1{
         font-size: 33px;
@@ -797,16 +803,8 @@ span{
         margin-bottom: 5px;
     }
     hr[verde]{
-        bottom: 56%;
-        height: 48%;
-    }
-    hr[amarelo]{
-        height: 52%;
-        bottom: 52%;
-    }
-    hr[vermelho]{
-        bottom: 62%;
-        height: 44%;
+        bottom: 68%;
+        height: 36%;
     }
     .textos-hero div h3::before{
         font-size: 120px;
@@ -814,6 +812,12 @@ span{
     }
     h3, .textos-hero h3{
         font-size: 10px;
+    }
+    .article-novo-visual img, #article-03 img, #article-02 img{
+        min-width: 90px;
+        min-height: 120px;
+        max-width: 90px;
+        max-height: 120px;
     }
     [titulo-de-seção], .conteudo-azul [titulo-de-seção], .article-novo-visual h1{
         font-size: 18px;
@@ -844,6 +848,10 @@ span{
     :root{
         --espaço-padding-2:10px;
     }
+    hr[verde]{
+        bottom: 66%;
+        height: 38%;
+    }
     .logo img{
         max-width:100%;
         margin-left:0px;
@@ -865,16 +873,8 @@ span{
         --espaço-padding-2:20px;
     }
     hr[verde]{
-        bottom: 58%;
-        height: 48%;
-    }
-    hr[amarelo]{
-        height: 52%;
-        bottom: 52%;
-    }
-    hr[vermelho]{
-        bottom: 65%;
-        height: 41%;
+        bottom: 68%;
+        height: 36%;
     }
     .elementos-article{
         grid-template-columns: 1fr;
@@ -885,6 +885,9 @@ span{
     }
     .prime-sustentavel{
         padding: 4px 10px 30px 0px;
+    }
+    .article-novo-visual h1[titulo-de-seção] {
+        font-size: 16px;
     }
 }
 @keyframes animacao{
