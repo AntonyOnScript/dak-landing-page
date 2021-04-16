@@ -51,7 +51,7 @@ header .background-hero .slider{
 .background-hero .slider img{
     position: absolute;
     top: 0px;
-    left: 0px;
+    right: 0px;
     min-height: 100%;
     min-width: 100%;
 }
