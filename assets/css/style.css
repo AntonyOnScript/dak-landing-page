@@ -467,6 +467,7 @@ h4{
     font-size: 20px;
     margin: 0px;
     font-weight: 500;
+    line-height: normal;
 }
 .elementos-article article div .titulo-article{
     letter-spacing: 1px;
@@ -595,8 +596,8 @@ footer{
     font-size: 16px;
     min-width: max-content;
 }
-.footer-container a:hover span{
-    padding-right: 5px;
+.footer-container a:hover{
+    text-decoration: underline;
 }
 .footer-container h3{
     color: white;
@@ -637,7 +638,6 @@ footer{
 }
 span{
     font-size: 16px;
-    transition: padding-right .3s;
 }
 /*MEDIA QUERIES*/
 @media only screen and (max-width:1880px){

@@ -50,7 +50,7 @@ const intervaloSlide02 = setInterval(() => {
 // verifica a resolução
 window.onresize = verificaTela
 function verificaTela(){
-    if(window.innerWidth<=1480){
+    if(window.innerWidth<=1315){
         clearInterval(intervaloSlide01)
         botao_slider_01_01.style.visibility = 'hidden'
         botao_slider_01_02.style.visibility = 'hidden'
@@ -62,7 +62,7 @@ function verificaTela(){
 
         document.querySelector('.slider').style.backgroundColor = "#c6e0eb"
     }
-    if(window.innerWidth>1480){
+    if(window.innerWidth>1315){
         botao_slider_01_01.style.visibility = 'visible'
         botao_slider_01_02.style.visibility = 'visible'
         botao_slider_01_03.style.visibility = 'visible'
