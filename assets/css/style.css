@@ -700,6 +700,7 @@ span{
     .footer-container{
         flex-direction: column-reverse;
         align-items: center;
+        row-gap: 0px;
     }
     .footer-container a{
         min-width: auto;
