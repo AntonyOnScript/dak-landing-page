@@ -39,12 +39,41 @@ function passaSlide(e){
     acaoDosBotoes(e.target)
 }
 // a cada 5.5 segundos passa o slide do hero automaticamente
-/*
-setInterval(() => {
+const intervaloSlide01 = setInterval(() => {
     passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03)
+}, 5500);
+
+const intervaloSlide02 = setInterval(() => {
     passaSlideAutomatico(slide_02_01, slide_02_02, slide_02_03)
 }, 5500);
-*/
+
+// verifica a resolução
+window.onresize = verificaTela
+function verificaTela(){
+    if(window.innerWidth<=1480){
+        clearInterval(intervaloSlide01)
+        botao_slider_01_01.style.visibility = 'hidden'
+        botao_slider_01_02.style.visibility = 'hidden'
+        botao_slider_01_03.style.visibility = 'hidden'
+
+        slide_01_01.style.display = "none"
+        slide_01_02.style.display = "none"
+        slide_01_03.style.display = "none"
+
+        document.querySelector('.slider').style.backgroundColor = "#c6e0eb"
+    }
+    if(window.innerWidth>1480){
+        botao_slider_01_01.style.visibility = 'visible'
+        botao_slider_01_02.style.visibility = 'visible'
+        botao_slider_01_03.style.visibility = 'visible'
+
+        slide_01_01.style.display = "flex"
+        slide_01_02.style.display = "none"
+        slide_01_03.style.display = "none"
+    }
+}
+
+verificaTela()
 // verifica qual número vai ser apresentado no hero
 function checkBefore(){
     if(slide_01_01.style.display!=="none"){

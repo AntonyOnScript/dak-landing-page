@@ -51,7 +51,7 @@ header .background-hero .slider{
 .background-hero .slider img{
     position: absolute;
     top: 0px;
-    right: 0px;
+    left: -100px;
     min-height: 100%;
     min-width: 100%;
 }
@@ -722,7 +722,7 @@ span{
         padding: 70px var(--espaço-padding-2);
     }
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:917px){
     :root{
         --espaço-padding-2: 80px;
     }
@@ -813,8 +813,8 @@ span{
         font-size: 22px;
         line-height: 30px;
     }
-    .fale-conosco form{
-        padding: 0px 10px;
+    .footer-container{
+        padding: 60px var(--espaço-padding-2);
     }
 }
 @media only screen and (max-width:448px){
@@ -866,9 +866,6 @@ span{
     }
     .prime-sustentavel p{
         padding-left: 80px;
-    }
-    .footer-container{
-        padding: 60px var(--espaço-padding-2);
     }
 }
 @media only screen and (max-width:390px){
