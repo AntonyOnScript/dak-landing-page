@@ -128,6 +128,13 @@ function acaoDosBotoes(elemento){
     if(elemento.classList.contains('seta-02')){
         passaSlideAutomatico(slide_02_01, slide_02_02, slide_02_03)
     }
+
+    if(elemento.classList.contains('seta-03')){
+        passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_03)
+    }
+    if(elemento.classList.contains('seta-04')){
+        passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03)
+    }
 }
 
 function passaSlideProLado(source_01, source_02, source_03){
