@@ -55,13 +55,32 @@ header{
     min-height: 100%;
     min-width: 100%;
 }
+.background-hero .slider video{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    max-height: 100%;
+    min-height:100%;
+    min-width: 100%;
+}
 .logo{
+    display:flex;
     width: 100%;
+    justify-content: space-between;
 }
 .logo img{
     margin-top: 75px;
     margin-left: var(--espaço-padding-2);
     width: 287px;
+}
+.logo ul{
+    display: flex;
+    list-style-type: none;
+    align-self: flex-end;
+}
+.logo ul li{
+    padding: 0px 10px;
 }
 .textos-hero{
     display: flex;
