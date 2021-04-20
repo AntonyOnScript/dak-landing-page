@@ -39,6 +39,7 @@ function passaSlide(e){
     acaoDosBotoes(e.target)
 }
 // a cada 5.5 segundos passa o slide do hero automaticamente
+
 const intervaloSlide01 = setInterval(() => {
     passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03)
 }, 5500);

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900;1000&display=swap');
 :root{
     --cor-primaria:#1c547a;
     --espaço-padding:238px;
@@ -19,7 +19,7 @@ p{
     hyphens: auto;
     font-size: 16px;
     line-height: 26px;
-    font-weight: 450;
+    font-weight: 500;
 }
 a{
     text-decoration: none;
@@ -30,7 +30,7 @@ header{
     flex-direction: column;
     min-height: 100vh;
 }
-header .background-hero{
+.background-hero{
     position: absolute;
     top: 0; 
     left: 0;
@@ -42,7 +42,7 @@ header .background-hero{
     height: 100%;
     z-index: -1000; /*ALTERAR PAARA NEGATIVO*/
 }
-header .background-hero .slider{
+.background-hero .slider{
     display: flex;
     position: relative;
     min-width: 100%;
@@ -127,7 +127,7 @@ h3{
     opacity: 0.15;
     color: white;
 }
-button.assista-agora{
+.assista-agora{
     font-size: 14px;
     margin-top: 33px;
     text-transform: uppercase;
@@ -140,7 +140,7 @@ button.assista-agora{
     cursor: pointer;
     font-weight: 300;
 }
-button.assista-agora:hover{
+.assista-agora:hover{
     background-color: white;
     color: var(--cor-primaria);
     animation: links .8s 1;
@@ -278,6 +278,20 @@ hr{
     font-size: 40px;
 }
 .article-novo-visual img, #article-02 img, #article-03 img{
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 132px);
+    max-width: 264px;
+    max-height: 331px;
+    min-width: 264px;
+    min-height: 331px;
+    margin: 0 auto;
+    margin-top: -30px;
+    animation: verdeVermelhoAmarelo 1.7s infinite;
+}
+.article-novo-visual div img.espacador, #article-02 div img.espacador, #article-03 div img.espacador{
+    position: relative;
+    opacity: 0;
     max-width: 264px;
     max-height: 331px;
     min-width: 264px;
@@ -390,11 +404,11 @@ hr[amarelo]{
     flex-direction: column;
     align-items: center;
 }
-.desenvolvimento .moleculas {
+.moleculas{
     padding: 134px 0px 0px 0px;
     max-width: 80%;
 }
-.desenvolvimento .moleculas img{
+.moleculas img{
     max-width: 100%;
 }
 .textos-desenvolvimento{
@@ -445,7 +459,7 @@ h4{
     padding-left: 64px;
 }
 .elementos-article{
-    padding: 0px 300px 150px 300px;
+    padding: 0px var(--espaço-padding-2) 150px var(--espaço-padding-2);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     column-gap: 20px;
@@ -641,8 +655,12 @@ span{
 }
 /*MEDIA QUERIES*/
 @media only screen and (max-width:1880px){
-    .elementos-article {
-        padding: 0px 20px 150px 20px;
+    .elementos-article{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .elementos-article article:nth-child(7){
+        grid-column: span 3;
+        max-width: 100%;
     }
 }
 @media only screen and (max-width:1692px){ /*1560*/
@@ -666,13 +684,7 @@ span{
     }
 }
 @media only screen and (max-width:1260px){
-    .elementos-article{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .elementos-article article:nth-child(7){
-        grid-column: span 3;
-        max-width: 100%;
-    }
+    
     .elementos-article {
         padding: 0px var(--espaço-padding-2) 150px var(--espaço-padding-2);
     }
@@ -802,10 +814,13 @@ span{
         max-width: 180px;
         max-height: 180px;
     }
+    .article-novo-visual img:nth-child(2).espacador{
+        display:none;
+    }
     .textos-hero h1{
         font-size: 33px;
     }
-    .textos-hero button.assista-agora{
+    .textos-hero .assista-agora{
         margin-top: 60px;
     }
     .elementos-article{
@@ -933,4 +948,9 @@ span{
 @keyframes links{
     from{border:solid 1px var(--cor-primaria);}
     to{border:solid 1px white;}
+}
+@keyframes verdeVermelhoAmarelo{
+    0%{top: 0px;}
+    50%{top: -10px;}
+    100%{top: 0px;}
 }
