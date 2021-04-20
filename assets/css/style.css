@@ -64,23 +64,49 @@ header{
     min-height:100%;
     min-width: 100%;
 }
-.logo{
+.menu{
     display:flex;
     width: 100%;
     justify-content: space-between;
+    padding: 75px 0px 40px 0px;
+    background-color: white;
+    transition: background-color .3s;
 }
-.logo img{
-    margin-top: 75px;
+.menu img{
     margin-left: var(--espaço-padding-2);
     width: 287px;
 }
-.logo ul{
+.menu ul{
     display: flex;
     list-style-type: none;
-    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 80px;
 }
-.logo ul li{
+.menu ul li{
     padding: 0px 10px;
+}
+.menu ul li a{
+    position: relative;
+    cursor: pointer;
+    color: var(--cor-primaria);
+}
+.menu ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    height: 4px;
+    width: 0px;
+    border-radius: 4px;
+    left: 50%;
+    background-color: #9E8465;
+    transition: all .3s;
+}
+.menu ul li a:hover::before{
+    left: 0%;
+    width: 100%;
 }
 .textos-hero{
     display: flex;
@@ -941,7 +967,7 @@ span{
         bottom: 66%;
         height: 38%;
     }
-    .logo img{
+    .menu img{
         max-width:100%;
         margin-left:0px;
     }

@@ -33,10 +33,10 @@ let before_numero = document.querySelector('.textos-hero div h3')
 before_numero.dataset.content = '01'
 
 document.addEventListener('click', passaSlide)
-
+/*
 passaSlideAutomatico(slide_01_03, slide_01_01, slide_01_02, slide_01_04)
 passaSlideAutomatico(slide_02_03, slide_02_01, slide_02_02)
-
+*/
 //funções
 function passaSlide(e){
     acaoDosBotoes(e.target)
@@ -227,6 +227,7 @@ function resetarCoresSlide(botao_01, botao_02, botao_03, botao_04){
         botao_04.style.backgroundColor = "rgba(0, 0, 0, 0.1)"
     }
 }
+
 
 // estilo
 
