@@ -621,7 +621,7 @@ h4{
     padding: 0px var(--espaço-padding-2) 150px var(--espaço-padding-2);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 25px;
     row-gap: 20px;
 }
 .elementos-article article{
@@ -633,7 +633,7 @@ h4{
 .elementos-article article div{
     border: solid 1px #e2e2e2;
     width: 100%;
-    padding: 10px 30px 20px 30px;
+    padding: 10px 10px 20px 20px;
 }
 .elementos-article article div h2{
     color: var(--cor-primaria);
@@ -1142,6 +1142,11 @@ span{
     }
     .article-novo-visual h1[titulo-de-seção] {
         font-size: 16px;
+    }
+}
+@media only screen and (max-width:315px){
+    .menu img{
+        width: 140px;
     }
 }
 @keyframes animacao{
