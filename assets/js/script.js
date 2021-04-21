@@ -33,10 +33,10 @@ let before_numero = document.querySelector('.textos-hero div h3')
 before_numero.dataset.content = '01'
 
 document.addEventListener('click', passaSlide)
-/*
+
 passaSlideAutomatico(slide_01_03, slide_01_01, slide_01_02, slide_01_04)
 passaSlideAutomatico(slide_02_03, slide_02_01, slide_02_02)
-*/
+
 //funções
 function passaSlide(e){
     acaoDosBotoes(e.target)
@@ -55,14 +55,18 @@ const intervaloSlide02 = setInterval(() => {
 window.onresize = verificaTela
 function verificaTela(){
     if(window.innerWidth<=1315){
-        clearInterval(intervaloSlide01)
         botao_slider_01_01.style.visibility = 'hidden'
         botao_slider_01_02.style.visibility = 'hidden'
         botao_slider_01_03.style.visibility = 'hidden'
+        botao_slider_01_04.style.visibility  = 'hidden'
 
         slide_01_01.style.display = "none"
         slide_01_02.style.display = "none"
         slide_01_03.style.display = "none"
+        slide_01_04.style.display = "none"
+        slide_01_04.pause()
+
+        passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
 
         document.querySelector('.slider').style.backgroundColor = "#c6e0eb"
     }
@@ -70,10 +74,17 @@ function verificaTela(){
         botao_slider_01_01.style.visibility = 'visible'
         botao_slider_01_02.style.visibility = 'visible'
         botao_slider_01_03.style.visibility = 'visible'
+        botao_slider_01_04.style.visibility  = 'visible'
+        slide_01_04.pause()
+
+        resetarCoresSlide(botao_slider_01_01, botao_slider_01_02, botao_slider_01_03, botao_slider_01_04)
+        mudaCorDoBotãoAutomático(botao_slider_01_01)
 
         slide_01_01.style.display = "flex"
-        slide_01_02.style.display = "none"
-        slide_01_03.style.display = "none"
+        slide_01_02.style.display = "flex"
+        slide_01_03.style.display = "flex"
+        slide_01_04.style.display = "flex"
+        passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
     }
 }
 
@@ -183,13 +194,15 @@ function passaSlideProLado(source_01, source_02, source_03, source_04){
     if(source_01.classList.contains('slide-01-04')){
         resetarCoresSlide(botao_slider_01_01, botao_slider_01_02, botao_slider_01_03, botao_slider_01_04)
         mudaCorDoBotãoAutomático(botao_slider_01_04)
-        clearInterval(intervaloSlide01)
-        slide_01_04.play()
-        slide_01_04.onended = function(){
-            intervaloSlide01 = setInterval(() => {
-                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 5500);
-            passaSlideAutomatico(slide_01_04, slide_01_01, slide_01_02, slide_01_03)
+        if(document.documentElement.scrollTop <= 1200){
+            clearInterval(intervaloSlide01)
+            slide_01_04.play()
+            slide_01_04.onended = function(){
+                intervaloSlide01 = setInterval(() => {
+                    passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
+                }, 5500);
+                passaSlideAutomatico(slide_01_04, slide_01_01, slide_01_02, slide_01_03)
+            }
         }
     }
     
@@ -228,9 +241,119 @@ function resetarCoresSlide(botao_01, botao_02, botao_03, botao_04){
     }
 }
 
+// MENU FIXO 
+
+let scrollConstValue
+let menu_fixo = document.querySelector('.menu[menu-fixo]')
+window.onscroll = function () {
+    if(document.documentElement.scrollTop < 580){
+        menu_fixo.style.display="none"
+    }else if(document.documentElement.scrollTop < scrollConstValue){
+        menu_fixo.style.animation = "apareceMenu .3s 1"
+        menu_fixo.style.display = "flex"
+    }else if(document.documentElement.scrollTop > scrollConstValue){
+        menu_fixo.style.display="none"
+    }
+    setConstValueScroll()
+}
+function setConstValueScroll(){
+    scrollConstValue = document.documentElement.scrollTop
+}
 
 // estilo
+// menus
+let menu_lateral = document.querySelector('.menu-lateral')
+let menu_01 = document.querySelector('.menu-mobile-01')
+let menu_02 = document.querySelector('.menu-mobile-02')
 
+let link_menu_01 = document.querySelector('#link_01')
+let link_menu_02 = document.querySelector('#link_02')
+let link_menu_03 = document.querySelector('#link_03')
+let link_menu_04 = document.querySelector('#link_04')
+let link_menu_05 = document.querySelector('#link_05')
+
+menu_01.addEventListener('click', function(){
+    if(menu_01.getAttribute('ativado')){
+        menu_01.removeAttribute('ativado')
+        menu_02.removeAttribute('ativado')
+        menu_01.style.position = "relative"
+        menu_02.style.position = "relative"
+        menu_01.style.right = "0px"
+        menu_02.style.right = "0px"
+        menu_fixo.style.zIndex = "4000"
+        menu_fixo.style.backgroundColor = "white"
+        menu_fixo.querySelector('img').style.visibility = "visible"
+
+        menu_lateral.style.animation = "menuLateralSome .3s"
+        setTimeout(() => {
+            menu_lateral.style.display = "none"
+        }, 300); 
+        document.body.style.overflowY = "auto"
+    }else{
+        menu_01.setAttribute('ativado', 's')
+        menu_01.style.position = "absolute"
+        menu_01.style.right = "0px"
+        menu_01.style.display = "flex"
+        menu_fixo.style.zIndex = "9000"
+        menu_fixo.style.backgroundColor = "rgba(0,0,0,0)"
+        menu_fixo.querySelector('img').style.visibility = "hidden"
+
+        menu_lateral.style.top = document.documentElement.scrollTop+'px'
+        menu_lateral.style.display = "flex"
+        menu_lateral.style.animation = "menuLateral .3s"
+        document.body.style.overflow = "hidden"
+    }
+})
+
+menu_02.addEventListener('click', function(){
+    if(menu_02.getAttribute('ativado')){
+        menu_02.removeAttribute('ativado')
+        menu_01.removeAttribute('ativado')
+        menu_01.style.position = "relative"
+        menu_02.style.position = "relative"
+        menu_01.style.right = "0px"
+        menu_02.style.right = "0px"
+
+        menu_lateral.style.animation = "menuLateralSome .3s"
+        setTimeout(() => {
+            menu_lateral.style.display = "none"
+        }, 300); 
+        document.body.style.overflowY = "auto"
+    }else{
+        menu_02.setAttribute('ativado', 's')
+        menu_02.style.position = "absolute"
+        menu_02.style.right = "0px"
+
+        menu_lateral.style.top = "0px"
+        menu_lateral.style.display = "flex"
+        menu_lateral.style.animation = "menuLateral .3s"
+        document.body.style.overflow = "hidden"
+        document.documentElement.scrollTop = 0
+    }
+})
+
+function fechaMenuLateral(){
+    menu_01.removeAttribute('ativado')
+    menu_02.removeAttribute('ativado')
+    menu_01.style.position = "relative"
+    menu_02.style.position = "relative"
+    menu_01.style.right = "0px"
+    menu_02.style.right = "0px"
+    menu_fixo.style.zIndex = "4000"
+    menu_fixo.style.backgroundColor = "white"
+    menu_fixo.querySelector('img').style.visibility = "visible"
+    menu_lateral.style.display = "none"
+ 
+    document.body.style.overflowY = "auto"
+}
+
+link_menu_01.onclick = fechaMenuLateral
+link_menu_02.onclick = fechaMenuLateral
+link_menu_03.onclick = fechaMenuLateral
+link_menu_04.onclick = fechaMenuLateral
+link_menu_05.onclick = fechaMenuLateral
+
+// outras interações
 area_botao_slider_01_01.onmouseenter = function(){
     botao_slider_01_01.style.backgroundColor = "var(--cor-primaria)"
 }
