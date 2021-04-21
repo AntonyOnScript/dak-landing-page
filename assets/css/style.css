@@ -713,6 +713,9 @@ h4{
     border: solid 1px #e2e2e2;
 }
 .fale-conosco form .submit{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       
     margin-top: 30px;
     float: right;
     justify-self: self-end;
