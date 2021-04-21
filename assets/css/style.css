@@ -528,6 +528,9 @@ hr[amarelo]{
     column-gap: 30px;
     row-gap: 60px;
 }
+.articles-conteudo p{
+    font-weight: 400;
+}
 .articles-conteudo h1, .articles-conteudo h3, .articles-conteudo p{
     padding-left: 50px;   
 }
