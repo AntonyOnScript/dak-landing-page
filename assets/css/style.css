@@ -772,6 +772,9 @@ footer{
 .footer-container a:hover{
     text-decoration: underline;
 }
+.footer-container .endereco a:hover{
+    text-decoration: none;
+}
 .footer-container h3{
     color: white;
     font-size: 18px;
@@ -1028,6 +1031,9 @@ span{
     }
     .menu img{
         width: 200px;
+    }
+    .menu{
+        padding: 40px 0px;
     }
     .menu-mobile{
         justify-content: center;
