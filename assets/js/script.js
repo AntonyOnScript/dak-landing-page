@@ -28,6 +28,7 @@ let botao_slider_02_01 = document.querySelector('.botao-slider-02-01')
 let botao_slider_02_02 = document.querySelector('.botao-slider-02-02')
 let botao_slider_02_03 = document.querySelector('.botao-slider-02-03')
 
+var check
 // conteudo do before 
 let before_numero = document.querySelector('.textos-hero div h3')
 before_numero.dataset.content = '01'
@@ -136,12 +137,30 @@ function passaSlideAutomatico(slide01, slide02, slide03, slide04){
 function acaoDosBotoes(elemento){
     if(elemento.classList.contains('area-botao-slider-01-01') || elemento.classList.contains('botao-slider-01-01')){
         passaSlideProLado(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
+        if(!slide_01_04.paused){
+            slide_01_04.pause()
+            intervaloSlide01 = setInterval(() => {
+                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
+            }, 5500);
+        }
     }
     if(elemento.classList.contains('area-botao-slider-01-02') || elemento.classList.contains('botao-slider-01-02')){
         passaSlideProLado(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
+        if(!slide_01_04.paused){
+            slide_01_04.pause()
+            intervaloSlide01 = setInterval(() => {
+                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
+            }, 5500);
+        }
     }
     if(elemento.classList.contains('area-botao-slider-01-03') || elemento.classList.contains('botao-slider-01-03')){
         passaSlideProLado(slide_01_03, slide_01_02, slide_01_01, slide_01_04)
+        if(!slide_01_04.paused){
+            slide_01_04.pause()
+            intervaloSlide01 = setInterval(() => {
+                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
+            }, 5500);
+        }
     }
     if(elemento.classList.contains('area-botao-slider-01-04') || elemento.classList.contains('botao-slider-01-04')){
         passaSlideProLado(slide_01_04, slide_01_02, slide_01_01, slide_01_03)
@@ -167,12 +186,18 @@ function acaoDosBotoes(elemento){
     if(elemento.classList.contains('seta-03')){
         if(!slide_01_04.paused){
             slide_01_04.pause()
+            intervaloSlide01 = setInterval(() => {
+                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
+            }, 5500);
         }
         passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_04, slide_01_03)
     }
     if(elemento.classList.contains('seta-04')){
         if(!slide_01_04.paused){
             slide_01_04.pause()
+            intervaloSlide01 = setInterval(() => {
+                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
+            }, 5500);
         }
         passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
     }
