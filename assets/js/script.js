@@ -144,7 +144,7 @@ function acaoDosBotoes(elemento){
         passaSlideProLado(slide_01_03, slide_01_02, slide_01_01, slide_01_04)
     }
     if(elemento.classList.contains('area-botao-slider-01-04') || elemento.classList.contains('botao-slider-01-04')){
-        passaSlideProLado(slide_01_04, slide_01_02, slide_01_01, slide_02_03)
+        passaSlideProLado(slide_01_04, slide_01_02, slide_01_01, slide_01_03)
     }
 
     if(elemento.classList.contains('area-botao-slider-02-01') || elemento.classList.contains('botao-slider-02-01')){
@@ -198,10 +198,10 @@ function passaSlideProLado(source_01, source_02, source_03, source_04){
             clearInterval(intervaloSlide01)
             slide_01_04.play()
             slide_01_04.onended = function(){
+                passaSlideAutomatico(slide_01_04, slide_01_01, slide_01_02, slide_01_03)
                 intervaloSlide01 = setInterval(() => {
                     passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
                 }, 5500);
-                passaSlideAutomatico(slide_01_04, slide_01_01, slide_01_02, slide_01_03)
             }
         }
     }
@@ -220,7 +220,8 @@ function passaSlideProLado(source_01, source_02, source_03, source_04){
     }
     
     source_02.style.animation = source_03.style.animation = "animacao 1s"
-    if(typeof source_04 !== "undefined") {
+    console.log(typeof source_04)
+    if(typeof source_04 !== "undefined" && typeof source_04 !== "null") {
         source_04.style.animation = "animacao 1s"
         source_04.style.display = "none"
     }
@@ -262,6 +263,7 @@ function setConstValueScroll(){
 
 // estilo
 // menus
+let menus = document.querySelector('.menu')
 let menu_lateral = document.querySelector('.menu-lateral')
 let menu_01 = document.querySelector('.menu-mobile-01')
 let menu_02 = document.querySelector('.menu-mobile-02')
@@ -289,6 +291,8 @@ menu_01.addEventListener('click', function(){
             menu_lateral.style.display = "none"
         }, 300); 
         document.body.style.overflowY = "auto"
+
+        menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.1)"
     }else{
         menu_01.setAttribute('ativado', 's')
         menu_01.style.position = "absolute"
@@ -302,6 +306,7 @@ menu_01.addEventListener('click', function(){
         menu_lateral.style.display = "flex"
         menu_lateral.style.animation = "menuLateral .3s"
         document.body.style.overflow = "hidden"
+        menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.0)"
     }
 })
 

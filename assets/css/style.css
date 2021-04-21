@@ -5,6 +5,21 @@
     --espaço-padding:238px;
     --espaço-padding-2:135px;
 }
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal; 
+    font-style: normal;
+    font-size: 64px; 
+    line-height: 1; 
+    letter-spacing: normal; 
+    text-transform: none; 
+    display: block; 
+    white-space: nowrap; 
+    word-wrap: normal; 
+    direction: unset; 
+    -webkit-font-feature-settings: 'liga'; 
+    -webkit-font-smoothing: antialiased;
+}
 *{
     outline: none;
     margin: 0;
@@ -71,6 +86,7 @@ header{
     padding: 75px 0px 40px 0px;
     background-color: white;
     transition: background-color .3s;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
 }
 .menu img{
     margin-left: var(--espaço-padding-2);
@@ -216,8 +232,8 @@ header{
     margin-top: 300px;
     margin-bottom: 15%;
 }
-.textos-hero .seta-04{
-    position: absolute;
+.textos-hero .seta-04.material-icons{
+    position: absolute !important;
     right: 0px;
 }
 h1{
@@ -477,13 +493,20 @@ hr[amarelo]{
     cursor: pointer;
     transition: background-color .3s;
 }
-.seta{
+.seta.material-icons{
     align-self: center;
     padding: 0px 20px;
     width: 90px;
     height: 60px;
     transition: all .3s;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.1);
+    transition: color .3s;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.seta.material-icons:hover{
+    color: var(--cor-primaria);
 }
 .conteudo{
     padding-top: 100px;
@@ -825,7 +848,7 @@ span{
     }
 }
 @media only screen and (max-width: 1315px){
-    .seta-03, .seta-04{
+    .seta-03.material-icons, .seta-04.material-icons{
         display: none;
     }
     .textos-hero div{
@@ -901,7 +924,7 @@ span{
         line-height: 30px;
         margin-bottom: 10px;
     }
-    .seta{
+    .seta.material-icons{
         display: none;
     }
     .textos-desenvolvimento{
