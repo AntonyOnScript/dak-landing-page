@@ -80,13 +80,12 @@ header{
     min-width: 100%;
 }
 .menu{
+    position: absolute;
     display:flex;
     width: 100%;
     justify-content: space-between;
     padding: 75px 0px 40px 0px;
-    background-color: white;
-    transition: background-color .3s;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 .menu img{
     margin-left: var(--espaço-padding-2);
@@ -128,6 +127,8 @@ header{
     display: none;
     position: fixed;
     z-index: 2000;
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 .menu-mobile{
     display: none;

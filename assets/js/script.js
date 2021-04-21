@@ -245,7 +245,6 @@ function passaSlideProLado(source_01, source_02, source_03, source_04){
     }
     
     source_02.style.animation = source_03.style.animation = "animacao 1s"
-    console.log(typeof source_04)
     if(typeof source_04 !== "undefined" && typeof source_04 !== "null") {
         source_04.style.animation = "animacao 1s"
         source_04.style.display = "none"
@@ -269,23 +268,21 @@ function resetarCoresSlide(botao_01, botao_02, botao_03, botao_04){
 
 // MENU FIXO 
 
-let scrollConstValue
 let menu_fixo = document.querySelector('.menu[menu-fixo]')
 window.onscroll = function () {
-    if(document.documentElement.scrollTop < 580){
-        menu_fixo.style.display="none"
-    }else if(document.documentElement.scrollTop < scrollConstValue){
-        menu_fixo.style.animation = "apareceMenu .3s 1"
-        menu_fixo.style.display = "flex"
-    }else if(document.documentElement.scrollTop > scrollConstValue){
-        menu_fixo.style.display="none"
+    if(document.documentElement.scrollTop < 180){
+        someMenu()
+    }else if(document.documentElement.scrollTop > 180){
+        apareceMenu()
     }
-    setConstValueScroll()
 }
-function setConstValueScroll(){
-    scrollConstValue = document.documentElement.scrollTop
+function someMenu(){
+    menu_fixo.style.display="none"
 }
-
+function apareceMenu(){
+    menu_fixo.style.animation = "apareceMenu .3s 1"
+    menu_fixo.style.display = "flex"
+}
 // estilo
 // menus
 let menus = document.querySelector('.menu')
