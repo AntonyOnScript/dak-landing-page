@@ -30,6 +30,7 @@ let botao_slider_02_03 = document.querySelector('.botao-slider-02-03')
 
 // video
 slide_01_04.volume = 0
+
 // conteudo do before 
 let before_numero = document.querySelector('.textos-hero div h3')
 before_numero.dataset.content = '01'
@@ -269,6 +270,16 @@ function resetarCoresSlide(botao_01, botao_02, botao_03, botao_04){
 
 // ESTILOS, ANIMAÇÕES, TRANSIÇÕES E ETC.
 
+// seções da página
+
+const secoes = {
+    topo:document.querySelector('#menu-topo'),
+    sobre:document.querySelector('#sobre-nos'),
+    economia:document.querySelector('#economia'),
+    nossos_produtos:document.querySelector('#nossos-produtos'),
+    contato:document.querySelector('#contato')
+}
+
 // menus
 
 let menus = document.querySelector('.menu')
@@ -277,12 +288,41 @@ let menu_01 = document.querySelector('.menu-mobile-01')
 let menu_02 = document.querySelector('.menu-mobile-02')
 let menu_topo = document.querySelector('#menu-topo')
 
-let link_menu_01 = document.querySelector('#link_01')
-let link_menu_02 = document.querySelector('#link_02')
-let link_menu_03 = document.querySelector('#link_03')
-let link_menu_04 = document.querySelector('#link_04')
-let link_menu_05 = document.querySelector('#link_05')
+let link_menu_01 = document.querySelector('.link_01')
+let link_menu_02 = document.querySelector('.link_02')
+let link_menu_03 = document.querySelector('.link_03')
+let link_menu_04 = document.querySelector('.link_04')
+let link_menu_05 = document.querySelector('.link_05')
 let menu_fixo = document.querySelector('.menu[menu-fixo]')
+
+document.addEventListener('click', (e)=>{
+    let el = e.target
+    if(el.classList.contains("link_01")){
+        setTimeout(() => {
+          window.scrollTo(0, (secoes.topo.getBoundingClientRect().top + window.pageYOffset - 140))
+        }, 1);
+    }
+    if(el.classList.contains("link_02")){
+        setTimeout(() => {
+           window.scrollTo(0, (secoes.sobre.getBoundingClientRect().top + window.pageYOffset - 140))
+        }, 1);
+    }
+    if(el.classList.contains("link_03")){
+        setTimeout(() => {
+            window.scrollTo(0, (secoes.economia.getBoundingClientRect().top + window.pageYOffset - 40))
+        }, 1);
+    }
+    if(el.classList.contains("link_04")){
+        setTimeout(() => {
+            window.scrollTo(0, (secoes.nossos_produtos.getBoundingClientRect().top + window.pageYOffset - 140))
+        }, 1);
+    }
+    if(el.classList.contains("link_05")){
+        setTimeout(() => {
+            window.scrollTo(0, (secoes.contato.getBoundingClientRect().top + window.pageYOffset - 140))
+        }, 1);
+    }
+})
 // MENU FIXO 
 
 window.onscroll = function () {
