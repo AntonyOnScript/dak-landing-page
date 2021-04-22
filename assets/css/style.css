@@ -293,6 +293,10 @@ h3{
     width: 161px;
     height: 51px;
     border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
     color: white;
     background-color: var(--cor-primaria);
     transition: color .3s, background-color .3s;
@@ -710,6 +714,10 @@ h4{
 .fale-conosco form div input, .fale-conosco form div textarea{
     padding: 16px 24px;
     width:100%;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
 }
 .fale-conosco form div textarea{
     height: 140px;
@@ -727,6 +735,8 @@ h4{
     width: 160px;
     height: 60px;
     border: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
     color: white;
     background-color: var(--cor-primaria);
     transition: color .3s, background-color .3s;
