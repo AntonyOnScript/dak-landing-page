@@ -15,6 +15,7 @@
     scroll-behavior: smooth;
 }
 p{
+    font-family: "Calibri";
     word-wrap: break-word;
     hyphens: auto;
     font-size: 16px;
