@@ -376,6 +376,7 @@ function fechaMenuLateral(){
     menu_fixo.style.zIndex = "4000"
     menu_fixo.style.backgroundColor = "white"
     menu_fixo.querySelector('img').style.visibility = "visible"
+    menu_topo.querySelector('img').style.visibility = "visible"
     menu_lateral.style.display = "none"
  
     document.body.style.overflowY = "auto"
