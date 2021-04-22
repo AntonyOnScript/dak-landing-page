@@ -289,6 +289,7 @@ let menus = document.querySelector('.menu')
 let menu_lateral = document.querySelector('.menu-lateral')
 let menu_01 = document.querySelector('.menu-mobile-01')
 let menu_02 = document.querySelector('.menu-mobile-02')
+let menu_topo = document.querySelector('#menu-topo')
 
 let link_menu_01 = document.querySelector('#link_01')
 let link_menu_02 = document.querySelector('#link_02')
@@ -340,6 +341,8 @@ menu_02.addEventListener('click', function(){
         menu_02.style.position = "relative"
         menu_01.style.right = "0px"
         menu_02.style.right = "0px"
+        menu_topo.style.zIndex = "4000"
+        menu_topo.querySelector('img').style.visibility = "visible"
 
         menu_lateral.style.animation = "menuLateralSome .3s"
         setTimeout(() => {
@@ -350,6 +353,8 @@ menu_02.addEventListener('click', function(){
         menu_02.setAttribute('ativado', 's')
         menu_02.style.position = "absolute"
         menu_02.style.right = "0px"
+        menu_topo.querySelector('img').style.visibility = "hidden"
+        menu_topo.style.zIndex = "9000"
 
         menu_lateral.style.top = "0px"
         menu_lateral.style.display = "flex"
