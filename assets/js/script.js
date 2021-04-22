@@ -266,9 +266,24 @@ function resetarCoresSlide(botao_01, botao_02, botao_03, botao_04){
     }
 }
 
+// ESTILOS, ANIMAÇÕES, TRANSIÇÕES E ETC.
+
+// menus
+
+let menus = document.querySelector('.menu')
+let menu_lateral = document.querySelector('.menu-lateral')
+let menu_01 = document.querySelector('.menu-mobile-01')
+let menu_02 = document.querySelector('.menu-mobile-02')
+let menu_topo = document.querySelector('#menu-topo')
+
+let link_menu_01 = document.querySelector('#link_01')
+let link_menu_02 = document.querySelector('#link_02')
+let link_menu_03 = document.querySelector('#link_03')
+let link_menu_04 = document.querySelector('#link_04')
+let link_menu_05 = document.querySelector('#link_05')
+let menu_fixo = document.querySelector('.menu[menu-fixo]')
 // MENU FIXO 
 
-let menu_fixo = document.querySelector('.menu[menu-fixo]')
 window.onscroll = function () {
     if(document.documentElement.scrollTop < 180){
         someMenu()
@@ -283,19 +298,6 @@ function apareceMenu(){
     menu_fixo.style.animation = "apareceMenu .3s 1"
     menu_fixo.style.display = "flex"
 }
-// estilo
-// menus
-let menus = document.querySelector('.menu')
-let menu_lateral = document.querySelector('.menu-lateral')
-let menu_01 = document.querySelector('.menu-mobile-01')
-let menu_02 = document.querySelector('.menu-mobile-02')
-let menu_topo = document.querySelector('#menu-topo')
-
-let link_menu_01 = document.querySelector('#link_01')
-let link_menu_02 = document.querySelector('#link_02')
-let link_menu_03 = document.querySelector('#link_03')
-let link_menu_04 = document.querySelector('#link_04')
-let link_menu_05 = document.querySelector('#link_05')
 
 menu_01.addEventListener('click', function(){
     if(menu_01.getAttribute('ativado')){
@@ -385,7 +387,8 @@ link_menu_03.onclick = fechaMenuLateral
 link_menu_04.onclick = fechaMenuLateral
 link_menu_05.onclick = fechaMenuLateral
 
-// outras interações
+// interações com botões dos slides
+
 area_botao_slider_01_01.onmouseenter = function(){
     botao_slider_01_01.style.backgroundColor = "var(--cor-primaria)"
 }
