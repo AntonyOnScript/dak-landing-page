@@ -28,7 +28,8 @@ let botao_slider_02_01 = document.querySelector('.botao-slider-02-01')
 let botao_slider_02_02 = document.querySelector('.botao-slider-02-02')
 let botao_slider_02_03 = document.querySelector('.botao-slider-02-03')
 
-var check
+// video
+slide_01_04.volume = 0
 // conteudo do before 
 let before_numero = document.querySelector('.textos-hero div h3')
 before_numero.dataset.content = '01'
