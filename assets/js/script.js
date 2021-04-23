@@ -331,26 +331,31 @@ document.addEventListener('click', (e)=>{
     if(el.classList.contains("link_01")){
         setTimeout(() => {
           window.scrollTo(0, (secoes.topo.getBoundingClientRect().top + window.pageYOffset - 120))
+          menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.1)"
         }, 1);
     }
     if(el.classList.contains("link_02")){
         setTimeout(() => {
            window.scrollTo(0, (secoes.sobre.getBoundingClientRect().top + window.pageYOffset - 120))
+           menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.1)"
         }, 1);
     }
     if(el.classList.contains("link_03")){
         setTimeout(() => {
             window.scrollTo(0, (secoes.economia.getBoundingClientRect().top + window.pageYOffset - 20))
+            menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.1)"
         }, 1);
     }
     if(el.classList.contains("link_04")){
         setTimeout(() => {
             window.scrollTo(0, (secoes.nossos_produtos.getBoundingClientRect().top + window.pageYOffset - 120))
+            menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.1)"
         }, 1);
     }
     if(el.classList.contains("link_05")){
         setTimeout(() => {
             window.scrollTo(0, (secoes.contato.getBoundingClientRect().top + window.pageYOffset - 121))
+            menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.1)"
         }, 1);
     }
 })
