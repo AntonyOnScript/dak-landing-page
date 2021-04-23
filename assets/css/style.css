@@ -767,6 +767,7 @@ footer{
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    min-width: 170px;
 }
 .endereco{
     display: flex;
@@ -780,7 +781,7 @@ footer{
     font-weight: 300;
     transition: padding-left .3s;
 }
-.footer-container a:hover{
+.footer-container .links a:hover{
     padding-left: 10px;
 }
 .footer-container .endereco a:hover{
