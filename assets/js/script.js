@@ -68,7 +68,7 @@ function verificaTela(){
         slide_01_03.style.display = "none"
         slide_01_04.style.display = "none"
         slide_01_04.pause()
-
+        
         passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
 
         document.querySelector('.slider').style.backgroundColor = "#c6e0eb"

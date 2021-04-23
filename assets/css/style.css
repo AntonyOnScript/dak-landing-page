@@ -212,7 +212,7 @@ header{
     margin: auto 0;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-left: 148px;
+    margin-left: 238px;
     color: var(--cor-primaria);
     width: 710px;
     z-index: 1;
@@ -222,6 +222,12 @@ header{
 .textos-hero .seta-04{
     position: absolute !important;
     right: 0px;
+    top: calc(50% - 45px);
+}
+.textos-hero .seta-03{
+    position: absolute !important;
+    left: 0px;
+    top: calc(50% - 45px);
 }
 h1{
     z-index: 1000;
@@ -436,7 +442,7 @@ hr{
     min-height: 331px;
     margin: 0 auto;
     margin-top: -30px;
-    animation: verdeVermelhoAmarelo 1.7s infinite;
+    animation: verdeVermelhoAmarelo 2.25s infinite;
 }
 .article-novo-visual div img.espacador, #article-02 div img.espacador, #article-03 div img.espacador{
     position: relative;
@@ -834,7 +840,7 @@ span{
         font-size: 33px;
     }
     .textos-hero div{
-        margin-left: calc(var(--espaço-padding-2) - 90px);
+        margin-left: calc(var(--espaço-padding-2));
     }
     .container-sobre{
         padding: 65px 80px 133px var(--espaço-padding-2);
@@ -1169,9 +1175,9 @@ span{
     to{border:solid 1px white;}
 }
 @keyframes verdeVermelhoAmarelo{
-    0%{top: 0px;}
-    50%{top: -10px;}
-    100%{top: 0px;}
+    0%{top: -10px;}
+    50%{top: 0px;}
+    100%{top: -10px;}
 }
 @keyframes apareceMenu{
     from{margin-top: -100%;}
