@@ -777,7 +777,9 @@ h4{
 .fale-conosco form div span{
     float: left;
     color: var(--cor-primaria);
-    font-weight: 600;
+    font-weight: 400;
+    font-family: "Calibri";
+    font-size: 20px;
     margin-bottom: 8px;
 }
 .fale-conosco form input{
@@ -875,6 +877,7 @@ span{
 .modal-box .dialogo{
     background-color: white;
     min-width: 250px;
+    max-width: 90%;
     width: 300px;
     min-height: 100px;
     max-height: 100%;
@@ -892,7 +895,8 @@ span{
     border-radius: 2px;
 }
 .modal-box .dialogo header p{
-    color:var(--cor-primaria)
+    color:var(--cor-primaria);
+    align-self: center;
 }
 .modal-box .dialogo .conteudo-modal{
     padding: 20px 15px;
@@ -961,6 +965,9 @@ span{
     .textos-hero div{
         margin-left: var(--espaço-padding-2);
     }
+    .seletor-slide-01{
+        z-index: -10000;
+    }
 }
 @media only screen and (max-width:1260px){
     .elementos-article {
@@ -1008,7 +1015,7 @@ span{
         padding: 0px var(--espaço-padding-2);
     }
     .prime-sustentavel{
-        padding: 4px var(--espaço-padding-2) 30px var(--espaço-padding-2);
+        padding: 4px var(--espaço-padding-2) 80px var(--espaço-padding-2);
         flex-direction: column;
         row-gap: 20px;
     }
@@ -1083,8 +1090,12 @@ span{
     .conteudo-azul article h3{
         letter-spacing: 3.2px;
     }
-    p{
+    .container-sobre{
+        padding-bottom: 100px;
+    }
+    p, .fale-conosco form div span{
         font-size: 14px;
+        line-height: 20px;
     }
     .article-novo-visual, #article-03, #article-02{
         padding: 0px 49px 30px 40px;
@@ -1110,6 +1121,7 @@ span{
     }
     .elementos-article{
         grid-template-columns: 1fr 1fr;
+        padding: 30px 20px 100px 20px;
     }
     .elementos-article article:nth-child(7){
         grid-column: span 2;
@@ -1124,11 +1136,11 @@ span{
     }
     .footer-container{
         padding: 60px var(--espaço-padding-2);
-    }
+    } 
 }
 @media only screen and (max-width:448px){
     .prime-sustentavel{
-        padding: 4px 10px 30px 10px;
+        padding: 4px 80px 30px 10px;
     }
     .menu img{
         width: 200px;
@@ -1148,7 +1160,6 @@ span{
     .container-sobre h2, h2{
         font-size: 16px;
         line-height: 18px;
-        margin-bottom: 5px;
     }
     hr[verde]{
         bottom: 68%;
@@ -1192,9 +1203,8 @@ span{
     h4{
         font-size: 18px;
     }
-    p{
-        font-size: 10px;
-        line-height: 20px;
+    .modal-box .dialogo p{
+        font-size: 16px;
     }
     .prime-sustentavel p{
         padding-left: 80px;
@@ -1226,6 +1236,9 @@ span{
     .footer-container a{
         font-size: 12px;
     }
+    .moleculas{
+        padding-top: 100px;
+    }
 }
 @media only screen and (max-width:370px){
     :root{
@@ -1243,7 +1256,7 @@ span{
         max-width: 190px;
     }
     .prime-sustentavel{
-        padding: 4px 20px 30px 0px;
+        padding: 4px 80px 30px 0px;
     }
     .article-novo-visual h1[titulo-de-seção] {
         font-size: 16px;
