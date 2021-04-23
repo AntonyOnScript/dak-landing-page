@@ -170,13 +170,18 @@ header{
     margin-bottom: 0px;
 }
 .fecha-modal[ativado] .linha-01{
+    background-color: rgb(192, 192, 192);
 	transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
 }
 .fecha-modal[ativado] .linha-02{
 	display: none;
 }
 .fecha-modal[ativado] .linha-03{
+    background-color: rgb(192, 192, 192);
     transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+}
+.fecha-modal[ativado]:hover .f-modal{
+    background-color: var(--cor-primaria);
 }
 .menu-lateral{
     display: none;
@@ -874,6 +879,8 @@ span{
     min-height: 100px;
     max-height: 100%;
     border-radius: 4px;
+    border-end-end-radius: 8px;
+    border-end-start-radius: 8px;
 }
 .modal-box .dialogo header{
     display: flex;
@@ -907,6 +914,9 @@ span{
     background-color: white;
     cursor: pointer;
     padding: 5px 15px;
+}
+.ok-modal:active{
+    background-color: rgb(230, 230, 230);
 }
 /*MEDIA QUERIES*/
 @media only screen and (max-width:1880px){
