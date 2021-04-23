@@ -48,11 +48,11 @@ function passaSlide(e){
 
 var intervaloSlide01 = setInterval(() => {
     passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-}, 5500);
+}, 7000);
 
 const intervaloSlide02 = setInterval(() => {
     passaSlideAutomatico(slide_02_01, slide_02_02, slide_02_03)
-}, 5500);
+}, 7000);
 
 // verifica a resolução
 window.onresize = verificaTela
@@ -143,7 +143,7 @@ function acaoDosBotoes(elemento){
             slide_01_04.pause()
             intervaloSlide01 = setInterval(() => {
                 passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 5500);
+            }, 7000);
         }
     }
     if(elemento.classList.contains('area-botao-slider-01-02') || elemento.classList.contains('botao-slider-01-02')){
@@ -152,7 +152,7 @@ function acaoDosBotoes(elemento){
             slide_01_04.pause()
             intervaloSlide01 = setInterval(() => {
                 passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 5500);
+            }, 7000);
         }
     }
     if(elemento.classList.contains('area-botao-slider-01-03') || elemento.classList.contains('botao-slider-01-03')){
@@ -161,7 +161,7 @@ function acaoDosBotoes(elemento){
             slide_01_04.pause()
             intervaloSlide01 = setInterval(() => {
                 passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 5500);
+            }, 7000);
         }
     }
     if(elemento.classList.contains('area-botao-slider-01-04') || elemento.classList.contains('botao-slider-01-04')){
@@ -190,7 +190,7 @@ function acaoDosBotoes(elemento){
             slide_01_04.pause()
             intervaloSlide01 = setInterval(() => {
                 passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 5500);
+            }, 7000);
         }
         passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_04, slide_01_03)
     }
@@ -199,7 +199,7 @@ function acaoDosBotoes(elemento){
             slide_01_04.pause()
             intervaloSlide01 = setInterval(() => {
                 passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 5500);
+            }, 7000);
         }
         passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
     }
@@ -228,7 +228,7 @@ function passaSlideProLado(source_01, source_02, source_03, source_04){
                 passaSlideAutomatico(slide_01_04, slide_01_01, slide_01_02, slide_01_03)
                 intervaloSlide01 = setInterval(() => {
                     passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-                }, 5500);
+                }, 7000);
             }
         }
     }

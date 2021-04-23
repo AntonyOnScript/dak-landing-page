@@ -442,7 +442,7 @@ hr{
     min-height: 331px;
     margin: 0 auto;
     margin-top: -30px;
-    animation: verdeVermelhoAmarelo 2.25s infinite;
+    animation: verdeVermelhoAmarelo 3.5s infinite;
 }
 .article-novo-visual div img.espacador, #article-02 div img.espacador, #article-03 div img.espacador{
     position: relative;
@@ -778,9 +778,10 @@ footer{
     font-size: 16px;
     min-width: max-content;
     font-weight: 300;
+    transition: padding-left .3s;
 }
 .footer-container a:hover{
-    text-decoration: underline;
+    padding-left: 10px;
 }
 .footer-container .endereco a:hover{
     text-decoration: none;
