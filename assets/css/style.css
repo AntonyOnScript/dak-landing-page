@@ -18,9 +18,9 @@ p{
     font-family: "Calibri";
     word-wrap: break-word;
     hyphens: auto;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
-    font-weight: 600;
+    font-weight: 400;
 }
 a{
     text-decoration: none;
@@ -113,7 +113,7 @@ header{
     position: fixed;
     z-index: 2000;
     background-color: white;
-    padding: 40px 0px;
+    padding: 30px 0px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 .menu-mobile{

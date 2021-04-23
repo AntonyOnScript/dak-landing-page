@@ -57,6 +57,7 @@ const intervaloSlide02 = setInterval(() => {
 // verifica a resolução
 window.onresize = verificaTela
 function verificaTela(){
+    var menu_mobile = document.querySelector('.menu-mobile')
     if(window.innerWidth<=1315){
         botao_slider_01_01.style.visibility = 'hidden'
         botao_slider_01_02.style.visibility = 'hidden'
@@ -88,6 +89,12 @@ function verificaTela(){
         slide_01_03.style.display = "flex"
         slide_01_04.style.display = "flex"
         passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
+    }
+    if(window.innerWidth>1260){
+        menu_mobile.style.display = "none"
+    }
+    if(window.innerWidth<=1260){
+        menu_mobile.style.display = "flex"
     }
 }
 
