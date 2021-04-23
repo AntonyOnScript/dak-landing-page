@@ -483,6 +483,13 @@ area_botao_slider_01_03.onmouseout = function(){
     if(slide_01_03.style.display==="none") botao_slider_01_03.style.backgroundColor = "rgba(0,0,0,0.1)"
 }
 
+area_botao_slider_01_04.onmouseenter = function(){
+    botao_slider_01_04.style.backgroundColor = "var(--cor-primaria)"
+}
+area_botao_slider_01_04.onmouseout = function(){
+    if(slide_01_04.style.display==="none") botao_slider_01_04.style.backgroundColor = "rgba(0,0,0,0.1)"
+}
+
 botao_slider_01_01.onmouseenter = function(){
     botao_slider_01_01.style.backgroundColor = "var(--cor-primaria)"
 }
