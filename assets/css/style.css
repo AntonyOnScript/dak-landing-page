@@ -890,6 +890,9 @@ span{
 .modal-box .dialogo .conteudo-modal{
     padding: 20px 15px;
 }
+.conteudo-modal p{
+    text-align: center;
+}
 .ok-modal{
     -webkit-appearance: none;
     -moz-appearance: none;
