@@ -192,7 +192,7 @@ header{
     position: absolute;
     left: 0px;
     width: 100%;
-    height: 100%;
+    height: 110%;
     background-color: white;
     z-index: 3000;
 }
@@ -1094,7 +1094,11 @@ span{
         padding-bottom: 100px;
     }
     p, .fale-conosco form div span{
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 19px;
+    }
+    .container-sobre h2, h2{
+        font-size: 18px;
         line-height: 20px;
     }
     .article-novo-visual, #article-03, #article-02{
@@ -1156,10 +1160,6 @@ span{
     }
     .menu-mobile .linha{
         height: 4px;
-    }
-    .container-sobre h2, h2{
-        font-size: 16px;
-        line-height: 18px;
     }
     hr[verde]{
         bottom: 68%;
