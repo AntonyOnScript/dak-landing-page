@@ -300,6 +300,28 @@ function fechaModal(){
     }, 300)
 }
 // ESTILOS, ANIMAÇÕES, TRANSIÇÕES E ETC.
+// mascara telefone
+
+let telefone_input = document.querySelector('#telefone')
+telefone_input.addEventListener('keypress', (e)=>{
+    let numeros_permitidos = ['0','1','2','3','4','5','6','7','8','9','-','(',')']
+
+    if(numeros_permitidos.indexOf(e.key) === -1){
+        e.preventDefault()
+    }
+    if(telefone_input.value.length === 0){
+        telefone_input.value = "("+telefone_input.value
+    }
+    if(telefone_input.value.length === 3){
+        telefone_input.value = telefone_input.value+") "
+    }
+    if(telefone_input.value.length === 5){
+        telefone_input.value = telefone_input.value+"9 "
+    }
+    if(telefone_input.value.length === 11){
+        telefone_input.value = telefone_input.value+"-"
+    }
+})
 
 // seções da página
 
