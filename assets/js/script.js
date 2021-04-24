@@ -310,7 +310,8 @@ telefone_input.addEventListener('focus', (e)=>{
     telefone_input.setAttribute('maxlength','11')
 })
 telefone_input.onkeydown = (e)=>{
-    if(e.key === "Backspace"){
+    if(e.key === "Backspace" && telefone_input.value.indexOf('(')!==-1){
+        e.preventDefault()
         telefone_input.value = telefone_input.value.replace('(', "")
         telefone_input.value = telefone_input.value.replace(')', "")
         telefone_input.value = telefone_input.value.replace(' ', "")
