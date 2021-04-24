@@ -300,29 +300,27 @@ function fechaModal(){
     }, 300)
 }
 // ESTILOS, ANIMAÇÕES, TRANSIÇÕES E ETC.
+
 // mascara telefone
 
 let telefone_input = document.querySelector('#telefone')
-telefone_input.addEventListener('keydown', (e)=>{
-    let numeros_permitidos = ['0','1','2','3','4','5','6','7','8','9','-','(',')']
 
-    if(numeros_permitidos.indexOf(e.key) === -1){
-        e.preventDefault()
-    }
-    if(telefone_input.value.length === 0){
-        telefone_input.value = "("+telefone_input.value
-    }
-    if(telefone_input.value.length === 3){
-        telefone_input.value = telefone_input.value+") "
-    }
-    if(telefone_input.value.length === 5){
-        telefone_input.value = telefone_input.value+"9 "
-    }
-    if(telefone_input.value.length === 11){
-        telefone_input.value = telefone_input.value+"-"
-    }
+
+telefone_input.addEventListener('focus', (e)=>{
+    telefone_input.setAttribute('maxlength','11')
 })
 
+telefone_input.addEventListener('blur', (e)=>{
+    telefone_input.setAttribute('maxlength','15')
+    telefone_input.value = telefone(telefone_input.value)
+})
+
+function telefone(v){
+    v=v.replace(/\D/g,"")                 //Remove tudo o que não é dígito
+    v=v.replace(/^(\d\d)(\d)/g,"($1) $2") //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d{4})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+    return v
+}
 // seções da página
 
 const secoes = {
