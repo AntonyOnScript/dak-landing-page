@@ -1209,6 +1209,9 @@ span{
     .prime-sustentavel p{
         padding-left: 80px;
     }
+    .moleculas{
+        padding-top: 95px;
+    }
 }
 @media only screen and (max-width:402px){
     :root{
@@ -1235,9 +1238,6 @@ span{
     }
     .footer-container a{
         font-size: 12px;
-    }
-    .moleculas{
-        padding-top: 100px;
     }
 }
 @media only screen and (max-width:370px){
