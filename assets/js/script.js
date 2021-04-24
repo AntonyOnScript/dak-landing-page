@@ -309,7 +309,14 @@ let telefone_input = document.querySelector('#telefone')
 telefone_input.addEventListener('focus', (e)=>{
     telefone_input.setAttribute('maxlength','11')
 })
-
+telefone_input.onkeydown = (e)=>{
+    if(e.key === "Backspace"){
+        telefone_input.value = telefone_input.value.replace('(', "")
+        telefone_input.value = telefone_input.value.replace(')', "")
+        telefone_input.value = telefone_input.value.replace(' ', "")
+        telefone_input.value = telefone_input.value.replace('-', "")
+    }
+}
 telefone_input.addEventListener('blur', (e)=>{
     telefone_input.setAttribute('maxlength','15')
     telefone_input.value = telefone(telefone_input.value)
@@ -318,7 +325,11 @@ telefone_input.addEventListener('blur', (e)=>{
 function telefone(v){
     v=v.replace(/\D/g,"")                 //Remove tudo o que não é dígito
     v=v.replace(/^(\d\d)(\d)/g,"($1) $2") //Coloca parênteses em volta dos dois primeiros dígitos
-    v=v.replace(/(\d{4})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+    if(telefone_input.value.length === 10){
+        v=v.replace(/(\d{4})(\d)/,"$1-$2") //Coloca hífen entre o quarto e o quinto dígitos
+    }else if(telefone_input.value.length === 11){
+        v=v.replace(/(\d{5})(\d)/,"$1-$2") //Coloca hífen entre o quinto e o sexto dígitos
+    }
     return v
 }
 // seções da página
