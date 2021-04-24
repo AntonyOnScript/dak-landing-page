@@ -5,6 +5,9 @@
     --espaço-padding:238px;
     --espaço-padding-2:135px;
 }
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 *{
     outline: none;
     margin: 0;
