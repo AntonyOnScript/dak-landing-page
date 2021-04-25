@@ -305,17 +305,6 @@ function fechaModal(){
 
 let telefone_input = document.querySelector('#telefone')
 
-telefone_input.addEventListener('blur', ()=>{
-    telefone_input.value.replace('(', '')
-    telefone_input.value.replace(')', '')
-    telefone_input.value.replace(' ', '')
-    telefone_input.value.replace('-', '')
-    setTimeout(() => {
-        telefone_input.value = telefone(telefone_input.value)
-    }, 10);
-    
-})
-
 telefone_input.addEventListener('keydown', teclaTelefone)
 
 function teclaTelefone(e){
