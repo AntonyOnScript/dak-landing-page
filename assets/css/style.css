@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900;1000&display=swap');
+@import url(//db.onlinewebfonts.com/c/a78cfad3beb089a6ce86d4e280fa270b?family=Calibri);
 :root{
     --cor-primaria:#1c547a;
     --espaço-padding:238px;
@@ -884,6 +885,7 @@ span{
     width: 300px;
     min-height: 100px;
     max-height: 100%;
+    -webkit-border-radius: 0px;
     border-radius: 4px;
     border-end-end-radius: 8px;
     border-end-start-radius: 8px;
@@ -1290,16 +1292,16 @@ span{
     100%{top: -10px;}
 }
 @keyframes apareceMenu{
-    from{margin-top: -100%;}
-    to{margin-top: 0%;}
+    from{clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+    to{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
 }
 @keyframes menuLateral{
-    from{left: 1000px;}
-    to{left:0px;}
+    from{clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);}
+    to{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
 }
 @keyframes menuLateralSome{
-    from{left: 0px;}
-    to{left:1000px;}
+    from{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+    to{clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);}
 }
 @keyframes abreModal{
     from{transform: scale(.1, .1);}

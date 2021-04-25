@@ -424,7 +424,7 @@ menu_01.addEventListener('click', function(){
         menu_lateral.style.top = document.documentElement.scrollTop+'px'
         menu_lateral.style.display = "flex"
         menu_lateral.style.animation = "menuLateral .3s"
-        document.body.style.overflow = "hidden"
+        document.body.style.overflowY = "hidden"
         menus.style.boxShadow = "0px 1px 10px rgba(0,0,0,0.0)"
     }
 })
@@ -455,7 +455,7 @@ menu_02.addEventListener('click', function(){
         menu_lateral.style.top = "0px"
         menu_lateral.style.display = "flex"
         menu_lateral.style.animation = "menuLateral .3s"
-        document.body.style.overflow = "hidden"
+        document.body.style.overflowY = "hidden"
         document.documentElement.scrollTop = 0
     }
 })
