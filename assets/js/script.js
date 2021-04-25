@@ -305,27 +305,38 @@ function fechaModal(){
 
 let telefone_input = document.querySelector('#telefone')
 
-
+telefone_input.addEventListener('blur', ()=>{
+    telefone_input.value.replace('(', '')
+    telefone_input.value.replace(')', '')
+    telefone_input.value.replace(' ', '')
+    telefone_input.value.replace('-', '')
+    setTimeout(() => {
+        telefone_input.value = telefone(telefone_input.value)
+    }, 10);
+    
+})
 
 telefone_input.addEventListener('keydown', teclaTelefone)
 
 function teclaTelefone(e){
     if(telefone_input.value.length === 15 && e.key !== "Backspace"){
         e.preventDefault()
-        return ''
+        return 
     }
-    if(telefone_input.value.length < 15 && e.key !== "Backspace"){
+    if(telefone_input.value.length < 15 && (e.key !== "Backspace" && e.key!=='ArrowLeft' && e.key!=='ArrowRight')){
         console.log('ok')
         telefone_input.setAttribute('maxlength','15')
         telefone_input.value = telefone(telefone_input.value)
     }
+    
 }
-function telefone(v, numero_01_01, numero_01_02, numero_02_01){
+function telefone(v){
     v=v.replace(/\D/g,"") //Remove tudo o que não é dígito
     v=v.replace(/^(\d\d)(\d)/g,"($1) $2") //Coloca parênteses em volta dos dois primeiros dígitos
-    if(telefone_input.value.length >= 10 && telefone_input.value.length <= 13){
+    if(telefone_input.value.length >= 10 && telefone_input.value.length <= 14){
         v=v.replace(/(\d{4})(\d)/,"$1-$2") //Coloca hífen entre o quarto e o quinto dígitos
-    }else if(telefone_input.value.length <= 14){
+    }
+    if(telefone_input.value.length <= 15){
         v=v.replace(/(\d{5})(\d)/,"$1-$2") //Coloca hífen entre o quinto e o sexto dígitos
     }
     return v
