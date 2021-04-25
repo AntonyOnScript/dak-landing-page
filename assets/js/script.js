@@ -319,27 +319,15 @@ telefone_input.addEventListener('blur', ()=>{
 telefone_input.addEventListener('keydown', teclaTelefone)
 
 function teclaTelefone(e){
-    if(telefone_input.value.length === 15 && e.key !== "Backspace"){
-        e.preventDefault()
-        return 
-    }
-    if(telefone_input.value.length < 15 && (e.key !== "Backspace" && e.key!=='ArrowLeft' && e.key!=='ArrowRight')){
-        console.log('ok')
-        telefone_input.setAttribute('maxlength','15')
-        telefone_input.value = telefone(telefone_input.value)
-    }
-    
+    setTimeout(()=>{
+   telefone_input.value = telefone(telefone_input.value)
+    }, 2)
 }
 function telefone(v){
-    v=v.replace(/\D/g,"") //Remove tudo o que não é dígito
-    v=v.replace(/^(\d\d)(\d)/g,"($1) $2") //Coloca parênteses em volta dos dois primeiros dígitos
-    if(telefone_input.value.length >= 10 && telefone_input.value.length <= 14){
-        v=v.replace(/(\d{4})(\d)/,"$1-$2") //Coloca hífen entre o quarto e o quinto dígitos
-    }
-    if(telefone_input.value.length <= 15){
-        v=v.replace(/(\d{5})(\d)/,"$1-$2") //Coloca hífen entre o quinto e o sexto dígitos
-    }
-    return v
+   v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
 }
 // seções da página
 
