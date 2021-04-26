@@ -646,9 +646,11 @@ h4{
 }
 .icone-texto{
     display: flex;
-    column-gap: 20px;
     align-items: center;
     padding-bottom: 20px;
+}
+.icone-texto img{
+    margin-right: 20px;
 }
 .sustentavel{
     margin-left: 70px;
