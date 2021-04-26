@@ -671,8 +671,10 @@ h4{
 .elementos-article article{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
     max-width: 190px;
+}
+.elementos-article div:nth-child(1){
+    margin-bottom: 10px;
 }
 .elementos-article article div{
     border: solid 1px #e2e2e2;
@@ -1032,6 +1034,12 @@ span{
     .footer-container .endereco{
         margin: 60px 0px;
     }
+    .links *{
+        margin-bottom: 18px;
+    }
+    .links span:nth-child(6){
+        margin-bottom: 0px;
+    }
     .footer-container a{
         min-width: auto;
     }
@@ -1044,7 +1052,9 @@ span{
     .prime-sustentavel{
         padding: 4px var(--espaço-padding-2) 80px var(--espaço-padding-2);
         flex-direction: column;
-        row-gap: 20px;
+    }
+    .prime-sustentavel .prime{
+        margin-bottom: 20px;
     }
     .sustentavel{
         margin: 0;
