@@ -39,6 +39,8 @@ header{
     min-height: 100vh;
 }
 .background-hero{
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 0; 
     left: 0;
@@ -52,22 +54,20 @@ header{
 }
 .background-hero .slider{
     display: flex;
+    justify-content: center;
     position: relative;
     min-width: 100%;
     min-height: 100%;
 }
 .background-hero .slider img{
     position: absolute;
-    top: 0px;
-    left: -100px;
     min-height: 100%;
     min-width: 100%;
+    max-height: 100%;
 }
 .background-hero .slider video{
     position: absolute;
     top: 0px;
-    left: 0px;
-    right: 0px;
     max-height: 100%;
     min-height:100%;
     min-width: 100%;
@@ -965,7 +965,8 @@ span{
         font-size: 33px;
     }
     .textos-hero div{
-        margin-left: calc(var(--espaço-padding-2));
+        margin-right: 90px;
+        margin-left: calc(var(--espaço-padding-2) + 50px);
     }
     .container-sobre{
         padding: 65px 80px 133px var(--espaço-padding-2);
@@ -985,6 +986,7 @@ span{
         margin: 0px 100px;
     }
 }
+/*
 @media only screen and (max-width: 1315px){
     .seta-03, .seta-04{
         display: none;
@@ -996,6 +998,7 @@ span{
         z-index: -10000;
     }
 }
+*/
 @media only screen and (max-width:1260px){
     .elementos-article {
         padding: 30px var(--espaço-padding-2) 150px var(--espaço-padding-2);
@@ -1072,9 +1075,6 @@ span{
         line-height: 30px;
         margin-bottom: 10px;
     }
-    .seta{
-        display: none;
-    }
     .textos-desenvolvimento{
         padding: 0px var(--espaço-padding-2);
     }
@@ -1108,6 +1108,13 @@ span{
     .elementos-article {
         padding: 30px 20px 150px 20px;
     }
+    .seta{
+        display: none;
+    }
+    .textos-hero div {
+        margin-right: 0px;
+        margin-left: var(--espaço-padding-2);
+    }    
 }
 @media only screen and (max-width:560px){
     :root{

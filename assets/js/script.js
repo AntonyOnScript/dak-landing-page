@@ -54,51 +54,6 @@ const intervaloSlide02 = setInterval(() => {
     passaSlideAutomatico(slide_02_01, slide_02_02, slide_02_03)
 }, 7000);
 
-// verifica a resolução
-window.onresize = verificaTela
-function verificaTela(){
-    var menu_mobile = document.querySelector('.menu-mobile')
-    if(window.innerWidth<=1315){
-        botao_slider_01_01.style.visibility = 'hidden'
-        botao_slider_01_02.style.visibility = 'hidden'
-        botao_slider_01_03.style.visibility = 'hidden'
-        botao_slider_01_04.style.visibility  = 'hidden'
-
-        slide_01_01.style.display = "none"
-        slide_01_02.style.display = "none"
-        slide_01_03.style.display = "none"
-        slide_01_04.style.display = "none"
-        slide_01_04.pause()
-        
-        passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
-
-        document.querySelector('.slider').style.backgroundColor = "#c6e0eb"
-    }
-    if(window.innerWidth>1315){
-        botao_slider_01_01.style.visibility = 'visible'
-        botao_slider_01_02.style.visibility = 'visible'
-        botao_slider_01_03.style.visibility = 'visible'
-        botao_slider_01_04.style.visibility  = 'visible'
-        slide_01_04.pause()
-
-        resetarCoresSlide(botao_slider_01_01, botao_slider_01_02, botao_slider_01_03, botao_slider_01_04)
-        mudaCorDoBotãoAutomático(botao_slider_01_01)
-
-        slide_01_01.style.display = "flex"
-        slide_01_02.style.display = "flex"
-        slide_01_03.style.display = "flex"
-        slide_01_04.style.display = "flex"
-        passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
-    }
-    if(window.innerWidth>1260){
-        menu_mobile.style.display = "none"
-    }
-    if(window.innerWidth<=1260){
-        menu_mobile.style.display = "flex"
-    }
-}
-
-verificaTela()
 // verifica qual número vai ser apresentado no hero
 function checkBefore(){
     if(slide_01_01.style.display!=="none"){
