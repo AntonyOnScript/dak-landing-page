@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Dakhia</title>
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-    <script src="assets/js/script.js" defer></script>
+    <script src="<?php echo get_template_directory_uri();?>/assets/js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/style.css">
 </head>
 <body>
     <div class="modal-box">
@@ -39,7 +39,7 @@
         </div> 
     </div>
     <div class="menu" menu-fixo>
-        <img src="assets/imgs/logo_colorido.svg">
+        <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg">
         <ul>
             <li class="link_01"><a class="link_01">Home</a></li>
             <li class="link_02"><a class="link_02">Sobre Nós</a></li>
@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="menu" id="menu-topo">
-        <img src="assets/imgs/logo_colorido.svg">
+        <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg">
         <ul>
             <li class="link_01"><a class="link_01">Home</a></li>
             <li class="link_02"><a class="link_02">Sobre Nós</a></li>
@@ -71,10 +71,10 @@
     <header id="header">
         <div class="background-hero">
             <div class="slider">
-                <img src="assets/imgs/slide01_01.png" class="slide-01-01" id="slide01-01" style="display: none;">
-                <img src="assets/imgs/slide01_02.png" class="slide-01-02" id="slide01-02" style="display: none;">
-                <img src="assets/imgs/slide01_03.png" class="slide-01-03" id="slide01-03">
-                <video src="assets/video/video.mp4" class="slide-01-04" style="display: none;"></video>
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/slide01_01.png" class="slide-01-01" id="slide01-01" style="display: none;">
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/slide01_02.png" class="slide-01-02" id="slide01-02" style="display: none;">
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/slide01_03.png" class="slide-01-03" id="slide01-03">
+                <video src="<?php echo get_template_directory_uri();?>/assets/video/video.mp4" class="slide-01-04" style="display: none;"></video>
             </div>
         </div>
         <div class="textos-hero">
@@ -121,7 +121,7 @@
                 <input type="button" value="CONHEÇA" class="assista-agora modal">
             </div>
             <div class="container-youtube">
-                <img src="assets/imgs/youtube.png" class="youtube">
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/youtube.png" class="youtube">
             </div>
         </div>
     </section>
@@ -147,8 +147,8 @@
                 class="seta seta-01">
             </lord-icon>
             <article class="article-novo-visual slide-02-01" id="article-01">
-                <img src="assets/imgs/setaverde.png" alt="" >
-                <div><img src="assets/imgs/amarelo.png" class="espacador"></div>
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/setaverde.png" alt="" >
+                <div><img src="<?php echo get_template_directory_uri();?>/assets/imgs/amarelo.png" class="espacador"></div>
                 <hr verde>
                 <div class="textos-article">
                     <h3 style="color:#8ec341;letter-spacing: 3.2px;">verde</h3>
@@ -157,8 +157,8 @@
                 </div>
             </article>
             <article class="article-novo-visual slide-02-02" id="article-02">
-                <img src="assets/imgs/amarelo.png" alt="">
-                <div><img src="assets/imgs/amarelo.png" class="espacador"></div>
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/amarelo.png" alt="">
+                <div><img src="<?php echo get_template_directory_uri();?>/assets/imgs/amarelo.png" class="espacador"></div>
                 <hr verde amarelo>
                 <div class="textos-article">
                     <h3 style="color:#fdb745;letter-spacing: 3.2px;">Amarelo</h3>
@@ -167,8 +167,8 @@
                 </div>
             </article>
             <article class="article-novo-visual slide-02-03" id="article-03">
-                <img src="assets/imgs/vermelho.png" alt="">
-                <div><img src="assets/imgs/amarelo.png" class="espacador"></div>
+                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/vermelho.png" alt="">
+                <div><img src="<?php echo get_template_directory_uri();?>/assets/imgs/amarelo.png" class="espacador"></div>
                 <hr verde vermelho>
                 <div class="textos-article">
                     <h3 style="color:#c34541;letter-spacing: 3.2px;">vermelho</h3>
@@ -199,28 +199,28 @@
             <h1 titulo-de-seção>Economia circular</h1>
             <div class="articles-conteudo">
                 <article>
-                    <img src="assets/imgs/blog_01.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_01.png" alt="">
                     <h3>sociedade</h3>
                     <h1>lre asokf oapfo sapfks apfs?</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
                 </article>
 
                 <article>
-                    <img src="assets/imgs/blog_02.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_02.png" alt="">
                     <h3>meio ambiente</h3>
                     <h1>lreot asokf oapfo sapfks apfs?</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
                 </article>
 
                 <article>
-                    <img src="assets/imgs/blog_03.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_03.png" alt="">
                     <h3>sociedade</h3>
                     <h1>lrefkoas asokf oapfo sapfks apfs?</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
                 </article>
                 
                 <article>
-                    <img src="assets/imgs/blog_04.png" alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_04.png" alt="">
                     <h3>tecnologia</h3>
                     <h1>lreotgfk asokf oapfo sapfks apfs?</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
@@ -229,7 +229,7 @@
         </div>
     </section>
     <section class="desenvolvimento" id="nossos-produtos">
-        <div class="moleculas"><img src="assets/imgs/moleculas.png"></div>
+        <div class="moleculas"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/moleculas.png"></div>
         <div class="textos-desenvolvimento">
             <h3>desenvolvimento</h3>
             <h1 titulo-de-seção>Engenharia</h1>
@@ -242,14 +242,14 @@
         <div class="prime-sustentavel">
             <div class="prime">
                 <div class="icone-texto">
-                    <img src="assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
                     <h4 style="color: #fdb745;">PRIME</h4>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod debitis perspiciatis reprehenderit ab consectetur doloremque recusandae repellendus sint magnam iste dolor deleniti porro hic eum veniam possimus, laboriosam totam libero.</p>
             </div>
             <div class="sustentavel">
                 <div class="icone-texto">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                     <h4 style="color: #8ec341;">sustentavel</h4>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio maxime ratione quam eaque. Aspernatur cupiditate architecto fugiat illo provident quasi veniam laudantium officiis. Quidem asperiores excepturi ab maiores quo quis.</p>
@@ -264,8 +264,8 @@
                 </div>
                 <div>
                     <h2>DISPONÍVEL EM: </h2>
-                    <img src="assets/imgs/prime.svg">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                 </div>
             </article>
             <article>
@@ -276,8 +276,8 @@
                 </div>
                 <div>
                     <h2>DISPONÍVEL EM: </h2>
-                    <img src="assets/imgs/prime.svg">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                 </div>
             </article>
             <article>
@@ -288,8 +288,8 @@
                 </div>
                 <div>
                     <h2>DISPONÍVEL EM: </h2>
-                    <img src="assets/imgs/prime.svg">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                 </div>
             </article>
             <article>
@@ -300,8 +300,8 @@
                 </div>
                 <div>
                     <h2>DISPONÍVEL EM: </h2>
-                    <img src="assets/imgs/prime.svg">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                 </div>
             </article>
             <article>
@@ -312,8 +312,8 @@
                 </div>
                 <div>
                     <h2>DISPONÍVEL EM: </h2>
-                    <img src="assets/imgs/prime.svg">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                 </div>
             </article>
             <article>
@@ -324,8 +324,8 @@
                 </div>
                 <div>
                     <h2>DISPONÍVEL EM: </h2>
-                    <img src="assets/imgs/prime.svg">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                 </div>
             </article>
             <article>
@@ -336,8 +336,8 @@
                 </div>
                 <div>
                     <h2>DISPONÍVEL EM: </h2>
-                    <img src="assets/imgs/prime.svg">
-                    <img src="assets/imgs/sustentavel.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
                 </div>
             </article>
     </section>
@@ -366,7 +366,7 @@
     </section>
     <footer>
         <div class="footer-container">
-            <img src="assets/imgs/logo_gray.svg">
+            <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_gray.svg">
             <div class="endereco">
                 <h3>endereço</h3>
                 <a>Av. Fabio Eduardo Ramos Esquivel, 2424</a>
