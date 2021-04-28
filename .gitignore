@@ -1,0 +1,8 @@
+# SOs
+**/.DS_STORE
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+nbproject/
