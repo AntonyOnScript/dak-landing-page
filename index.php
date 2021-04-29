@@ -88,10 +88,11 @@
                 class="seta seta-03">
             </lord-icon>
             <div>
-                <h3>uma nova dakhia para o futuro</h3>
-                <h1>a dakhia mudou.</h1>
-                <h1>veja nosso manifesto</h1>
-                <button class="assista-agora">assista agora</button>
+                <h3><?php the_field('slider_titulo_menor'); ?></h3>
+                <h1><?php the_field('titulo_maior'); ?></h1>
+                <a href="<?php the_field('slider_botao_link'); ?>">
+                    <button class="assista-agora"><?php the_field('slider_botao_texto'); ?></button>
+                </a>
             </div>
             <lord-icon
                 src="https://cdn.lordicon.com/zpcieyfp.json"
@@ -114,12 +115,13 @@
     <section class="sobre" id="sobre-nos">
         <div class="container-sobre">
             <div class="textos-sobre">
-                <h3>sobre nós</h3>
-                <h1 titulo-de-seção>conheça a dakhia</h1>
-                <h2>Lorem, ipsum dolor sit amet conse adipisicinge egetium.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ad recusandae laboriosam veniam, sint id molestias architecto qui ab exercitati  Lorem ipsum Surem.</p>
-                <p style="margin-top: 10px;">veniam, sint id molestias architecto qui ab exercitationem vitae laudantium minus saepe nisi asperiores blanditiis facilis et incidunt. Lorem ipsum dolor </p>
-                <input type="button" value="CONHEÇA" class="assista-agora modal">
+                <h3><?php the_field('sobre_titulo_menor'); ?></h3>
+                <h1 titulo-de-seção><?php the_field('sobre_titulo_maior'); ?></h1>
+                <h2><?php the_field('sobre_texto_maior'); ?></h2>
+                <p><?php the_field('sobre_texto_menor'); ?></p>
+                <a href="<?php the_field('sobre_botao_link'); ?>">
+                    <input type="button" value="<?php the_field('sobre_botao_texto'); ?>" class="assista-agora modal">
+                </a>
             </div>
             <div class="container-youtube">
                 <img src="<?php echo get_template_directory_uri();?>/assets/imgs/youtube.png" class="youtube">
