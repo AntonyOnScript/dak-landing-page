@@ -1,3 +1,4 @@
+<?php require_once 'header.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -388,3 +389,4 @@
     <a href="#menu-topo" class="back-to-top" style="font-weight: 300; font-family: 'Nanum Myeong';font-size:18px"><i class="fas fa-angle-up"></i></a>
 </body>
 </html>
+<?php require_once 'footer.php';
