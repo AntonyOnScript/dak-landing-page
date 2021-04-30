@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Dakhia</title>
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-    <script src="assets/js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
@@ -391,5 +390,31 @@
         </div>
     </footer>
     <a href="#menu-topo" class="back-to-top" style="font-weight: 300; font-family: 'Nanum Myeong';font-size:18px"><i class="fas fa-angle-up"></i></a>
+    <script>
+        // adaptações para wordpress
+        let labels = document.querySelectorAll(".fale-conosco form div label span")
+        for(let i of labels){
+            i.setAttribute("class", "label-form")
+        }
+        let inputs = document.querySelectorAll('.fale-conosco form div span input')
+        let textarea = document.querySelector('.fale-conosco form div span textarea')
+
+        textarea.setAttribute('id', 'mensagem')
+        textarea.setAttribute('placeholder', "Digite sua mensagem")
+
+        inputs[0].setAttribute('id', 'nome')
+        inputs[0].setAttribute('placeholder', 'Digite seu nome')
+        inputs[0].setAttribute('autocomplete', 'off')
+        
+        inputs[1].setAttribute('id', 'email')
+        inputs[1].setAttribute('autocomplete', 'off')
+        inputs[1].setAttribute('placeholder', 'exemplo@dominio.com')
+
+        inputs[2].setAttribute('id', 'telefone')
+        inputs[2].setAttribute('placeholder', '(__) ____-____')
+        inputs[2].setAttribute('maxlength', '15')
+        inputs[2].setAttribute('autocomplete', 'off')
+    </script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>

@@ -737,17 +737,28 @@ h4{
     display: flex;
     flex-direction: column;
 }
-.fale-conosco form div:nth-child(1){
-    grid-area: nome;
+br{
+    display:none;
+}
+.fale-conosco form div{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .fale-conosco form div:nth-child(2){
-    grid-area: email;
+    grid-area: nome;
 }
 .fale-conosco form div:nth-child(3){
-    grid-area: telefone;
+    grid-area: email;
 }
 .fale-conosco form div:nth-child(4){
+    grid-area: telefone;
+}
+.fale-conosco form div:nth-child(5){
     grid-area: mensagem;
+}
+.fale-conosco form div:nth-child(1){
+    display:none;
 }
 .fale-conosco form div input, .fale-conosco form div textarea{
     padding: 16px 24px;
