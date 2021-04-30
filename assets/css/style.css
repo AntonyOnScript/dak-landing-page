@@ -745,16 +745,16 @@ br{
     display: flex;
     flex-direction: column;
 }
-.fale-conosco form div:nth-child(2){
+.fale-conosco form div.nome{
     grid-area: nome;
 }
-.fale-conosco form div:nth-child(3){
+.fale-conosco form div.email{
     grid-area: email;
 }
-.fale-conosco form div:nth-child(4){
+.fale-conosco form div.telefone{
     grid-area: telefone;
 }
-.fale-conosco form div:nth-child(5){
+.fale-conosco form div.mensagem{
     grid-area: mensagem;
 }
 .fale-conosco form div:nth-child(1){
