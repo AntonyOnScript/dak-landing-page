@@ -757,9 +757,6 @@ br{
 .fale-conosco form div.mensagem{
     grid-area: mensagem;
 }
-.fale-conosco form div:nth-child(1){
-    display:none;
-}
 .fale-conosco form div input, .fale-conosco form div textarea{
     padding: 16px 24px;
     width:100%;
