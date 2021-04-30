@@ -785,13 +785,22 @@ h4{
     color: var(--cor-primaria);
     animation: links .8s 1;
 }
-.fale-conosco form div span{
+.fale-conosco form div label .label-form{
     float: left;
     color: var(--cor-primaria);
     font-weight: 400;
     font-family: "Calibri";
     font-size: 20px;
     margin-bottom: 8px;
+}
+.wpcf7-not-valid-tip {
+    color: #dc3232;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Calibri";
+    display: block;
+    float: left;
+    margin-top: 3px;
 }
 .fale-conosco form input{
     border: solid 1px #e2e2e2;
