@@ -347,25 +347,7 @@
     <section class="fale-conosco" id="contato">
         <h3>Contato</h3>
         <h1 titulo-de-seção>Fale conosco</h1>
-        <form>
-            <div>
-                <label for="nome"><span>Nome Completo*</span></label>
-                <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="off">
-            </div>
-            <div>
-                <label for="e-mail"><span>E-mail*</span></label>
-                <input type="text" id="email" placeholder="exemplo@dominio.com" autocomplete="off">
-            </div>
-            <div>
-                <label for="telefone"><span>Telefone*</span></label>
-                <input type="text" id="telefone" placeholder="(__) ____-____"  maxlength="15" autocomplete="off">
-            </div>
-            <div>
-                <label for="mensagem"><span>Mensagem</span></label>
-                <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
-            </div>
-            <input type="button" value="Enviar" class="submit">
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="43" title="Personalizado"]') ?>
     </section>
     <footer>
         <div class="footer-container">
