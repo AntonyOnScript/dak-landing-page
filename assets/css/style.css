@@ -730,7 +730,7 @@ h4{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 9px 14px;
-    grid-template-areas: "nome nome" "email telefone" "mensagem mensagem" "none submit";
+    grid-template-areas: "nome nome" "email telefone" "mensagem mensagem" "submit submit";
 }
 .fale-conosco form div{
     max-width: 100%;
@@ -757,6 +757,9 @@ br{
 .fale-conosco form div.mensagem{
     grid-area: mensagem;
 }
+.fale-conosco form div.enviar{
+    grid-area: submit;
+}
 .fale-conosco form div input, .fale-conosco form div textarea{
     padding: 16px 24px;
     width:100%;
@@ -764,6 +767,9 @@ br{
     appearance: none;
     border-radius: 0px;
     -webkit-border-radius: 0px;
+}
+.wpcf7-response-output{
+    grid-column: span 2;
 }
 .fale-conosco form div textarea{
     height: 140px;
@@ -773,11 +779,10 @@ br{
 .fale-conosco form .submit{
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;       
+    appearance: none;
+    margin: auto;       
     margin-top: 30px;
-    float: right;
-    justify-self: self-end;
-    grid-area: submit;
+    margin-bottom: 0px;
     width: 160px;
     height: 60px;
     border: none;
