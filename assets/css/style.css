@@ -759,6 +759,7 @@ br{
 }
 .fale-conosco form div.enviar{
     grid-area: submit;
+    align-items: flex-end;
 }
 .fale-conosco form div input, .fale-conosco form div textarea{
     padding: 16px 24px;
@@ -780,7 +781,6 @@ br{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: auto;       
     margin-top: 30px;
     margin-bottom: 0px;
     width: 160px;
@@ -1112,9 +1112,6 @@ span{
         "submit"
         ;
         row-gap: 20px;
-    }
-    .fale-conosco form .submit{
-        justify-self: center;
     }
     .conteudo-azul h1{
         font-size: 24px;
