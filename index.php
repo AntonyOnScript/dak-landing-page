@@ -75,7 +75,7 @@
                 style="width:90px;height:90px"
                 class="seta seta-03">
             </lord-icon>
-            <div>
+            <div class="textos-variaveis">
                 <h3><?php the_field('slider_titulo_menor'); ?></h3>
                 <h1><?php the_field('titulo_maior'); ?></h1>
                 <a href="<?php the_field('slider_botao_link'); ?>">

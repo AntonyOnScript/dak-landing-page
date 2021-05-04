@@ -29,9 +29,8 @@ let botao_slider_02_02 = document.querySelector('.botao-slider-02-02')
 let botao_slider_02_03 = document.querySelector('.botao-slider-02-03')
 
 let textos_variaveis_slider = {
-    h3:document.querySelector('h3'),
-    h1_01:document.querySelector('h1.primeiro'),
-    h1_02:document.querySelector('h1.segundo')
+    h3:document.querySelector('.textos-variaveis h3'),
+    h1_01:document.querySelector('.textos-variaveis h1'),
 }
 // video
 slide_01_04.volume = 0
@@ -63,22 +62,21 @@ const intervaloSlide02 = setInterval(() => {
 function checkSlide(){
     if(slide_01_01.style.display!=="none"){
         before_numero.dataset.content = '01'
-        mudaTextoSlide('UMA NOVA DAKHIA PARA O FUTURO', 'A DAKHIA MUDOU.', "VEJA NOSSO MANIFESTO")
+        mudaTextoSlide('UMA NOVA DAKHIA PARA O FUTURO', 'A DAKHIA MUDOU. VEJA NOSSO MANIFESTO')
     }else if(slide_01_02.style.display!=="none"){
         before_numero.dataset.content = '02'
-        mudaTextoSlide('FAÇA PARTE DO NOSSO TIME', 'ANOS LUZ A FRENTE DO COMUM.', "SEJA O DIFERENCIAL")
+        mudaTextoSlide('FAÇA PARTE DO NOSSO TIME', 'ANOS LUZ A FRENTE DO COMUM. SEJA O DIFERENCIAL')
     }else if(slide_01_03.style.display!=="none"){
         before_numero.dataset.content = '03'
-        mudaTextoSlide('FAÇA PARTE DA HISTÓRIA', 'A CADA NOVA HISTÓRIA UMA NOVA ALEGRIA.', "MUDE HOJE MESMO")
+        mudaTextoSlide('FAÇA PARTE DA HISTÓRIA', 'A CADA NOVA HISTÓRIA UMA NOVA ALEGRIA. MUDE HOJE MESMO')
     }else if(slide_01_04.style.display!=="none"){
         before_numero.dataset.content = '04'
-        mudaTextoSlide('A NOVO MODO DE MUDAR', 'E DE FATO,', "NOVAS HISTÓRIAS, NOVAS MEMÓRIAS")
+        mudaTextoSlide('A NOVO MODO DE MUDAR', 'E DE FATO, NOVAS HISTÓRIAS, NOVAS MEMÓRIAS')
     }
 }
 // muda o texto de acordo com o slide 01
-function mudaTextoSlide(h3, h1_01, h1_02){
+function mudaTextoSlide(h3, h1_01){
     textos_variaveis_slider.h1_01.innerText = h1_01
-    textos_variaveis_slider.h1_02.innerText = h1_02
     textos_variaveis_slider.h3.innerText = h3
 }
 // passa o slide automático
