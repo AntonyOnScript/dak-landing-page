@@ -49,10 +49,10 @@ section{
     margin-bottom: 30px;
 }
 .titulo{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .aviso{
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 .home{
     width: 160px;
@@ -93,4 +93,15 @@ footer p:nth-child(1){
 @keyframes links{
     from{border:solid 1px var(--cor-primaria);}
     to{border:solid 1px white;}
+}
+@media only screen and (max-width:320px){
+    footer p, footer a{
+        font-size: 13pt;
+    }
+    h1{
+        font-size: 80px;
+    }
+    p{
+        text-align: center;
+    }
 }
