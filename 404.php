@@ -1,22 +1,22 @@
 <?php require_once 'header.php'; ?>
-
-	<main role="main">
+	<!DOCTYPE html>
+		<html lang="pt-BR">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, user-scalable=no">
+			<title>Página não encontrada</title>
+			<link rel="stylesheet" href="wp-content/themes/dakhia/assets/css/reset.css">
+			<link rel="stylesheet" href="wp-content/themes/dakhia/assets/css/404.css">
+		</head>
+		<body>
 		<!-- section -->
-		<section>
-
-			<!-- article -->
-			<article id="post-404">
-
-				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
-
-			</article>
-			<!-- /article -->
-
-		</section>
+			<section>
+			    <img src="wp-content/themes/dakhia/assets/imgs/logo_colorido.svg" alt="" class="logo">
+			    <h1 class="titulo">404</h1>
+			    <p class="aviso">Essa página não pode ser encontrada.</p>
+			    <a href="<?php echo home_url(); ?>"><button class="home">IR PARA HOME</button></a>
+			</section>
 		<!-- /section -->
-	</main>
-
+		</body>
+	</html>
 <?php require_once 'footer.php';
