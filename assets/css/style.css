@@ -769,6 +769,9 @@ br{
     border-radius: 0px;
     -webkit-border-radius: 0px;
 }
+.wpcf7-response-output{
+    grid-column: span 2;
+}
 .fale-conosco form div textarea{
     height: 140px;
     resize: none;
@@ -802,6 +805,15 @@ br{
     font-family: "Calibri";
     font-size: 20px;
     margin-bottom: 8px;
+}
+.wpcf7-not-valid-tip {
+    color: #dc3232;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Calibri";
+    display: block;
+    float: left;
+    margin-top: 3px;
 }
 .fale-conosco form input{
     border: solid 1px #e2e2e2;
