@@ -28,6 +28,11 @@ let botao_slider_02_01 = document.querySelector('.botao-slider-02-01')
 let botao_slider_02_02 = document.querySelector('.botao-slider-02-02')
 let botao_slider_02_03 = document.querySelector('.botao-slider-02-03')
 
+let textos_variaveis_slider = {
+    h3:document.querySelector('h3'),
+    h1_01:document.querySelector('h1.primeiro'),
+    h1_02:document.querySelector('h1.segundo')
+}
 // video
 slide_01_04.volume = 0
 
@@ -55,44 +60,53 @@ const intervaloSlide02 = setInterval(() => {
 }, 7000);
 
 // verifica qual número vai ser apresentado no hero
-function checkBefore(){
+function checkSlide(){
     if(slide_01_01.style.display!=="none"){
         before_numero.dataset.content = '01'
+        mudaTextoSlide('UMA NOVA DAKHIA PARA O FUTURO', 'A DAKHIA MUDOU.', "VEJA NOSSO MANIFESTO")
     }else if(slide_01_02.style.display!=="none"){
         before_numero.dataset.content = '02'
+        mudaTextoSlide('FAÇA PARTE DO NOSSO TIME', 'ANOS LUZ A FRENTE DO COMUM.', "SEJA O DIFERENCIAL")
     }else if(slide_01_03.style.display!=="none"){
         before_numero.dataset.content = '03'
+        mudaTextoSlide('FAÇA PARTE DA HISTÓRIA', 'A CADA NOVA HISTÓRIA UMA NOVA ALEGRIA.', "MUDE HOJE MESMO")
     }else if(slide_01_04.style.display!=="none"){
         before_numero.dataset.content = '04'
+        mudaTextoSlide('A NOVO MODO DE MUDAR', 'E DE FATO,', "NOVAS HISTÓRIAS, NOVAS MEMÓRIAS")
     }
 }
-
+// muda o texto de acordo com o slide 01
+function mudaTextoSlide(h3, h1_01, h1_02){
+    textos_variaveis_slider.h1_01.innerText = h1_01
+    textos_variaveis_slider.h1_02.innerText = h1_02
+    textos_variaveis_slider.h3.innerText = h3
+}
 // passa o slide automático
 function passaSlideAutomatico(slide01, slide02, slide03, slide04){
     if(typeof slide04 !== "undefined"){
         if(slide01.style.display!=="none"){
             passaSlideProLado(slide02, slide03, slide01, slide04)
-            checkBefore()
+            checkSlide()
         }else if(slide02.style.display!=="none"){
             passaSlideProLado(slide03, slide02, slide01, slide04)
-            checkBefore()
+            checkSlide()
         }else if(slide03.style.display!=="none"){
             passaSlideProLado(slide04, slide02, slide03, slide01)
-            checkBefore()
+            checkSlide()
         }else if(slide04.style.display!=="none"){
             passaSlideProLado(slide01, slide02, slide03, slide04)
-            checkBefore()
+            checkSlide()
         }
     }else{
         if(slide01.style.display!=="none"){
             passaSlideProLado(slide02, slide03, slide01)
-            checkBefore()
+            checkSlide()
         }else if(slide02.style.display!=="none"){
             passaSlideProLado(slide03, slide02, slide01)
-            checkBefore()
+            checkSlide()
         }else if(slide03.style.display!=="none"){
             passaSlideProLado(slide01, slide02, slide03)
-            checkBefore()
+            checkSlide()
         }
     }
 }
@@ -216,7 +230,7 @@ function passaSlideProLado(source_01, source_02, source_03, source_04){
     source_02.style.display = source_03.style.display = 'none'
 
     source_01.style.display = 'flex'
-    checkBefore()
+    checkSlide()
 }
 
 function mudaCorDoBotãoAutomático(botao){
