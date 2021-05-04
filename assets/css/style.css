@@ -483,7 +483,7 @@ hr{
     min-height: 331px;
     margin: 0 auto;
     margin-top: -30px;
-    animation: verdeVermelhoAmarelo 3.5s infinite;
+    animation: verdeVermelhoAmarelo 2s infinite;
 }
 .article-novo-visual div img.espacador, #article-02 div img.espacador, #article-03 div img.espacador{
     position: relative;
@@ -1345,9 +1345,9 @@ span{
     to{border:solid 1px white;}
 }
 @keyframes verdeVermelhoAmarelo{
-    0%{top: -10px;}
+    0%{top: -20px;}
     50%{top: 0px;}
-    100%{top: -10px;}
+    100%{top: -20px;}
 }
 @keyframes apareceMenu{
     from{clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
