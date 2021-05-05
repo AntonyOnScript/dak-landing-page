@@ -1391,3 +1391,7 @@ span{
 .wpcf7-response-output{
     grid-column: span 2;
 }
+.wpcf7 form .wpcf7-response-output {
+    margin: -.5em 0em 1em !important;
+    padding: 1em 1em;
+}
