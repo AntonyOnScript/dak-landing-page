@@ -24,7 +24,7 @@
                 <div class="linha linha-03 f-modal"></div>
             </div>
         </div>
-    <iframe src="https://www.youtube.com/embed/ZbZSe6N_BXs?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
+    <iframe src="https://www.youtube.com/embed/ZbZSe6N_BXs?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
     </div>
     <div class="modal-pesquisa">
         <div class="fecha-modal fecha-pesquisa-modal" ativado>
