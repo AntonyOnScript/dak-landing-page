@@ -26,6 +26,17 @@
         </div>
     <iframe src="https://www.youtube.com/embed/ZbZSe6N_BXs?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
     </div>
+    <div class="modal-pesquisa">
+        <div class="fecha-modal fecha-pesquisa-modal" ativado>
+            <div class="linha linha-01 f-modal"></div>
+            <div class="linha linha-02"></div>
+            <div class="linha linha-03 f-modal"></div>
+        </div>
+        <div class='pesquisa pesquisa-modal'>
+            <input type="text">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
     <div class="menu-lateral">
         <div>
             <ul>
@@ -36,6 +47,9 @@
                 <li class="link_05"><a class="link_05">Contato</a></li>
             </ul>
         </div> 
+        <div class="pesquisa mobile">
+            <i class="fas fa-search"></i>
+        </div>
     </div>
     <div class="menu" menu-fixo>
         <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg">
@@ -51,6 +65,9 @@
             <div class="linha linha-02"></div>
             <div class="linha linha-03"></div>
         </div>
+        <div class="pesquisa">
+            <i class="fas fa-search"></i>
+        </div>
     </div>
     <div class="menu" id="menu-topo">
         <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg">
@@ -65,6 +82,9 @@
             <div class="linha linha-01"></div>
             <div class="linha linha-02"></div>
             <div class="linha linha-03"></div>
+        </div>
+        <div class="pesquisa">
+            <i class="fas fa-search"></i>
         </div>
     </div>
     <header id="header">

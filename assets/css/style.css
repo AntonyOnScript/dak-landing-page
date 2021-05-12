@@ -193,7 +193,7 @@ header{
 .menu-lateral{
     display: none;
     flex-direction: column;
-    row-gap: 200px;
+    row-gap: 50px;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -987,6 +987,55 @@ span{
 .ok-modal:active{
     background-color: rgb(230, 230, 230);
 }
+.pesquisa{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:min-content;
+    padding: 0 25px;
+    z-index: 10000;
+}
+.pesquisa i{
+    font-size: 30px;
+    color: var(--cor-primaria);
+    margin: 0;
+}
+.pesquisa:hover i{
+    animation: pesquisa .6s 1;
+}
+.modal-pesquisa{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+    display: none;
+    flex-direction: column;
+    z-index: 20000;
+    justify-content: center;
+    align-items: center;
+}
+.pesquisa-modal{
+    position: relative;
+}
+.pesquisa-modal i{
+    position: absolute;
+    right: 30px;
+}
+.pesquisa input{
+    min-width:100%;
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px 45px 10px 10px;
+}
+.fecha-pesquisa-modal{
+    position: absolute;
+    top: 60px;
+    right: 40px;
+}
 /*MEDIA QUERIES*/
 @media only screen and (max-width:1880px){
     .elementos-article{
@@ -1043,6 +1092,15 @@ span{
     }
     .menu ul{
         display: none;
+    }
+    .pesquisa{
+        display:none;
+    }
+    .pesquisa-modal{
+        display: flex;
+    }
+    .pesquisa.mobile{
+        display: flex;
     }
     .menu-mobile{
         display: flex;
@@ -1392,7 +1450,10 @@ span{
     from{background-color:rgba(0, 0, 0, 0.219);}
     to{background-color:rgba(0, 0, 0, 0);}
 }
-
+@keyframes pesquisa{
+    from{transform: rotate3d(0, 0, 0, 0deg);}
+    to{transform: rotate3d(0, 0, 1, 360deg);}
+}
 /* WORDPRESS STYLES */
 .wpcf7-not-valid-tip {
     color: #dc3232;
