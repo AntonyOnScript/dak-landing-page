@@ -908,7 +908,7 @@ footer{
 span{
     font-size: 16px;
 }
-.modal-box{
+.modal-box, .modal-box-video{
     display: none;
     position: fixed;
     min-width: 100%;
@@ -919,6 +919,23 @@ span{
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+}
+.fecha-video-container{
+    width: 1920px;
+    max-width: 80%;
+}
+.modal-box-video{
+    flex-direction: column;
+}
+.fecha-video-modal{
+    float: right;
+    margin-bottom: 20px;
+}
+.modal-box-video iframe{
+    width: 1920px;
+    height: 500px;
+    max-width: 80%;
+    max-height: 80%;
 }
 .modal-box .dialogo{
     background-color: white;
