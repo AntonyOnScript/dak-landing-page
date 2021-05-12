@@ -76,10 +76,10 @@
                 class="seta seta-03">
             </lord-icon>
             <div class="textos-variaveis">
-                <h3><?php the_field('slider_titulo_menor'); ?></h3>
-                <h1><?php the_field('titulo_maior'); ?></h1>
-                <a href="<?php the_field('slider_botao_link'); ?>">
-                    <button class="assista-agora"><?php the_field('slider_botao_texto'); ?></button>
+                <h3>uma nova dakhia para o futuro</h3>
+                <h1>A dakhia mudou. veja nosso manifesto.</h1>
+                <a href="#">
+                    <button class="assista-agora">assista agora</button>
                 </a>
             </div>
             <lord-icon
