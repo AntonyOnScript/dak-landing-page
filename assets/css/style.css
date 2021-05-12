@@ -476,10 +476,9 @@ hr{
 .article-novo-visual img, #article-02 img, #article-03 img{
     position: absolute;
     top: 0px;
-    left: calc(50% - 132px);
+    align-self: center;
     max-width: 264px;
     max-height: 331px;
-    min-width: 264px;
     min-height: 331px;
     margin: 0 auto;
     margin-top: -30px;
@@ -1171,8 +1170,6 @@ span{
         padding: 0px 49px 30px 40px;
     }
     .article-novo-visual img, #article-03 img, #article-02 img{
-        left:calc(50% - 90px);
-        min-width: 180px;
         min-height: 180px;
         max-width: 180px;
         max-height: 180px;
@@ -1240,8 +1237,6 @@ span{
         font-size: 10px;
     }
     .article-novo-visual img, #article-03 img, #article-02 img{
-        left: calc(50% - 45px);
-        min-width: 90px;
         min-height: 120px;
         max-width: 90px;
         max-height: 120px;
