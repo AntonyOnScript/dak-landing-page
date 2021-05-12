@@ -107,9 +107,7 @@
                 <h1 titulo-de-seção><?php the_field('sobre_titulo_maior'); ?></h1>
                 <h2><?php the_field('sobre_texto_maior'); ?></h2>
                 <p><?php the_field('sobre_texto_menor'); ?></p>
-                <a href="<?php the_field('sobre_botao_link'); ?>">
-                    <input type="button" value="<?php the_field('sobre_botao_texto'); ?>" class="assista-agora modal">
-                </a>
+                <input type="button" value="<?php the_field('sobre_botao_texto'); ?>" class="assista-agora modal">
             </div>
             <div class="container-youtube">
                 <img src="<?php echo get_template_directory_uri();?>/assets/imgs/youtube.png" class="youtube">
