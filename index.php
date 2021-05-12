@@ -25,7 +25,7 @@
                 <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
                 <li class="link_05"><a class="link_05">Contato</a></li>
             </ul>
-        </div> 
+        </div>
     </div>
     <div class="menu" menu-fixo>
         <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg">
@@ -207,7 +207,7 @@
                     <h1>lrefkoas asokf oapfo sapfks apfs?</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
                 </article>
-                
+
                 <article>
                     <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_04.png" alt="">
                     <h3>tecnologia</h3>
@@ -220,9 +220,9 @@
     <section class="desenvolvimento" id="nossos-produtos">
         <div class="moleculas"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/moleculas.png"></div>
         <div class="textos-desenvolvimento">
-            <h3>desenvolvimento</h3>
-            <h1 titulo-de-seção>Engenharia</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quam eum aliquam non eaque aperiam quasi sunt ullam perferendis quibusdam. Error soluta temporibus molestias! Qui, velit! Suscipit aliquam distinctio fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. In cum, ab numquam explicabo inventore repellat blanditiis deleniti dolores! Eos modi perspiciatis eum maiores pariatur consectetur praesentium deleniti error quae ad?</p>
+            <h3><?php the_field('primeiro_titulo'); ?></h3>
+            <h1 titulo-de-seção><?php the_field('segundo_titulo'); ?></h1>
+            <p><?php the_field('texto'); ?></p>
             <div class="listra-hr">
                 <hr>
                 <div></div>
@@ -232,16 +232,16 @@
             <div class="prime">
                 <div class="icone-texto">
                     <img src="<?php echo get_template_directory_uri();?>/assets/imgs/prime.svg">
-                    <h4 style="color: #fdb745;">PRIME</h4>
+                    <h4 style="color: #fdb745;"><?php the_field('coluna_esquerda'); ?></h4>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod debitis perspiciatis reprehenderit ab consectetur doloremque recusandae repellendus sint magnam iste dolor deleniti porro hic eum veniam possimus, laboriosam totam libero.</p>
+                <p><?php the_field('coluna_esquerda_texto'); ?></p>
             </div>
             <div class="sustentavel">
                 <div class="icone-texto">
                     <img src="<?php echo get_template_directory_uri();?>/assets/imgs/sustentavel.svg">
-                    <h4 style="color: #8ec341;">sustentavel</h4>
+                    <h4 style="color: #8ec341;"><?php the_field('coluna_direita'); ?></h4>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio maxime ratione quam eaque. Aspernatur cupiditate architecto fugiat illo provident quasi veniam laudantium officiis. Quidem asperiores excepturi ab maiores quo quis.</p>
+                <p><?php the_field('coluna_direita_texto'); ?></p>
             </div>
         </div>
         <div class="elementos-article">
