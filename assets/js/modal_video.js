@@ -2,6 +2,11 @@ const youtube = document.querySelector('.youtube')
 const video_modal_box = document.querySelector('.modal-box-video')
 const video_modal = video_modal_box.querySelector('iframe')
 const fecha_video_modal = video_modal_box.querySelector('.fecha-video-modal')
+const logo_youtube = document.querySelector('.logo-youtube')
+
+logo_youtube.onclick = ()=>{
+    video_modal_box.style.display="flex"
+}
 
 fecha_video_modal.onclick = ()=>{
     video_modal.src = video_modal.src+'?paused=1'

@@ -140,7 +140,10 @@
                 <input type="button" value="<?php the_field('sobre_botao_texto'); ?>" class="assista-agora modal">
             </div>
             <div class="container-youtube">
-                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/youtube.png" class="youtube">
+                <div class="subcontainer-youtube">
+                    <img src="https://i.ytimg.com/vi/ZbZSe6N_BXs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLArt_w-Sp2d7xVGeW85q7jo8efYrg" class="youtube"alt="">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/youtube.svg" class='logo-youtube'>
+                </div>
             </div>
         </div>
     </section>
