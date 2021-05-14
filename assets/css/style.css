@@ -935,7 +935,7 @@ span{
     max-width: 100%;
     max-height: 100%;
     z-index: 10000;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
 }
@@ -1030,7 +1030,7 @@ span{
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.8);
     display: none;
     flex-direction: column;
     z-index: 20000;
@@ -1045,16 +1045,20 @@ span{
     right: 30px;
 }
 .pesquisa input{
-    min-width:100%;
+    width:500px;
+    max-width:100%;
     border: none;
     background-color: white;
     border-radius: 4px;
-    padding: 10px 45px 10px 10px;
+    padding: 20px 45px 20px 10px;
 }
 .fecha-pesquisa-modal{
     position: absolute;
     top: 60px;
     right: 40px;
+}
+.f-modal-02{
+    background-color: white !important;
 }
 /*MEDIA QUERIES*/
 @media only screen and (max-width:1880px){
@@ -1236,6 +1240,9 @@ span{
     :root{
         --espaço-padding-2:40px;
     }
+    .pesquisa input{
+        width:unset;
+    }
     hr[verde]{
         bottom: 60%;
         height: 44%;
@@ -1399,6 +1406,9 @@ span{
 @media only screen and (max-width:370px){
     :root{
         --espaço-padding-2:20px;
+    }
+    .pesquisa-modal{
+        padding: 0px;
     }
     hr[verde]{
         bottom: 68%;

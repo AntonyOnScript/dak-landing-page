@@ -19,21 +19,21 @@
     <div class='modal-box-video'>
         <div class="fecha-video-container">
             <div class="fecha-modal fecha-video-modal" ativado>
-                <div class="linha linha-01 f-modal"></div>
+                <div class="linha linha-01 f-modal f-modal-02"></div>
                 <div class="linha linha-02"></div>
-                <div class="linha linha-03 f-modal"></div>
+                <div class="linha linha-03 f-modal f-modal-02"></div>
             </div>
         </div>
     <iframe src="https://www.youtube.com/embed/ZbZSe6N_BXs?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
     </div>
     <div class="modal-pesquisa">
         <div class="fecha-modal fecha-pesquisa-modal" ativado>
-            <div class="linha linha-01 f-modal"></div>
+            <div class="linha linha-01 f-modal f-modal-02"></div>
             <div class="linha linha-02"></div>
-            <div class="linha linha-03 f-modal"></div>
+            <div class="linha linha-03 f-modal f-modal-02"></div>
         </div>
         <div class='pesquisa pesquisa-modal'>
-            <input type="text">
+            <input type="text" placeholder="Pesquisar">
             <i class="fas fa-search"></i>
         </div>
     </div>
