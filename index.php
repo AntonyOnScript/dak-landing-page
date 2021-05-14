@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="menu" id="menu-topo">
-        <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg">
+        <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
         <ul>
             <li class="link_01"><a class="link_01">Home</a></li>
             <li class="link_02"><a class="link_02">Sobre Nós</a></li>

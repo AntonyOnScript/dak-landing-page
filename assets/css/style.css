@@ -80,9 +80,11 @@ header{
     padding: 75px 0px 40px 0px;
     z-index: 1000;
 }
-.menu img{
-    margin-left: var(--espaço-padding-2);
+.menu img, .logo-container{
     width: 287px;
+}
+.logo-container{
+    margin-left: var(--espaço-padding-2);
 }
 .menu ul{
     display: flex;
@@ -557,13 +559,8 @@ hr[amarelo]{
     transition: all .3s;
     cursor: pointer;
     color: var(--cor-primaria);
-    transition: padding .3s;
     -moz-user-select: none;
     -webkit-user-select: none;
-}
-.seta:hover{
-    color: var(--cor-primaria);
-    padding: 0px 25px;
 }
 .conteudo{
     padding-top: 100px;
@@ -1311,7 +1308,7 @@ span{
     .prime-sustentavel{
         padding: 4px 80px 30px 10px;
     }
-    .menu img{
+    .menu img, .logo-container{
         width: 200px;
     }
     .textos-hero div{
@@ -1384,8 +1381,10 @@ span{
         bottom: 66%;
         height: 38%;
     }
-    .menu img{
+    .menu img, .logo-container{
         max-width:100%;
+    }
+    .logo-container{
         margin-left:10px;
     }
     .textos-hero h1{
@@ -1435,7 +1434,7 @@ span{
     }
 }
 @media only screen and (max-width:315px){
-    .menu img{
+    .menu img, .logo-container{
         width: 140px;
     }
 }

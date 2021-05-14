@@ -45,7 +45,6 @@ section{
 .logo{
     width: 350px;
     max-width: 100%;
-    margin-bottom: 30px;
 }
 .titulo{
     margin-bottom: 10px;
@@ -68,6 +67,9 @@ section{
     background-color: white;
     color: var(--cor-primaria);
     animation: links .8s 1;
+}
+.logo-container-404{
+    margin-bottom: 30px;
 }
 @keyframes links{
     from{border:solid 1px var(--cor-primaria);}

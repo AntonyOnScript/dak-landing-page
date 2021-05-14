@@ -11,7 +11,7 @@
 		<body>
 		<!-- section -->
 			<section>
-			    <img src="wp-content/themes/dakhia/assets/imgs/logo_colorido.svg" alt="" class="logo">
+			    <a href="<?php echo home_url();?>" class="logo-container-404"><img src="wp-content/themes/dakhia/assets/imgs/logo_colorido.svg" alt="" class="logo"></a>
 			    <h1 class="titulo">404</h1>
 			    <p class="aviso">Essa página não pode ser encontrada.</p>
 			    <a href="<?php echo home_url(); ?>"><button class="home">IR PARA HOME</button></a>
