@@ -99,7 +99,7 @@
         <div class="textos-hero">
             <lord-icon
                 src="https://cdn.lordicon.com/onyplpvn.json"
-                trigger="static"
+                trigger="loop-on-hover"
                 colors="primary:#1c547a,secondary:#1c547a"
                 scale="100"
                 style="width:90px;height:90px"
@@ -114,7 +114,7 @@
             </div>
             <lord-icon
                 src="https://cdn.lordicon.com/zpcieyfp.json"
-                trigger="static"
+                trigger="loop-on-hover"
                 colors="primary:#1c547a,secondary:#1c547a"
                 scale="100"
                 style="width:90px;height:90px"
@@ -162,7 +162,7 @@
         <div class="article-container">
             <lord-icon
                 src="https://cdn.lordicon.com/onyplpvn.json"
-                trigger="static"
+                trigger="loop-on-hover"
                 colors="primary:#1c547a,secondary:#1c547a"
                 scale="100"
                 style="width:90px;height:90px"
@@ -200,7 +200,7 @@
             </article>
             <lord-icon
                 src="https://cdn.lordicon.com/zpcieyfp.json"
-                trigger="static"
+                trigger="loop-on-hover"
                 colors="primary:#1c547a,secondary:#1c547a"
                 scale="100"
                 style="width:90px;height:90px"
