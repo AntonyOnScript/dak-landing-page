@@ -503,7 +503,7 @@ hr{
     min-height: 331px;
     margin: 0 auto;
     margin-top: -30px;
-    animation: verdeVermelhoAmarelo 1.6s infinite;
+    animation: float 6s infinite;
 }
 .article-novo-visual div img.espacador, #article-02 div img.espacador, #article-03 div img.espacador{
     position: relative;
@@ -1499,4 +1499,15 @@ span{
 .wpcf7 form .wpcf7-response-output {
     margin: -.5em 0em 1em !important;
     padding: 1em 1em;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
