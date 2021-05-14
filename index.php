@@ -220,33 +220,15 @@
             <h3>+conteúdo</h3>
             <h1 titulo-de-seção>Economia circular</h1>
             <div class="articles-conteudo">
-                <article>
-                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_01.png" alt="">
-                    <h3>sociedade</h3>
-                    <h1>lre asokf oapfo sapfks apfs?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
-                </article>
-
-                <article>
-                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_02.png" alt="">
-                    <h3>meio ambiente</h3>
-                    <h1>lreot asokf oapfo sapfks apfs?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
-                </article>
-
-                <article>
-                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_03.png" alt="">
-                    <h3>sociedade</h3>
-                    <h1>lrefkoas asokf oapfo sapfks apfs?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
-                </article>
-
-                <article>
-                    <img src="<?php echo get_template_directory_uri();?>/assets/imgs/blog_04.png" alt="">
-                    <h3>tecnologia</h3>
-                    <h1>lreotgfk asokf oapfo sapfks apfs?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid nisi laborum eveniet, voluptatibus reprehenderit et nesciunt, aliquam veritatis corrupti incidunt qui nobis quasi debitis dolores eaque deleniti numquam provident.</p>
-                </article>
+                <?php include_once "inc/get-posts.economia-circular.php"; ?>
+                    <?php foreach ( $conn->query( $sql ) as $row ) { ?>
+                        <article>
+                            <a href="<?php print $row['link']; ?>" target="_blank"><img src="<?php print $row['imagem']; ?>"></a>
+                            <a href="<?php print $row['link']; ?>" target="_blank"><h3><?php print $row['categoria']; ?></h3></a>
+                            <a href="<?php print $row['link']; ?>" target="_blank"><h1><?php print $row['post_title']; ?></h1></a>
+                            <a href="<?php print $row['link']; ?>" target="_blank"><p><?php print $row['resumo']; ?></p></a>
+                        </article>
+                    <?php } ?>
             </div>
         </div>
     </section>
