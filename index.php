@@ -220,15 +220,7 @@
             <h3>+conteúdo</h3>
             <h1 titulo-de-seção>Economia circular</h1>
             <div class="articles-conteudo">
-                <?php include_once "inc/get-posts.economia-circular.php"; ?>
-                    <?php foreach ( $conn->query( $sql ) as $row ) { ?>
-                        <article>
-                            <a href="<?php print $row['link']; ?>" target="_blank"><img src="<?php print $row['imagem']; ?>"></a>
-                            <a href="<?php print $row['link']; ?>" target="_blank"><h3><?php print $row['categoria']; ?></h3></a>
-                            <a href="<?php print $row['link']; ?>" target="_blank"><h1><?php print $row['post_title']; ?></h1></a>
-                            <a href="<?php print $row['link']; ?>" target="_blank"><p><?php print $row['resumo']; ?></p></a>
-                        </article>
-                    <?php } ?>
+                <?php require_once("inc/get-posts.economia-circular.php"); ?>
             </div>
         </div>
     </section>
