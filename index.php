@@ -88,47 +88,7 @@
         </div>
     </div>
     <header id="header">
-        <div class="background-hero">
-            <div class="slider">
-                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/slide01_01.png" class="slide-01-01" id="slide01-01" style="display: none;">
-                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/slide01_02.png" class="slide-01-02" id="slide01-02" style="display: none;">
-                <img src="<?php echo get_template_directory_uri();?>/assets/imgs/slide01_03.png" class="slide-01-03" id="slide01-03">
-                <video src="<?php echo get_template_directory_uri();?>/assets/video/video.mp4" class="slide-01-04" style="display: none;"></video>
-            </div>
-        </div>
-        <div class="textos-hero">
-            <lord-icon
-                src="https://cdn.lordicon.com/onyplpvn.json"
-                trigger="loop-on-hover"
-                colors="primary:#1c547a,secondary:#1c547a"
-                scale="100"
-                style="width:90px;height:90px"
-                class="seta seta-03">
-            </lord-icon>
-            <div class="textos-variaveis">
-                <h3>uma nova dakhia para o futuro</h3>
-                <h1>A dakhia mudou. veja nosso manifesto.</h1>
-                <a href="#">
-                    <button class="assista-agora">assista agora</button>
-                </a>
-            </div>
-            <lord-icon
-                src="https://cdn.lordicon.com/zpcieyfp.json"
-                trigger="loop-on-hover"
-                colors="primary:#1c547a,secondary:#1c547a"
-                scale="100"
-                style="width:90px;height:90px"
-                class="seta seta-04">
-            </lord-icon>
-        </div>
-        <div class="seletor-slide-01">
-            <ul>
-                <li class="area-botao-slider-01-01"><div class="botao-slider-01-01"></div></li>
-                <li class="area-botao-slider-01-02"><div class="botao-slider-01-02"></div></li>
-                <li class="area-botao-slider-01-03"><div class="botao-slider-01-03"></div></li>
-                <li class="area-botao-slider-01-04"><div class="botao-slider-01-04"></div></li>
-            </ul>
-        </div>
+        <?php add_revslider('slider-2'); ?>
     </header>
     <section class="sobre" id="sobre-nos">
         <div class="container-sobre">
