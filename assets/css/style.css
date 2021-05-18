@@ -752,9 +752,6 @@ h4{
     display: flex;
     flex-direction: column;
 }
-br{
-    display:none;
-}
 .fale-conosco form div{
     max-width: 100%;
     display: flex;
