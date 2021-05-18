@@ -32,8 +32,6 @@ let textos_variaveis_slider = {
     h3:document.querySelector('.textos-variaveis h3'),
     h1_01:document.querySelector('.textos-variaveis h1'),
 }
-// video
-slide_01_04.volume = 0
 
 // conteudo do before 
 let before_numero = document.querySelector('.textos-hero div h3')

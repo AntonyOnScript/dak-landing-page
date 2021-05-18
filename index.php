@@ -1,4 +1,7 @@
 <?php require_once 'header.php'; ?>
+    <div class='lupa'>
+        <i class="fas fa-search"></i>
+    </div>
     <div class="modal-box">
         <div class="dialogo">
             <header>
@@ -65,9 +68,6 @@
             <div class="linha linha-02"></div>
             <div class="linha linha-03"></div>
         </div>
-        <div class="pesquisa">
-            <i class="fas fa-search"></i>
-        </div>
     </div>
     <div class="menu" id="menu-topo">
         <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
@@ -82,9 +82,6 @@
             <div class="linha linha-01"></div>
             <div class="linha linha-02"></div>
             <div class="linha linha-03"></div>
-        </div>
-        <div class="pesquisa">
-            <i class="fas fa-search"></i>
         </div>
     </div>
     <header id="header">

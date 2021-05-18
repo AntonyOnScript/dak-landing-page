@@ -37,6 +37,24 @@ header{
     display: flex;
     flex-direction: column;
 }
+.lupa{
+    z-index: 10000;
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    border-radius: 100%;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    border: solid 1px white;
+    top: 220px;
+    right: 15px;
+    transition: color .3s, background-color .3s;
+}
+.lupa:hover{
+    animation: links .8s 1;
+    background-color: white;
+    color: var(--cor-primaria);
+}
 .background-hero{
     display: flex;
     justify-content: center;
