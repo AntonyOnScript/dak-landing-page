@@ -1,18 +1,3 @@
-let slide_01_01 = document.querySelector('.slide-01-01')
-let slide_01_02 = document.querySelector('.slide-01-02')
-let slide_01_03 = document.querySelector('.slide-01-03')
-let slide_01_04 = document.querySelector('.slide-01-04')
-
-let area_botao_slider_01_01 = document.querySelector('.area-botao-slider-01-01')
-let area_botao_slider_01_02 = document.querySelector('.area-botao-slider-01-02')
-let area_botao_slider_01_03 = document.querySelector('.area-botao-slider-01-03')
-let area_botao_slider_01_04 = document.querySelector('.area-botao-slider-01-04')
-
-let botao_slider_01_01 = document.querySelector('.botao-slider-01-01')
-let botao_slider_01_02 = document.querySelector('.botao-slider-01-02')
-let botao_slider_01_03 = document.querySelector('.botao-slider-01-03')
-let botao_slider_01_04 = document.querySelector('.botao-slider-01-04')
-
 let slide_02_01 = document.querySelector('.slide-02-01')
 let slide_02_02 = document.querySelector('.slide-02-02')
 let slide_02_03 = document.querySelector('.slide-02-03')
@@ -28,18 +13,7 @@ let botao_slider_02_01 = document.querySelector('.botao-slider-02-01')
 let botao_slider_02_02 = document.querySelector('.botao-slider-02-02')
 let botao_slider_02_03 = document.querySelector('.botao-slider-02-03')
 
-let textos_variaveis_slider = {
-    h3:document.querySelector('.textos-variaveis h3'),
-    h1_01:document.querySelector('.textos-variaveis h1'),
-}
-
-// conteudo do before 
-let before_numero = document.querySelector('.textos-hero div h3')
-before_numero.dataset.content = '01'
-
 document.addEventListener('click', passaSlide)
-
-passaSlideAutomatico(slide_01_03, slide_01_01, slide_01_02, slide_01_04)
 passaSlideAutomatico(slide_02_03, slide_02_01, slide_02_02)
 
 //funções
@@ -47,31 +21,10 @@ function passaSlide(e){
     acaoDosBotoes(e.target)
 }
 // a cada 5.5 segundos passa o slide do hero automaticamente
-
-var intervaloSlide01 = setInterval(() => {
-    passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-}, 7000);
-
 const intervaloSlide02 = setInterval(() => {
     passaSlideAutomatico(slide_02_01, slide_02_02, slide_02_03)
 }, 7000);
 
-// verifica qual número vai ser apresentado no hero
-function checkSlide(){
-    if(slide_01_01.style.display!=="none"){
-        before_numero.dataset.content = '01'
-        mudaTextoSlide('UMA NOVA DAKHIA PARA O FUTURO', 'A DAKHIA MUDOU. VEJA NOSSO MANIFESTO')
-    }else if(slide_01_02.style.display!=="none"){
-        before_numero.dataset.content = '02'
-        mudaTextoSlide('FAÇA PARTE DO NOSSO TIME', 'ANOS LUZ A FRENTE DO COMUM. SEJA O DIFERENCIAL')
-    }else if(slide_01_03.style.display!=="none"){
-        before_numero.dataset.content = '03'
-        mudaTextoSlide('FAÇA PARTE DA HISTÓRIA', 'A CADA NOVA HISTÓRIA UMA NOVA ALEGRIA. MUDE HOJE MESMO')
-    }else if(slide_01_04.style.display!=="none"){
-        before_numero.dataset.content = '04'
-        mudaTextoSlide('A NOVO MODO DE MUDAR', 'E DE FATO, NOVAS HISTÓRIAS, NOVAS MEMÓRIAS')
-    }
-}
 // muda o texto de acordo com o slide 01
 function mudaTextoSlide(h3, h1_01){
     textos_variaveis_slider.h1_01.innerText = h1_01
@@ -82,64 +35,26 @@ function passaSlideAutomatico(slide01, slide02, slide03, slide04){
     if(typeof slide04 !== "undefined"){
         if(slide01.style.display!=="none"){
             passaSlideProLado(slide02, slide03, slide01, slide04)
-            checkSlide()
         }else if(slide02.style.display!=="none"){
             passaSlideProLado(slide03, slide02, slide01, slide04)
-            checkSlide()
         }else if(slide03.style.display!=="none"){
             passaSlideProLado(slide04, slide02, slide03, slide01)
-            checkSlide()
         }else if(slide04.style.display!=="none"){
             passaSlideProLado(slide01, slide02, slide03, slide04)
-            checkSlide()
         }
     }else{
         if(slide01.style.display!=="none"){
             passaSlideProLado(slide02, slide03, slide01)
-            checkSlide()
         }else if(slide02.style.display!=="none"){
             passaSlideProLado(slide03, slide02, slide01)
-            checkSlide()
         }else if(slide03.style.display!=="none"){
             passaSlideProLado(slide01, slide02, slide03)
-            checkSlide()
         }
     }
 }
 
 // ação dos botoes no slide
 function acaoDosBotoes(elemento){
-    if(elemento.classList.contains('area-botao-slider-01-01') || elemento.classList.contains('botao-slider-01-01')){
-        passaSlideProLado(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-        if(!slide_01_04.paused){
-            slide_01_04.pause()
-            intervaloSlide01 = setInterval(() => {
-                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 7000);
-        }
-    }
-    if(elemento.classList.contains('area-botao-slider-01-02') || elemento.classList.contains('botao-slider-01-02')){
-        passaSlideProLado(slide_01_02, slide_01_01, slide_01_03, slide_01_04)
-        if(!slide_01_04.paused){
-            slide_01_04.pause()
-            intervaloSlide01 = setInterval(() => {
-                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 7000);
-        }
-    }
-    if(elemento.classList.contains('area-botao-slider-01-03') || elemento.classList.contains('botao-slider-01-03')){
-        passaSlideProLado(slide_01_03, slide_01_02, slide_01_01, slide_01_04)
-        if(!slide_01_04.paused){
-            slide_01_04.pause()
-            intervaloSlide01 = setInterval(() => {
-                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 7000);
-        }
-    }
-    if(elemento.classList.contains('area-botao-slider-01-04') || elemento.classList.contains('botao-slider-01-04')){
-        passaSlideProLado(slide_01_04, slide_01_02, slide_01_01, slide_01_03)
-    }
-
     if(elemento.classList.contains('area-botao-slider-02-01') || elemento.classList.contains('botao-slider-02-01')){
         passaSlideProLado(slide_02_01, slide_02_02, slide_02_03)
     }
@@ -156,55 +71,9 @@ function acaoDosBotoes(elemento){
     if(elemento.classList.contains('seta-02')){
         passaSlideAutomatico(slide_02_01, slide_02_02, slide_02_03)
     }
-
-    if(elemento.classList.contains('seta-03')){
-        if(!slide_01_04.paused){
-            slide_01_04.pause()
-            intervaloSlide01 = setInterval(() => {
-                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 7000);
-        }
-        passaSlideAutomatico(slide_01_02, slide_01_01, slide_01_04, slide_01_03)
-    }
-    if(elemento.classList.contains('seta-04')){
-        if(!slide_01_04.paused){
-            slide_01_04.pause()
-            intervaloSlide01 = setInterval(() => {
-                passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-            }, 7000);
-        }
-        passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-    }
 }
 
 function passaSlideProLado(source_01, source_02, source_03, source_04){
-    if(source_01.classList.contains('slide-01-01')){
-        resetarCoresSlide(botao_slider_01_01, botao_slider_01_02, botao_slider_01_03, botao_slider_01_04)
-        mudaCorDoBotãoAutomático(botao_slider_01_01)
-    }
-    if(source_01.classList.contains('slide-01-02')){
-        resetarCoresSlide(botao_slider_01_01, botao_slider_01_02, botao_slider_01_03, botao_slider_01_04)
-        mudaCorDoBotãoAutomático(botao_slider_01_02)
-    }
-    if(source_01.classList.contains('slide-01-03')){
-        resetarCoresSlide(botao_slider_01_01, botao_slider_01_02, botao_slider_01_03, botao_slider_01_04)
-        mudaCorDoBotãoAutomático(botao_slider_01_03)
-    }
-    if(source_01.classList.contains('slide-01-04')){
-        resetarCoresSlide(botao_slider_01_01, botao_slider_01_02, botao_slider_01_03, botao_slider_01_04)
-        mudaCorDoBotãoAutomático(botao_slider_01_04)
-        if(document.documentElement.scrollTop <= 1200){
-            clearInterval(intervaloSlide01)
-            slide_01_04.play()
-            slide_01_04.onended = function(){
-                passaSlideAutomatico(slide_01_04, slide_01_01, slide_01_02, slide_01_03)
-                intervaloSlide01 = setInterval(() => {
-                    passaSlideAutomatico(slide_01_01, slide_01_02, slide_01_03, slide_01_04)
-                }, 7000);
-            }
-        }
-    }
-    
     if(source_01.classList.contains('slide-02-01')){
         resetarCoresSlide(botao_slider_02_01, botao_slider_02_02, botao_slider_02_03)
         mudaCorDoBotãoAutomático(botao_slider_02_01)
@@ -226,7 +95,6 @@ function passaSlideProLado(source_01, source_02, source_03, source_04){
     source_02.style.display = source_03.style.display = 'none'
 
     source_01.style.display = 'flex'
-    checkSlide()
 }
 
 function mudaCorDoBotãoAutomático(botao){
@@ -448,57 +316,6 @@ link_menu_04.onclick = fechaMenuLateral
 link_menu_05.onclick = fechaMenuLateral
 
 // interações com botões dos slides
-
-area_botao_slider_01_01.onmouseenter = function(){
-    botao_slider_01_01.style.backgroundColor = "var(--cor-primaria)"
-}
-area_botao_slider_01_01.onmouseout = function(){
-    if(slide_01_01.style.display==="none") botao_slider_01_01.style.backgroundColor = "rgba(0,0,0,0.1)"
-}
-
-area_botao_slider_01_02.onmouseenter = function(){
-    botao_slider_01_02.style.backgroundColor = "var(--cor-primaria)"
-}
-area_botao_slider_01_02.onmouseout = function(){
-    if(slide_01_02.style.display==="none") botao_slider_01_02.style.backgroundColor = "rgba(0,0,0,0.1)"
-}
-
-area_botao_slider_01_03.onmouseenter = function(){
-    botao_slider_01_03.style.backgroundColor = "var(--cor-primaria)"
-}
-area_botao_slider_01_03.onmouseout = function(){
-    if(slide_01_03.style.display==="none") botao_slider_01_03.style.backgroundColor = "rgba(0,0,0,0.1)"
-}
-
-area_botao_slider_01_04.onmouseenter = function(){
-    botao_slider_01_04.style.backgroundColor = "var(--cor-primaria)"
-}
-area_botao_slider_01_04.onmouseout = function(){
-    if(slide_01_04.style.display==="none") botao_slider_01_04.style.backgroundColor = "rgba(0,0,0,0.1)"
-}
-
-botao_slider_01_01.onmouseenter = function(){
-    botao_slider_01_01.style.backgroundColor = "var(--cor-primaria)"
-}
-botao_slider_01_01.onmouseout = function(){
-    if(slide_01_01.style.display==="none") botao_slider_01_01.style.backgroundColor = "rgba(0,0,0,0.1)"
-}
-
-botao_slider_01_02.onmouseenter = function(){
-    botao_slider_01_02.style.backgroundColor = "var(--cor-primaria)"
-}
-botao_slider_01_02.onmouseout = function(){
-    if(slide_01_02.style.display==="none") botao_slider_01_02.style.backgroundColor = "rgba(0,0,0,0.1)"
-}
-
-botao_slider_01_03.onmouseenter = function(){
-    botao_slider_01_03.style.backgroundColor = "var(--cor-primaria)"
-}
-botao_slider_01_03.onmouseout = function(){
-    if(slide_01_03.style.display==="none") botao_slider_01_03.style.backgroundColor = "rgba(0,0,0,0.1)"
-}
-
-/*------------------------------------------------------------------------------------------------*/
 
 area_botao_slider_02_01.onmouseenter = function(){
     botao_slider_02_01.style.backgroundColor = "var(--cor-primaria)"
