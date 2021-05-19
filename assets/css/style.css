@@ -37,23 +37,34 @@ header{
     display: flex;
     flex-direction: column;
 }
-.lupa{
-    z-index: 2000;
-    cursor: pointer;
+.circulo-01{
+    padding: 20px 15px 20px 10px;
+    display: none;
+    border-radius: 40px;
+    margin-right: 10px;
     background-color: var(--cor-primaria);
+}
+.circulo-02{
     border-radius: 100%;
     padding: 20px;
+    background-color: var(--cor-primaria);
+}
+.lupa{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2000;
+    cursor: pointer;
     color: white;
     position: fixed;
-    border: solid 1px white;
     top: 220px;
     right: 15px;
-    transition: color .3s, background-color .3s;
 }
-.lupa:hover{
-    animation: links .8s 1;
-    background-color: white;
-    color: var(--cor-primaria);
+.lupa p{
+    margin-right: 8px;
+}
+.lupa i{
+    font-size:1.5em;
 }
 .background-hero{
     display: flex;
@@ -1526,4 +1537,20 @@ span{
 	100% {
 		transform: translatey(0px);
 	}
+}
+@keyframes lupa{
+    from{
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes lupaInverso{
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    to{
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
 }
