@@ -85,7 +85,7 @@
         </div>
     </div>
     <header id="header">
-        <?php add_revslider('slider-2'); ?>
+        <?php add_revslider('slider-home'); ?>
     </header>
     <section class="sobre" id="sobre-nos">
         <div class="container-sobre">
