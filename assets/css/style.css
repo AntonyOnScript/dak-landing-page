@@ -57,7 +57,7 @@ header{
     cursor: pointer;
     color: white;
     position: fixed;
-    top: 220px;
+    top: 180px;
     right: 15px;
 }
 .lupa p{
@@ -1403,6 +1403,12 @@ span{
 @media only screen and (max-width:402px){
     :root{
         --espaço-padding-2:10px;
+    }
+    .lupa{
+        top:124px;
+    }
+    .circulo-02{
+        padding: 15px;
     }
     hr[verde]{
         bottom: 66%;
