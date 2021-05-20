@@ -8,7 +8,7 @@ fecha_pesquisa.addEventListener('click', ()=>{
 })
 
 lupa2.onmouseenter = ()=>{
-    lupa2.querySelector('.circulo-01').style.display = 'block'
+    lupa2.querySelector('.circulo-01').style.display = 'flex'
     lupa2.querySelector('.circulo-01').style.animation = 'lupa .3s'
 }
 

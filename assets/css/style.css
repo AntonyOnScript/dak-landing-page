@@ -40,6 +40,7 @@ header{
 .circulo-01{
     padding: 20px 15px 20px 10px;
     display: none;
+    align-items: center;
     border-radius: 40px;
     margin-right: 10px;
     background-color: var(--cor-primaria);
