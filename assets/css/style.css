@@ -1058,10 +1058,12 @@ span{
     display: none;
     flex-direction: column;
     z-index: 20000;
+    max-width:100%;
     justify-content: center;
     align-items: center;
 }
 .pesquisa-modal{
+    max-width: 100%;
     position: relative;
 }
 .pesquisa-modal i{
