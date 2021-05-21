@@ -367,6 +367,9 @@ h3{
     cursor: pointer;
     font-weight: 300;
 }
+br{
+    display:none;
+}
 .assista-agora:hover{
     background-color: white;
     color: var(--cor-primaria);
