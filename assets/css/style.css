@@ -23,8 +23,6 @@ html{
 }
 p{
     font-family: "Calibri";
-    word-wrap: break-word;
-    hyphens: auto;
     font-size: 20px;
     line-height: 26px;
     font-weight: 400;
