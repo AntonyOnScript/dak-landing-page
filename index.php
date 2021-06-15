@@ -107,8 +107,8 @@
         <div class="novo-visual-textos">
             <h3>novo visual</h3>
             <h1 titulo-de-seção>NOVA MARCA</h1>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque  </h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero nihil volup Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, laudantium. Similique animi accusamus, minus com tatum quis delectus officia quidem rerum, reiciendis perferendis, assumenda similique sequi accusantium repellat! Maiores eligendi facere recusandae eveniet quos eius?</p>
+            <h2>Nossa cultura organizacional é baseada em três pilares estratégicos: Qualidade, Transparência e Colaboração.</h2>
+            <p>A Dakhia está totalmente comprometida com estes valores e todas as nossas ações são orientada por eles. Afinal, sabemos do potencial transformador do nosso trabalho, e através dele criamos soluções para os nossos clientes e desenvolvemos inovações que impactam positivamente toda a sociedade.</p>
             <div class="listra-hr">
                 <hr>
                 <div></div>
@@ -130,7 +130,7 @@
                 <div class="textos-article">
                     <h3 style="color:#8ec341;letter-spacing: 3.2px;">verde</h3>
                     <h1 titulo-de-seção>Colaboração</h1>
-                    <p style="color:var(--cor-primaria);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci dolore temporibus odit labore. Quasi porro obcaecati quisquam a dolorum dolorem suscipit veniam </p>
+                    <p style="color:var(--cor-primaria);">Acreditamos em nosso potencial e sabemos que além de trabalhar muito, também é preciso trabalhar junto. Sempre acreditando que pessoas com diferentes experiências, histórias e habilidades podem gerar impacto na sociedade hoje e inspirar futuras gerações.</p>
                 </div>
             </article>
             <article class="article-novo-visual slide-02-02" id="article-02">
@@ -140,7 +140,7 @@
                 <div class="textos-article">
                     <h3 style="color:#fdb745;letter-spacing: 3.2px;">Amarelo</h3>
                     <h1 titulo-de-seção>Transparência</h1>
-                    <p style="color:var(--cor-primaria);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci dolore temporibus odit labore. Quasi porro obcaecati quisquam a dolorum dolorem suscipit veniam </p>
+                    <p style="color:var(--cor-primaria);">Prezando pelo respeito a nossos clientes e colaboradores, agimos com clareza em todas as nossas relações. Através de nossas ações, nosso compromisso diário consiste em manter a confiança dos mercados mais exigentes de forma consistente.</p>
                 </div>
             </article>
             <article class="article-novo-visual slide-02-03" id="article-03">
@@ -150,7 +150,7 @@
                 <div class="textos-article">
                     <h3 style="color:#c34541;letter-spacing: 3.2px;">vermelho</h3>
                     <h1 titulo-de-seção>Qualidade</h1>
-                    <p style="color:var(--cor-primaria);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci dolore temporibus odit labore. Quasi porro obcaecati quisquam a dolorum dolorem suscipit veniam </p>
+                    <p style="color:var(--cor-primaria);">Buscamos sempre os melhores resultados, independente da complexidade do projeto. Com ética, responsabilidade e comprometimento, buscamos incessantemente pela perfeição em tudo que fazermos.</p>
                 </div>
             </article>
             <lord-icon
