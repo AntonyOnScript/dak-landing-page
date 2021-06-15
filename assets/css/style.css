@@ -550,7 +550,7 @@ hr{
 hr[verde]{
     margin:0px;
     position: absolute;
-    bottom: 48%;
+    top: -1.35em;
     width: 1px;
     height: 55%;
     background-color: #8ec341;
