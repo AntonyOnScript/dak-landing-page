@@ -348,7 +348,7 @@ h3{
     opacity: 0.15;
     color: white;
 }
-.assista-agora{
+.nosso-manifesto{
     font-size: 14px;
     margin-top: 33px;
     text-transform: uppercase;
@@ -365,7 +365,7 @@ h3{
     cursor: pointer;
     font-weight: 300;
 }
-.assista-agora:hover{
+.nosso-manifesto:hover{
     background-color: white;
     color: var(--cor-primaria);
     animation: links .8s 1;

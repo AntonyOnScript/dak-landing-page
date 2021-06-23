@@ -110,21 +110,21 @@ function resetarCoresSlide(botao_01, botao_02, botao_03, botao_04){
 
 // Modal
 
-let botao_abre_modal = document.querySelector('.modal')
+/*let botao_abre_modal = document.querySelector('.modal')*/
 let modal = document.querySelector('.modal-box')
 let modal_dialogo = modal.querySelector('.dialogo')
 let fecha_modal = modal_dialogo.querySelector('.fecha-modal')
 let ok_modal = modal_dialogo.querySelector('.ok-modal')
 
 fecha_modal.onclick = fechaModal
-ok_modal.onclick = fechaModal
+/*ok_modal.onclick = fechaModal
 
 botao_abre_modal.onclick = ()=>{
     modal.style.display = "flex"
     modal.style.animation = "modalBoxAbre .3s"
     modal_dialogo.style.animation = "abreModal .3s"
 }
-
+*/
 function fechaModal(){
     modal_dialogo.style.animation = "fechaModal .3s"
     modal.style.animation = "modalBoxFecha .3s"
