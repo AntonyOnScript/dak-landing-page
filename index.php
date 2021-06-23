@@ -12,7 +12,7 @@
             <div class="conteudo-modal">
                 <p>Conheça a Dakhia e todos os nossos produtos!</p>
             </div>
-            <hr class="borda-botao">
+          <hr class="borda-botao">
             <button class="ok-modal"><p>OK</p></button>
         </div>
     </div>
@@ -24,7 +24,7 @@
                 <div class="linha linha-03 f-modal f-modal-02"></div>
             </div>
         </div>
-    <iframe src="https://www.youtube.com/embed/ZbZSe6N_BXs?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
+    <iframe src="https://www.youtube.com/embed/uCF5p3zFp-4?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
     </div>
     <div class="modal-pesquisa">
         <div class="fecha-modal fecha-pesquisa-modal" ativado>
@@ -42,7 +42,7 @@
             <ul>
                 <li class="link_01"><a class="link_01">Home</a></li>
                 <li class="link_02"><a class="link_02">Sobre Nós</a></li>
-                <li class="link_03"><a class="link_03">Blog de Economia</a></li>
+                <li class="link_03"><a class="link_03">Conteúdo</a></li>
                 <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
                 <li class="link_05"><a class="link_05">Contato</a></li>
             </ul>
@@ -56,7 +56,7 @@
         <ul>
             <li class="link_01"><a class="link_01">Home</a></li>
             <li class="link_02"><a class="link_02">Sobre Nós</a></li>
-            <li class="link_03"><a class="link_03">Blog de Economia</a></li>
+            <li class="link_03"><a class="link_03">Conteúdo</a></li>
             <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
             <li class="link_05"><a class="link_05">Contato</a></li>
         </ul>
@@ -67,11 +67,11 @@
         </div>
     </div>
     <div class="menu" id="menu-topo">
-        <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
+        <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo-branco.svg"></a>
         <ul>
             <li class="link_01"><a class="link_01">Home</a></li>
             <li class="link_02"><a class="link_02">Sobre Nós</a></li>
-            <li class="link_03"><a class="link_03">Blog de Economia</a></li>
+            <li class="link_03"><a class="link_03">Conteúdo</a></li>
             <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
             <li class="link_05"><a class="link_05">Contato</a></li>
         </ul>
@@ -92,6 +92,7 @@
                 <h2><?php the_field('sobre_texto_maior'); ?></h2>
                 <p><?php the_field('sobre_texto_menor'); ?></p>
                 <input type="button" value="<?php the_field('sobre_botao_texto'); ?>" class="assista-agora modal">
+
             </div>
             <div class="container-youtube">
                 <div class="subcontainer-youtube">
@@ -108,7 +109,7 @@
             <h3>novo visual</h3>
             <h1 titulo-de-seção>NOVA MARCA</h1>
             <h2>Nossa cultura organizacional é baseada em três pilares estratégicos: Qualidade, Transparência e Colaboração.</h2>
-            <p>A Dakhia está totalmente comprometida com estes valores e todas as nossas ações são orientada por eles. Afinal, sabemos do potencial transformador do nosso trabalho, e através dele criamos soluções para os nossos clientes e desenvolvemos inovações que impactam positivamente toda a sociedade.</p>
+            <p>A Dakhia está totalmente comprometida com estes valores e todas as nossas ações são orientadas por eles. Afinal, sabemos do potencial transformador do nosso trabalho, e através dele criamos soluções para os nossos clientes e desenvolvemos inovações que impactam positivamente toda a sociedade.</p>
             <div class="listra-hr">
                 <hr>
                 <div></div>
@@ -173,7 +174,7 @@
     <section class="conteudo" id="economia">
         <div class="conteudo-azul">
             <h3>+conteúdo</h3>
-            <h1 titulo-de-seção>Economia circular</h1>
+            <h1 titulo-de-seção>Portal Mundo Circular</h1>
             <div class="articles-conteudo">
                 <?php require_once("inc/get-posts.economia-circular.php"); ?>
             </div>
@@ -312,7 +313,7 @@
                 <h3>navegação</h3>
                 <span>/<a class="link_01" href="#header">&nbsp;&nbsp;Home</a></span>
                 <span>/<a class="link_02" href="#sobre-nos">&nbsp;&nbsp;Sobre Nós</a></span>
-                <span>/<a class="link_03" href="#economia">&nbsp;&nbsp;Blog de Economia</a></span>
+                <span>/<a class="link_03" href="#economia">&nbsp;&nbsp;Conteúdo</a></span>
                 <span>/<a class="link_04" href="#nossos-produtos">&nbsp;&nbsp;Nossos Produtos</a></span>
                 <span>/<a class="link_05" href="#contato">&nbsp;&nbsp;Contato</a></span>
             </div>

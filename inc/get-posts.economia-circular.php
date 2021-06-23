@@ -1,14 +1,10 @@
 <?php
 
-// $servername = "mysql";
-// $username = "u124324806_dWIHT";
-// $password = "6HvoHlnNV2";
-// $dbname = "u124324806_xyXXW";
+$servername = "mysql";
+$username = "u124324806_dWIHT";
+$password = "6HvoHlnNV2";
+$dbname = "u124324806_xyXXW";
 
-$servername = "localhosdt";
-$username   = "root";
-$password   = "";
-$dbname     = "economia_circular";
 
 try {
 	$conn = new PDO( "mysql:host=$servername;dbname=$dbname", $username, $password );
