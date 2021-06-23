@@ -144,6 +144,9 @@ header{
     left: 0%;
     width: 100%;
 }
+#menu-topo ul li a{
+    color: white;
+}
 .menu[menu-fixo]{
     display: none;
     position: fixed;
