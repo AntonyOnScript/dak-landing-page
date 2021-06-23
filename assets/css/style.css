@@ -1030,61 +1030,6 @@ span{
 .ok-modal:active{
     background-color: rgb(230, 230, 230);
 }
-.pesquisa{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:min-content;
-    padding: 0 25px;
-    z-index: 10000;
-}
-.pesquisa i{
-    font-size: 30px;
-    color: var(--cor-primaria);
-    margin: 0;
-}
-.pesquisa:hover i{
-    animation: pesquisa .6s 1;
-}
-.modal-pesquisa{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    flex-direction: column;
-    z-index: 20000;
-    max-width:100%;
-    justify-content: center;
-    align-items: center;
-}
-.pesquisa-modal{
-    max-width: 100%;
-    position: relative;
-}
-.pesquisa-modal i{
-    position: absolute;
-    right: 30px;
-}
-.pesquisa input{
-    width:500px;
-    max-width:100%;
-    border: none;
-    background-color: white;
-    border-radius: 4px;
-    padding: 20px 45px 20px 10px;
-}
-.fecha-pesquisa-modal{
-    position: absolute;
-    top: 60px;
-    right: 40px;
-}
-.f-modal-02{
-    background-color: white !important;
-}
 /*MEDIA QUERIES*/
 @media only screen and (max-width:1880px){
     .elementos-article{
@@ -1141,15 +1086,6 @@ span{
     }
     .menu ul{
         display: none;
-    }
-    .pesquisa{
-        display:none;
-    }
-    .pesquisa-modal{
-        display: flex;
-    }
-    .pesquisa.mobile{
-        display: flex;
     }
     .menu-mobile{
         display: flex;
@@ -1264,9 +1200,6 @@ span{
 @media only screen and (max-width:560px){
     :root{
         --espaço-padding-2:40px;
-    }
-    .pesquisa input{
-        width:unset;
     }
     hr[verde]{
         bottom: 60%;
@@ -1440,9 +1373,6 @@ span{
     :root{
         --espaço-padding-2:20px;
     }
-    .pesquisa-modal{
-        padding: 0px;
-    }
     hr[verde]{
         bottom: 68%;
         height: 36%;
@@ -1512,10 +1442,6 @@ span{
 @keyframes modalBoxFecha{
     from{background-color:rgba(0, 0, 0, 0.219);}
     to{background-color:rgba(0, 0, 0, 0);}
-}
-@keyframes pesquisa{
-    from{transform: rotate3d(0, 0, 0, 0deg);}
-    to{transform: rotate3d(0, 0, 1, 360deg);}
 }
 /* WORDPRESS STYLES */
 .wpcf7-not-valid-tip {

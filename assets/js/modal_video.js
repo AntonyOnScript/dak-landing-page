@@ -8,10 +8,6 @@ window.onkeyup = function(e){
     if(e.key === 'Escape'){ 
         if(video_modal_box.style.display === "flex"){
             saiDoModal()
-        }else if(caixa_de_pesquisa.style.display === "flex"){
-            caixa_de_pesquisa.style.display = 'none'
-        }else if(modal.style.display === 'flex'){
-            fechaModal()
         }
     }
 }
