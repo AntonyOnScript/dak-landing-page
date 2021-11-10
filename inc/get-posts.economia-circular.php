@@ -1,9 +1,9 @@
 <?php
 
-$servername = "mysql";
-$username = "u124324806_dWIHT";
-$password = "6HvoHlnNV2";
-$dbname = "u124324806_xyXXW";
+$servername = "213.190.7.235";
+$username = "u248128013_x6uTt";
+$password = "6cgLQ5Jr#$!!!57";
+$dbname = "u248128013_TSfxG";
 
 
 try {
@@ -14,7 +14,7 @@ try {
 	$sql = "	
 		SELECT wp_posts.id
 		     , wp_posts.post_title
-		     , (SELECT guid
+		     , (SELECT REPLACE(guid, 'http://','https://')
 		        FROM wp_posts
 		        WHERE id = wp_postmeta.meta_value) AS                                                          imagem
 		     , guid                                AS                                                          link
@@ -34,7 +34,7 @@ try {
 		  AND wp_posts.post_type = 'post'
 		  AND wp_postmeta.meta_key = '_thumbnail_id'
 		ORDER BY wp_posts.post_date DESC
-		LIMIT 4;	
+		LIMIT 4;
 	";
 
 	foreach ( $conn->query( $sql ) as $row ) {
