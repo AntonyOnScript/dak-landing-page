@@ -24,7 +24,7 @@
                 <div class="linha linha-03 f-modal f-modal-02"></div>
             </div>
         </div>
-    <iframe src="https://www.youtube.com/embed/uCF5p3zFp-4?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
+    <iframe src="https://www.youtube.com/embed/iABFlxG-kaE?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
     </div>
     <div class="menu-lateral">
         <div>
@@ -82,7 +82,7 @@
             </div>
             <div class="container-youtube">
                 <div class="subcontainer-youtube">
-                    <!-- PEGA THUMB DO VIDEO ORIGINAL<img src="https://i.ytimg.com/vi/[ID AQUI]/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLArt_w-Sp2d7xVGeW85q7jo8efYrg" class="youtube"alt="">-->
+                    <!-- PEGA THUMB DO VIDEO ORIGINAL<img src="https://i.ytimg.com/vi/iABFlxG-kaE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLArt_w-Sp2d7xVGeW85q7jo8efYrg" class="youtube"alt="">-->
                     <img src="<?php echo get_template_directory_uri();?>/assets/imgs/youtube.png" class='youtube'alt="">
                     <img src="<?php echo get_template_directory_uri();?>/assets/imgs/youtube.svg" class='logo-youtube'>
                 </div>
@@ -137,7 +137,7 @@
                 <div class="textos-article">
                     <h3 style="color:#c34541;letter-spacing: 3.2px;">vermelho</h3>
                     <h1 titulo-de-seção>Qualidade</h1>
-                    <p style="color:var(--cor-primaria);">Buscamos sempre os melhores resultados, independente da complexidade do projeto. Com ética, responsabilidade e comprometimento, buscamos incessantemente pela perfeição em tudo que fazermos.</p>
+                    <p style="color:var(--cor-primaria);">Buscamos sempre os melhores resultados, independente da complexidade do projeto. Com ética, responsabilidade e comprometimento, buscamos incessantemente pela perfeição em tudo que fazemos.</p>
                 </div>
             </article>
             <lord-icon
