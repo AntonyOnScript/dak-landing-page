@@ -1,0 +1,15 @@
+**/.DS_STORE
+desktop.ini
+**/.classpath
+**/.project
+**/.settings
+**/.factorypath
+build/
+bin/
+target/
+node_modules
+
+# IDEs
+.vscode/
+.idea/
+nbproject/
