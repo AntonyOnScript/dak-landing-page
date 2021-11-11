@@ -1,4 +1,12 @@
 <?php require_once 'header.php'; ?>
+    <div class='lupa'>
+        <div class="circulo-01">
+            <p>Alguma coisa aqui.</p>
+        </div>
+        <div class="circulo-02">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
     <div class="modal-box">
         <div class="dialogo">
             <header>

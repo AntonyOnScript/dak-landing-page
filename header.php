@@ -32,6 +32,7 @@
     <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
     <script src="<?php echo get_template_directory_uri();?>/assets/js/script.js" defer></script>
     <script src="<?php echo get_template_directory_uri();?>/assets/js/modal_video.js" defer></script>
+    <script src="<?php echo get_template_directory_uri();?>/assets/js/pesquisa.js" defer></script>
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/style.css">
 </head>
 <body>
