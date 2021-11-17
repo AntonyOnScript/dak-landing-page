@@ -44,4 +44,17 @@ class ProdutoController extends Controller
         $produtos = app('db')->select("SELECT id, grupo, nome, codigo, caracteristicas FROM dakhia.produto WHERE nome LIKE '%$nome%' ORDER BY nome;");        
         return response()->json($produtos);
     }
+
+    public function consultarProduto($id)
+    {        
+        $produto = app('db')->select("SELECT id, grupo, nome, codigo, caracteristicas FROM dakhia.produto WHERE id = $id;");        
+        $produto["propriedades"] = app('db')->select("SELECT id, propriedade, condicao, unidade, norma, seco FROM dakhia.propriedades WHERE id_produto = $id;");
+        return response()->json($produto);
+    }
+
+    public function gerarPDFProduto($id) 
+    {
+        //TODO
+        return response()->json($id);
+    }
 }
