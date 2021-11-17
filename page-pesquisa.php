@@ -29,11 +29,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <style>
+
     .container-area-de-pesquisa {
         background-color: #1c547a;
     }
 
-    .area-de-pesquisa, .filtros-ativos-container {
+    .container-geral {
         padding: 0px 30px;
     }
 
@@ -61,7 +62,7 @@
 <body>
 <div id="app">
     <div class="container-area-de-pesquisa">
-        <b-container class="area-de-pesquisa">
+        <b-container class="container-geral area-de-pesquisa">
             <h4 class="titulo-inicial">Lorem Ipsum Ispanos</h4>
             <h2 class="mb-4">Encontre o caminho certo</h2>
             <div class="d-flex gap-2">
@@ -507,17 +508,18 @@
             </b-collapse>
         </b-container>
         <div class="filtros-ativos">
-            <b-container class="filtros-ativos-container">
+            <b-container class="container-geral">
                 <b-button pill class="me-1">Filtro</b-button>
                 <b-button pill class="me-1">Filtro</b-button>
             </b-container>
         </div>
     </div>
+    
 </div>
 
 <script>
-    var app = new Vue({
-        el: '#app',
+
+    new Vue({
         data() {
             return {
                 iconeDropdown: "arrow-down"
@@ -528,7 +530,8 @@
                 this.iconeDropdown === "arrow-down"? this.iconeDropdown = "arrow-up": this.iconeDropdown = "arrow-down"
             }
         }
-    })
+    }).$mount("#app")
+    
 </script>
 </body>
 </html>
