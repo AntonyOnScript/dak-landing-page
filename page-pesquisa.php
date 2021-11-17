@@ -61,7 +61,7 @@
 </style>
 <body>
 <div id="app">
-    <div class="container-area-de-pesquisa">
+    <section class="container-area-de-pesquisa">
         <b-container class="container-geral area-de-pesquisa">
             <h4 class="titulo-inicial">Lorem Ipsum Ispanos</h4>
             <h2 class="mb-4">Encontre o caminho certo</h2>
@@ -513,11 +513,16 @@
                 <b-button pill class="me-1">Filtro</b-button>
             </b-container>
         </div>
-    </div>
+    </section>
     
 </div>
 
 <script>
+
+    Vue.component('alert-box', {
+        template: `
+        `
+    })
 
     new Vue({
         data() {
@@ -531,7 +536,7 @@
             }
         }
     }).$mount("#app")
-    
+
 </script>
 </body>
 </html>
