@@ -22,19 +22,26 @@ class ProdutoController extends Controller
      */
     public function listarGrupos()
     {
-        $grupos = app('db')->select("SELECT DISTINCT grupo FROM dakhia.produto WHERE grupo IS NOT NULL ORDER BY grupo");
+        $grupos = app('db')->select("SELECT DISTINCT grupo FROM dakhia.produto WHERE grupo IS NOT NULL ORDER BY grupo;");
         return response()->json($grupos);
     }
 
-    public function listarProdutosPorGrupos()
+    public function listarProdutosPorGrupos($grupos)
     {
-        
+        $grupos = urldecode($grupos);
+        $gruposArray = explode(",", $grupos);
+        foreach($gruposArray as $key => $grupo) {
+            $gruposArray[$key] = "'".$grupo."'";
+        }
+        $grupos = implode(",", $gruposArray);
+        $produtos = app('db')->select("SELECT id, grupo, nome, codigo, caracteristicas FROM dakhia.produto WHERE grupo IN ($grupos) ORDER BY nome;");        
+        return response()->json($produtos);
     }
 
-    public function consultarProduto($nome)
+    public function consultarProdutos($nome)
     {
         $nome = urldecode($nome);
-        $produto = app('db')->select("SELECT * FROM dakhia.produto WHERE nome LIKE '%$nome%' ORDER BY nome");        
-        return response()->json($produto);
+        $produtos = app('db')->select("SELECT id, grupo, nome, codigo, caracteristicas FROM dakhia.produto WHERE nome LIKE '%$nome%' ORDER BY nome;");        
+        return response()->json($produtos);
     }
 }
