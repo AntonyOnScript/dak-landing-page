@@ -58,6 +58,76 @@
         background-color: #133a54;
     }
 
+    .item-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        box-shadow: 0px 0px 10px 0px rgb(102 102 102 / 50%);
+    }
+
+    .descricao-topo-card {
+        background-color: blue;
+        padding: 5px 10px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .titulos-container-card {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .titulo-card {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: gray;
+    }
+
+    .descricao-card {
+        padding: 0px 10px;
+        padding-bottom: 30px;
+        color: gray;
+    }
+
+    .linha-azul-card {
+        background-color: blue;
+        width: 90%;
+        height: 1px;
+        margin-top: 7px;
+    }
+
+    .caracteristicas-card {
+        display: flex;
+        gap: 3px;
+    }
+
+    .caracteristica-geral-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 10px;
+        background-color: gray;
+    }
+
+    .linha-cinza-caracteristica-card {
+        height: 3px;
+        width: 100%;
+        background-color: lightgray;
+    }
+
+    .caracteristica-card {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+        padding-top: 5px;
+    }
+
+    .itens-de-pesquisa { 
+        margin-top: 30px;
+    }
+
 </style>
 <body>
 <div id="app">
@@ -515,13 +585,56 @@
         </div>
     </section>
     
+    <section class="itens-de-pesquisa">
+        <b-container>
+            <div class="container-geral">
+                <b-row class="mw-100">
+                    <b-col class="p-0">
+                        <card-item />
+                    </b-col>
+                </b-row>
+            </div>
+        </b-container>
+    </section>
 </div>
 
 <script>
 
-    Vue.component('alert-box', {
+    Vue.component('card-item', {
         template: `
-        `
+            <div class="item-card">
+                <div class="descricao-topo-card">
+                    <p>{{ descricaoTopo }}</p>
+                </div>
+                <div class="titulos-container-card">
+                    <h3 class="titulo-card">Teste</h3>
+                    <p class="subtitulo-card">TESTE S80 (T1S20)</p>
+                    <div class="linha-azul-card"></div>
+                </div>
+                <div class="descricao-card">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad non nam harum, beatae voluptatem necessitatibus voluptatibus eveniet minus iste magni itaque ullam. Debitis a labore vel excepturi, reiciendis quisquam?</p>
+                </div>
+                <div class="caracteristicas-card">
+                    <div class="caracteristica-geral-card">
+                        <div class="linha-cinza-caracteristica-card"></div>
+                        <p class="caracteristica-card">TESte</p>
+                    </div>
+                    <div class="caracteristica-geral-card">
+                        <div class="linha-cinza-caracteristica-card"></div>
+                        <p class="caracteristica-card">tensão</p>
+                    </div>
+                    <div class="caracteristica-geral-card">
+                        <div class="linha-cinza-caracteristica-card"></div>
+                        <p class="caracteristica-card">fórmula</p>
+                    </div>
+                </div>
+            </div>
+        `,
+        data() {
+            return {
+                descricaoTopo: "elemento x99000" // Antony: fiz apenas para exibir que é possivel utilizar data bind nesse componente
+            }
+        }
     })
 
     new Vue({
