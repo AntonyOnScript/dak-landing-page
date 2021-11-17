@@ -62,6 +62,7 @@
         display: flex;
         flex-direction: column;
         max-width: 400px;
+        min-width: 280px;
         box-shadow: 0px 0px 10px 0px rgb(102 102 102 / 50%);
     }
 
@@ -586,13 +587,13 @@
     </section>
     
     <section class="itens-de-pesquisa">
-        <b-container>
+        <b-container class="p-0">
             <div class="container-geral">
-                <b-row class="mw-100">
-                    <b-col class="p-0">
-                        <card-item />
-                    </b-col>
-                </b-row>
+                <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
+                    <card-item></card-item>
+                    <card-item></card-item>
+                    <card-item></card-item>
+                </div>
             </div>
         </b-container>
     </section>
