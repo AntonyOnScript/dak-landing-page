@@ -66,7 +66,9 @@
             <h2 class="mb-4">Encontre o caminho certo</h2>
             <div class="d-flex gap-2">
                 <b-form-input></b-form-input>
-                <b-button pill v-b-toggle.filtros><b-icon-arrow-down></b-icon-arrow-down></b-button>
+                <b-button pill v-b-toggle.filtros @click="mudaDropdown()">
+                    <b-icon :icon="iconeDropdown"></b-icon>
+                </b-button>
             </div>
             <b-collapse id="filtros" class="filtros">
                 <div class="area-de-filtros">
@@ -518,30 +520,13 @@
         el: '#app',
         data() {
             return {
-                URL_BASE: 'https://jsonplaceholder.typicode.com',
-                colunas: [
-                    {key: 'userId'},
-                    {key: 'id'},
-                    {key: 'title'},
-                    {key: 'body'}
-                ],
-                linhas: [],
-                id: 3
+                iconeDropdown: "arrow-down"
             }
         },
         methods: {
-            listar() {
-                axios.get(`${this.URL_BASE}/posts`)
-                    .then(response => {
-                        this.linhas = response.data
-                    })
-            },
-            pesquisar() {
-                axios.get(`${this.URL_BASE}/posts/${this.id}`)
-                    .then(response => {
-                        document.getElementById('results').innerHTML = response.data.body
-                    })
-            },
+            mudaDropdown() {
+                this.iconeDropdown === "arrow-down"? this.iconeDropdown = "arrow-up": this.iconeDropdown = "arrow-down"
+            }
         }
     })
 </script>
