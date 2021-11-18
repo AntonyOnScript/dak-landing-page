@@ -29,6 +29,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/menu.js" defer></script>
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.map"></script>
 </head>
 <style>
 
@@ -131,6 +132,18 @@
         margin: 30px 0px;
     }
 
+    .lista-grupos {
+        columns: 3;
+        column-width: 50px;
+        width: 100%;
+        max-height: 100%;
+        padding: 0;
+    }
+
+    .lista-grupos li {
+        list-style: none;
+    }
+
 </style>
 <body>
 <div class="menu-lateral">
@@ -185,441 +198,7 @@
                     <b-icon :icon="iconeDropdown"></b-icon>
                 </b-button>
             </div>
-            <b-collapse id="filtros" class="filtros">
-                <div class="area-de-filtros">
-                    <h6>Polimetros</h6>
-                    <b-row>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                    </b-row>
-                </div>
-            </b-collapse>
-            <b-collapse id="filtros" class="filtros">
-                <div class="area-de-filtros">
-                    <h6>Polimetros</h6>
-                    <b-row>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                    </b-row>
-                </div>
-            </b-collapse>
-            <b-collapse id="filtros" class="filtros">
-                <div class="area-de-filtros">
-                    <h6>Polimetros</h6>
-                    <b-row>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                        <b-col class="d-flex flex-column">
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                            <div>
-                                <b-form-checkbox
-                                    id="checkbox-1"
-                                    v-model="status"
-                                    name="checkbox-1"
-                                    value="accepted"
-                                    unchecked-value="not_accepted"
-                                >
-                                    <p class="ms-2">Propriedade Quimica</p>
-                                </b-form-checkbox>
-                            </div>
-                        </b-col>
-                    </b-row>
-                </div>
-            </b-collapse>
+            <filtros-checkbox titulo="Grupos" :grupos="grupos"></filtros-checkbox>
         </b-container>
         <div class="filtros-ativos">
             <b-container class="container-geral">
@@ -658,7 +237,6 @@
             </b-button> 
         </div>
     </section>
-
 </div>
 <footer>
     <div class="footer-container">
@@ -683,7 +261,32 @@
 </footer>
 <script>
 
-    Vue.component('card-item', {
+    const URL = "http://localhost/api-dakhia/dakhia/api/public"
+
+    let filtroCheckBoxComponent = {
+        template: `
+            <b-collapse id="filtros" class="filtros">
+                <div class="area-de-filtros">
+                    <h6>{{ titulo }}</h6>
+                    <ul class="lista-grupos">
+                        <li v-for="grupo of grupos" v-key="grupo">
+                            <b-form-checkbox
+                                :id="grupo.grupo"
+                                :name="grupo.grupo"
+                                value="accepted"
+                                unchecked-value="not_accepted"
+                            >
+                                <p class="ms-2">{{ grupo.grupo }}</p>
+                            </b-form-checkbox>
+                        </li>
+                    </ul>
+                </div>
+            </b-collapse>
+        `,
+        props: ["titulo", "grupos"]
+    }
+
+    let cardItemComponent = {
         template: `
             <div class="item-card">
                 <div class="descricao-topo-card">
@@ -718,21 +321,29 @@
                 descricaoTopo: "elemento x99000" // Antony: fiz apenas para exibir que é possivel utilizar data bind nesse componente
             }
         }
-    })
+    }
 
     new Vue({
+        components: {
+            'filtros-checkbox': filtroCheckBoxComponent,
+            'card-item': cardItemComponent
+        },
         data() {
             return {
-                iconeDropdown: "arrow-down"
+                iconeDropdown: "arrow-down",
+                grupos: []
             }
         },
         methods: {
             mudaDropdown() {
                 this.iconeDropdown === "arrow-down"? this.iconeDropdown = "arrow-up": this.iconeDropdown = "arrow-down"
             }
+        },
+        mounted() {
+            axios.get(URL+"/grupos/listar")
+            .then(resposta => this.grupos = resposta.data)
         }
     }).$mount("#app")
-
 </script>
 </body>
 </html>
