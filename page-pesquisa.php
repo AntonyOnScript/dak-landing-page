@@ -136,25 +136,22 @@
 <div class="menu-lateral">
         <div>
             <ul>
-                <li class="link_01"><a class="link_01">Home</a></li>
-                <li class="link_02"><a class="link_02">Sobre Nós</a></li>
-                <li class="link_03"><a class="link_03">Conteúdo</a></li>
-                <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
-                <li class="link_05"><a class="link_05">Contato</a></li>
+                <li class="link_01"><a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">Home</a></li>
+                <li class="link_02"><a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">Sobre Nós</a></li>
+                <li class="link_03"><a class="link_03" href="<?= bloginfo("url")."#economia" ?>">Conteúdo</a></li>
+                <li class="link_04"><a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">Nossos Produtos</a></li>
+                <li class="link_05"><a class="link_05" href="<?= bloginfo("url")."#contato" ?>">Contato</a></li>
             </ul>
-        </div> 
-        <div class="pesquisa mobile">
-            <i class="fas fa-search"></i>
         </div>
     </div>
     <div class="menu" menu-fixo>
     <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
         <ul>
-            <li class="link_01"><a class="link_01">Home</a></li>
-            <li class="link_02"><a class="link_02">Sobre Nós</a></li>
-            <li class="link_03"><a class="link_03">Conteúdo</a></li>
-            <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
-            <li class="link_05"><a class="link_05">Contato</a></li>
+            <li class="link_01"><a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">Home</a></li>
+            <li class="link_02"><a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">Sobre Nós</a></li>
+            <li class="link_03"><a class="link_03" href="<?= bloginfo("url")."#economia" ?>">Conteúdo</a></li>
+            <li class="link_04"><a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">Nossos Produtos</a></li>
+            <li class="link_05"><a class="link_05" href="<?= bloginfo("url")."#contato" ?>">Contato</a></li>
         </ul>
         <div class="menu-mobile menu-mobile-01">
             <div class="linha linha-01"></div>
@@ -165,11 +162,11 @@
     <div class="menu" id="menu-topo">
         <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
         <ul>
-            <li class="link_01"><a class="link_01">Home</a></li>
-            <li class="link_02"><a class="link_02">Sobre Nós</a></li>
-            <li class="link_03"><a class="link_03">Conteúdo</a></li>
-            <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
-            <li class="link_05"><a class="link_05">Contato</a></li>
+            <li class="link_01"><a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">Home</a></li>
+            <li class="link_02"><a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">Sobre Nós</a></li>
+            <li class="link_03"><a class="link_03" href="<?= bloginfo("url")."#economia" ?>">Conteúdo</a></li>
+            <li class="link_04"><a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">Nossos Produtos</a></li>
+            <li class="link_05"><a class="link_05" href="<?= bloginfo("url")."#contato" ?>">Contato</a></li>
         </ul>
         <div class="menu-mobile menu-mobile-02">
             <div class="linha linha-01"></div>
