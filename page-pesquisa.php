@@ -641,7 +641,27 @@
         </b-container>
     </section>
 </div>
-
+<footer>
+    <div class="footer-container">
+        <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_gray.svg">
+        <div class="endereco">
+            <h3>endereço</h3>
+            <a>Av. Fabio Eduardo Ramos Esquivel, 2424</a>
+            <a>Diadema - SP - CEP: 00941-202</a>
+            <a>+55 (11) 3296-8550</a>
+            <a style="margin-top: 20px;">&copy; 2021 Dakhia</a>
+            <a>Todos os direitos reservados</a>
+        </div>
+        <div class="links">
+            <h3>navegação</h3>
+            <span>/<a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">&nbsp;&nbsp;Home</a></span>
+            <span>/<a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">&nbsp;&nbsp;Sobre Nós</a></span>
+            <span>/<a class="link_03" href="<?= bloginfo("url")."#economia" ?>">&nbsp;&nbsp;Conteúdo</a></span>
+            <span>/<a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></span>
+            <span>/<a class="link_05" href="<?= bloginfo("url")."#contato" ?>">&nbsp;&nbsp;Contato</a></span>
+        </div>
+    </div>
+</footer>
 <script>
 
     Vue.component('card-item', {
