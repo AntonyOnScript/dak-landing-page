@@ -19,6 +19,8 @@ $router->get('/', function () use ($router) {
 
 $router->get('/grupos/listar', 'ProdutoController@listarGrupos');
 
+$router->get('/produtos/listar', 'ProdutoController@listarProdutos');
+
 $router->get('/produtos/procurar/{nome}', 'ProdutoController@consultarProdutos');
 
 $router->get('/produtos/consultar/{id:[0-9]+}', 'ProdutoController@consultarProduto');

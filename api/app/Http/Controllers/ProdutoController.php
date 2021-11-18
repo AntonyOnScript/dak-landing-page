@@ -26,6 +26,12 @@ class ProdutoController extends Controller
         return response()->json($grupos);
     }
 
+    public function listarProdutos()
+    {
+        $grupos = app('db')->select("SELECT DISTINCT id, grupo, nome, codigo, caracteristicas FROM dakhia.produto ORDER BY nome;");
+        return response()->json($grupos);
+    }
+
     public function listarProdutosPorGrupos($grupos)
     {
         $grupos = urldecode($grupos);
