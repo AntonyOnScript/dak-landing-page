@@ -630,7 +630,7 @@
     </section>
     
     <section class="itens-de-pesquisa">
-        <b-container class="p-0">
+        <b-container class="p-0 mb-5">
             <div class="container-geral">
                 <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
                     <card-item></card-item>
@@ -639,7 +639,26 @@
                 </div>
             </div>
         </b-container>
+        <div class="d-flex justify-content-center gap-1">
+            <b-button pill>
+                <b-icon icon="chevron-double-left"></b-icon>
+            </b-button> 
+            <b-button pill>
+                <span class="ps-1 pe-1">1</span>
+            </b-button> 
+            <b-button pill>
+                <span class="ps-1 pe-1">2</span>
+            </b-button>  
+                <span class="mt-1">...</span>
+            <b-button pill>
+                <span class="ps-1 pe-1">12</span>
+            </b-button> 
+            <b-button pill>
+                <b-icon icon="chevron-double-right"></b-icon>
+            </b-button> 
+        </div>
     </section>
+
 </div>
 <footer>
     <div class="footer-container">
