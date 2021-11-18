@@ -27,6 +27,8 @@
     <!-- ======= BOOTSTRAP-VUE end ======= -->
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/js/menu.js" defer></script>
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/menu.css">
 </head>
 <style>
 
@@ -131,6 +133,50 @@
 
 </style>
 <body>
+<div class="menu-lateral">
+        <div>
+            <ul>
+                <li class="link_01"><a class="link_01">Home</a></li>
+                <li class="link_02"><a class="link_02">Sobre Nós</a></li>
+                <li class="link_03"><a class="link_03">Conteúdo</a></li>
+                <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
+                <li class="link_05"><a class="link_05">Contato</a></li>
+            </ul>
+        </div> 
+        <div class="pesquisa mobile">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <div class="menu" menu-fixo>
+    <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
+        <ul>
+            <li class="link_01"><a class="link_01">Home</a></li>
+            <li class="link_02"><a class="link_02">Sobre Nós</a></li>
+            <li class="link_03"><a class="link_03">Conteúdo</a></li>
+            <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
+            <li class="link_05"><a class="link_05">Contato</a></li>
+        </ul>
+        <div class="menu-mobile menu-mobile-01">
+            <div class="linha linha-01"></div>
+            <div class="linha linha-02"></div>
+            <div class="linha linha-03"></div>
+        </div>
+    </div>
+    <div class="menu" id="menu-topo">
+        <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
+        <ul>
+            <li class="link_01"><a class="link_01">Home</a></li>
+            <li class="link_02"><a class="link_02">Sobre Nós</a></li>
+            <li class="link_03"><a class="link_03">Conteúdo</a></li>
+            <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
+            <li class="link_05"><a class="link_05">Contato</a></li>
+        </ul>
+        <div class="menu-mobile menu-mobile-02">
+            <div class="linha linha-01"></div>
+            <div class="linha linha-02"></div>
+            <div class="linha linha-03"></div>
+        </div>
+    </div>
 <div id="app">
     <section class="container-area-de-pesquisa">
         <b-container class="container-geral area-de-pesquisa">

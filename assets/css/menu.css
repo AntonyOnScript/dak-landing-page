@@ -21,16 +21,30 @@ html{
     font-weight: 400;
     scroll-behavior: smooth;
 }
+p{
+    font-family: "Calibri";
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+}
 a{
     text-decoration: none;
 }
-.menu{
-    position: absolute;
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.menu {
     display:flex;
     width: 100%;
     justify-content: space-between;
-    padding: 75px 0px 40px 0px;
+    padding: 30px 0px 30px 0px;
     z-index: 1000;
+    background-color: white;
+}
+#menu-topo {
+    display: flex;
 }
 .menu img, .logo-container{
     width: 287px;
@@ -45,6 +59,7 @@ a{
     align-items: center;
     width: 100%;
     max-width: 100%;
+    margin: 0;
 }
 .menu ul li{
     padding: 0px 10px;
@@ -69,9 +84,6 @@ a{
     left: 0%;
     width: 100%;
 }
-#menu-topo ul li a{
-    color: white;
-}
 .menu[menu-fixo]{
     display: none;
     position: fixed;
@@ -80,7 +92,7 @@ a{
     padding: 30px 0px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
-.menu-mobile, .fecha-modal{
+.menu-mobile {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -192,6 +204,10 @@ h3{
     letter-spacing: 3.2px;
     color: var(--cor-primaria);
 }
+h4{
+    font-size: 36px;
+    text-transform: uppercase;
+}
 footer{
     display: flex;
     justify-content: center;
@@ -259,39 +275,13 @@ footer{
     max-width: 100%;
     width: 365px;
 }
-span{
-    font-size: 16px;
-}
 /*MEDIA QUERIES*/
-@media only screen and (max-width:1880px){
-    .elementos-article{
-        padding-top: 40px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .elementos-article article:nth-child(7){
-        grid-column: span 3;
-        max-width: 100%;
-    }
-}
 @media only screen and (max-width:1692px){ /*1560*/
     h1{
         font-size: 33px;
     }
-    .textos-hero div{
-        margin-right: 90px;
-        margin-left: calc(var(--espaço-padding-2) + 50px);
-    }
-    .container-sobre{
-        padding: 65px 80px 133px var(--espaço-padding-2);
-    }
     .footer-container{
         padding: 100px var(--espaço-padding-2);
-    }
-    .novo-visual-textos{
-        padding:0px var(--espaço-padding-2);
-    }
-    .textos-desenvolvimento{
-        padding: 0px var(--espaço-padding-2);
     }
 }
 @media only screen and (max-width:1360px){
@@ -299,23 +289,7 @@ span{
         margin: 0px 100px;
     }
 }
-/*
-@media only screen and (max-width: 1315px){
-    .seta-03, .seta-04{
-        display: none;
-    }
-    .textos-hero div{
-        margin-left: var(--espaço-padding-2);
-    }
-    .seletor-slide-01{
-        z-index: -10000;
-    }
-}
-*/
 @media only screen and (max-width:1260px){
-    .elementos-article {
-        padding: 30px var(--espaço-padding-2) 150px var(--espaço-padding-2);
-    }
     .menu ul{
         display: none;
     }
@@ -333,25 +307,6 @@ span{
     }
 }
 @media only screen and (max-width:1212px){
-    .container-sobre{
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 65px var(--espaço-padding-2) 133px var(--espaço-padding-2);
-    }
-    .container-youtube{
-        margin-bottom: 20px;
-        margin-left: 0px;
-    }
-    [titulo-de-seção]{
-        font-size: 33px;
-        line-height: 40px;
-    }
-    .articles-conteudo img{
-        max-width: 240px;
-    }
-    .articles-conteudo{
-        grid-template-columns: 1fr;
-    }
     .footer-container{
         flex-direction: column-reverse;
         align-items: center;
@@ -371,19 +326,6 @@ span{
     .footer-container div{
         width: 322px;
     }
-    .textos-desenvolvimento{
-        padding: 0px var(--espaço-padding-2);
-    }
-    .prime-sustentavel{
-        padding: 4px var(--espaço-padding-2) 80px var(--espaço-padding-2);
-        flex-direction: column;
-    }
-    .prime-sustentavel .prime{
-        margin-bottom: 20px;
-    }
-    .sustentavel{
-        margin: 0;
-    }
     .fale-conosco{
         padding: 70px var(--espaço-padding-2);
     }
@@ -392,58 +334,13 @@ span{
     :root{
         --espaço-padding-2: 80px;
     }
-    .textos-sobre h2, h2{
-        font-size: 26px;
-        line-height: 30px;
-        margin-bottom: 10px;
-    }
-    .textos-desenvolvimento{
-        padding: 0px var(--espaço-padding-2);
-    }
-    .fale-conosco form{
-        max-width: 100%;
-        width:100%;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nome"
-        "email"
-        "telefone"
-        "mensagem"
-        "submit"
-        ;
-        row-gap: 20px;
-    }
-    .fale-conosco form div.enviar{
-        align-items: center;
-    }
-    .conteudo-azul h1{
-        font-size: 24px;
-    }
-    .novo-visual-textos{
-        padding: 0px var(--espaço-padding-2);
-    }
     .footer-container{
         padding: 100px var(--espaço-padding-2);
-    }
-}
-@media only screen and (max-width:672px){
-    .elementos-article {
-        padding: 30px 20px 150px 20px;
-    }
-    .seta{
-        display: none;
-    }
-    .textos-hero div {
-        margin-right: 0px;
-        margin-left: var(--espaço-padding-2);
     }
 }
 @media only screen and (max-width:560px){
     :root{
         --espaço-padding-2:40px;
-    }
-    .pesquisa input{
-        width:unset;
     }
     hr[verde]{
         bottom: 60%;
@@ -453,71 +350,13 @@ span{
         letter-spacing: 2px;
         margin-bottom: 5px;
     }
-    .conteudo-azul h3, .fale-conosco h3{
-        margin-bottom: 10px;
-    }
-    .conteudo-azul article h3{
-        letter-spacing: 3.2px;
-    }
-    .container-sobre{
-        padding-bottom: 100px;
-    }
-    p, .fale-conosco form div span{
-        font-size: 13px;
-        line-height: 19px;
-    }
-    .container-sobre h2, h2{
-        font-size: 18px;
-        line-height: 20px;
-    }
-    .article-novo-visual, #article-03, #article-02{
-        padding: 0px 49px 30px 40px;
-    }
-    .article-novo-visual img, #article-03 img, #article-02 img{
-        min-height: 180px;
-        max-width: 180px;
-        max-height: 180px;
-    }
-    .article-novo-visual div img.espacador, #article-02 div img.espacador, #article-03 div img.espacador{
-        min-width: 180px;
-        min-height: 180px;
-        max-width: 180px;
-        max-height: 180px;
-    }
-    .textos-hero h1{
-        font-size: 33px;
-    }
-    .textos-hero .assista-agora{
-        margin-top: 60px;
-    }
-    .elementos-article{
-        grid-template-columns: 1fr 1fr;
-        padding: 30px 20px 100px 20px;
-    }
-    .elementos-article article:nth-child(7){
-        grid-column: span 2;
-        max-width: 100%;
-    }
-    .article-novo-visual, .article-container article, #article-03, #article-02{
-        max-width: 80%;
-    }
-    [titulo-de-seção], .conteudo-azul [titulo-de-seção], .article-novo-visual h1,.article-container article h1{
-        font-size: 22px;
-        line-height: 30px;
-    }
     .footer-container{
         padding: 60px var(--espaço-padding-2);
     }
 }
 @media only screen and (max-width:448px){
-    .prime-sustentavel{
-        padding: 4px 80px 30px 10px;
-    }
     .menu img, .logo-container{
         width: 200px;
-    }
-    .textos-hero div{
-        margin-top: 300px;
     }
     .menu{
         padding: 40px 0px;
@@ -528,86 +367,19 @@ span{
     .menu-mobile .linha{
         height: 4px;
     }
-    hr[verde]{
-        bottom: 68%;
-        height: 36%;
-    }
-    /*
-    .textos-hero div h3::before{
-        font-size: 120px;
-        top: -30px;
-    }*/
     h3, .textos-hero h3{
         font-size: 10px;
-    }
-    .article-novo-visual img, #article-03 img, #article-02 img{
-        min-height: 120px;
-        max-width: 90px;
-        max-height: 120px;
-    }
-    .article-novo-visual div img.espacador, #article-02 div img.espacador, #article-03 div img.espacador{
-        min-width: 90px;
-        min-height: 120px;
-        max-width: 90px;
-        max-height: 120px;
-    }
-    [titulo-de-seção], .conteudo-azul [titulo-de-seção], .article-novo-visual h1{
-        font-size: 18px;
-        line-height: normal;
-        letter-spacing: 3px;
-    }
-    .prime img, .sustentavel img{
-        max-width: 30px;
-        max-height: 30px;
-        min-height: 30px;
-    }
-    .icone-texto{
-        padding-left: 30px;
-        padding-bottom: 4px;
-    }
-    h4{
-        font-size: 18px;
-    }
-    .modal-box .dialogo p{
-        font-size: 16px;
-    }
-    .prime-sustentavel p{
-        padding-left: 80px;
-    }
-    .moleculas{
-        padding-top: 95px;
     }
 }
 @media only screen and (max-width:402px){
     :root{
         --espaço-padding-2:10px;
     }
-    .lupa{
-        top:124px;
-    }
-    .circulo-02{
-        padding: 15px;
-    }
-    hr[verde]{
-        bottom: 66%;
-        height: 38%;
-    }
     .menu img, .logo-container{
         max-width:100%;
     }
     .logo-container{
         margin-left:10px;
-    }
-    .textos-hero h1{
-        font-size: 18px;
-        line-height: normal;
-    }
-    .article-novo-visual, .article-container article, #article-03, #article-02 {
-        padding: 0px 15px 20px 15px;
-    }
-    .article-novo-visual h1[titulo-de-seção], #article-03 h1, #article-02 h1{
-        font-size: 18px;
-        word-break: break-all;
     }
     .footer-container a{
         font-size: 12px;
@@ -616,32 +388,6 @@ span{
 @media only screen and (max-width:370px){
     :root{
         --espaço-padding-2:20px;
-    }
-    .pesquisa-modal{
-        padding: 0px;
-    }
-    hr[verde]{
-        bottom: 68%;
-        height: 36%;
-    }
-    .elementos-article{
-        grid-template-columns: 1fr;
-    }
-    .elementos-article article:nth-child(7){
-        grid-column: span 1;
-        max-width: 190px;
-    }
-    .prime-sustentavel{
-        padding: 4px 80px 30px 0px;
-    }
-    .article-novo-visual h1[titulo-de-seção] {
-        font-size: 16px;
-    }
-}
-@media only screen and (max-width:330px){
-    .textos-hero div h3::before{
-        font-size: 120px;
-        top: -30px;
     }
 }
 @media only screen and (max-width:315px){
@@ -693,23 +439,6 @@ span{
 @keyframes pesquisa{
     from{transform: rotate3d(0, 0, 0, 0deg);}
     to{transform: rotate3d(0, 0, 1, 360deg);}
-}
-/* WORDPRESS STYLES */
-.wpcf7-not-valid-tip {
-    color: #dc3232;
-    font-size: 1em;
-    font-weight: normal;
-    font-family: "Calibri";
-    display: block;
-    float: left;
-    margin-top: 3px;
-}
-.wpcf7-response-output{
-    grid-column: span 2;
-}
-.wpcf7 form .wpcf7-response-output {
-    margin: -.5em 0em 1em !important;
-    padding: 1em 1em;
 }
 @keyframes float {
 	0% {
