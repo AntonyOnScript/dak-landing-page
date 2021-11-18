@@ -144,6 +144,13 @@
         list-style: none;
     }
 
+    .container-caracteristicas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
 </style>
 <body>
 <div class="menu-lateral">
@@ -212,9 +219,7 @@
         <b-container class="p-0 mb-5">
             <div class="container-geral">
                 <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
-                    <card-item></card-item>
-                    <card-item></card-item>
-                    <card-item></card-item>
+                    <card-item v-for="produto of produtos" v-key="produto" :grupo="produto.grupo" :nome="produto.nome" :codigo="produto.codigo" :caracteristicas="produto.caracteristicas" ></card-item>
                 </div>
             </div>
         </b-container>
@@ -290,37 +295,35 @@
         template: `
             <div class="item-card">
                 <div class="descricao-topo-card">
-                    <p>{{ descricaoTopo }}</p>
+                    <p>{{ grupo }}</p>
                 </div>
                 <div class="titulos-container-card">
-                    <h3 class="titulo-card">Teste</h3>
-                    <p class="subtitulo-card">TESTE S80 (T1S20)</p>
+                    <h3 class="titulo-card">{{ nome }}</h3>
+                    <p class="subtitulo-card">{{ codigo }}</p>
                     <div class="linha-azul-card"></div>
                 </div>
-                <div class="descricao-card">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad non nam harum, beatae voluptatem necessitatibus voluptatibus eveniet minus iste magni itaque ullam. Debitis a labore vel excepturi, reiciendis quisquam?</p>
-                </div>
-                <div class="caracteristicas-card">
-                    <div class="caracteristica-geral-card">
-                        <div class="linha-cinza-caracteristica-card"></div>
-                        <p class="caracteristica-card">TESte</p>
+                <div class="container-caracteristicas">
+                    <div class="descricao-card">
+                        <p>{{ caracteristicas }}</p>
                     </div>
-                    <div class="caracteristica-geral-card">
-                        <div class="linha-cinza-caracteristica-card"></div>
-                        <p class="caracteristica-card">tensão</p>
-                    </div>
-                    <div class="caracteristica-geral-card">
-                        <div class="linha-cinza-caracteristica-card"></div>
-                        <p class="caracteristica-card">fórmula</p>
+                    <div class="caracteristicas-card">
+                        <div class="caracteristica-geral-card">
+                            <div class="linha-cinza-caracteristica-card"></div>
+                            <p class="caracteristica-card">TESte</p>
+                        </div>
+                        <div class="caracteristica-geral-card">
+                            <div class="linha-cinza-caracteristica-card"></div>
+                            <p class="caracteristica-card">tensão</p>
+                        </div>
+                        <div class="caracteristica-geral-card">
+                            <div class="linha-cinza-caracteristica-card"></div>
+                            <p class="caracteristica-card">fórmula</p>
+                        </div>
                     </div>
                 </div>
             </div>
         `,
-        data() {
-            return {
-                descricaoTopo: "elemento x99000" // Antony: fiz apenas para exibir que é possivel utilizar data bind nesse componente
-            }
-        }
+        props: ["grupo", "nome", "codigo", "caracteristicas"]
     }
 
     new Vue({
@@ -331,7 +334,8 @@
         data() {
             return {
                 iconeDropdown: "arrow-down",
-                grupos: []
+                grupos: [],
+                produtos: []
             }
         },
         methods: {
@@ -342,6 +346,9 @@
         mounted() {
             axios.get(URL+"/grupos/listar")
             .then(resposta => this.grupos = resposta.data)
+
+            axios.get(URL+"/produtos/listar")
+            .then(resposta => this.produtos = resposta.data)
         }
     }).$mount("#app")
 </script>
