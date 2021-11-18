@@ -128,7 +128,7 @@
     }
 
     .itens-de-pesquisa { 
-        margin-top: 30px;
+        margin: 30px 0px;
     }
 
 </style>
