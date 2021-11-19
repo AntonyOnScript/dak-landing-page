@@ -205,10 +205,11 @@
                     <b-icon :icon="iconeDropdown"></b-icon>
                 </b-button>
             </div>
-            <filtros-checkbox titulo="Grupos" :grupos="grupos"></filtros-checkbox>
+            <filtros-checkbox titulo="Grupos" :grupos="grupos" @atualizadados="atualizaGrupos" :gruposglobais="gruposSelecionados"></filtros-checkbox>
         </b-container>
         <div class="filtros-ativos">
             <b-container class="container-geral">
+                <b-button pill @click="gruposSelecionados = []">Limpa Filtros</b-button>
                 <b-button pill class="me-1" v-if="gruposSelecionados" v-for="grupo of gruposSelecionados" :key="grupo">{{ grupo }}</b-button>
             </b-container>
         </div>
@@ -266,7 +267,6 @@
 <script>
 
     const URL = "http://localhost/api-dakhia/dakhia/api/public"
-    window.grupos = []
 
     let filtroCheckBoxComponent = {
         template: `
@@ -276,33 +276,25 @@
                     <ul class="lista-grupos">
                         <b-form-checkbox-group
                             v-model="gruposSelecionados"
-                            v-for="grupo of grupos" v-key="grupo"
+                            :options="grupos"
                         >
-                            <b-form-checkbox
-                                :value="grupo.grupo"
-                            >
-                                <p class="ms-2">{{ grupo.grupo }}</p>
-                            </b-form-checkbox>
                         </b-form-checkbox-group>
                     </ul>
                 </div>
             </b-collapse>
         `,
-        props: ["titulo", "grupos"],
+        props: ["titulo", "grupos", "gruposglobais"],
         data() {
             return {
                 gruposSelecionados: []
             }
         },
         watch: {
-            gruposSelecionados(novo, velho) { // Antony: Utilizado loops para não redeclarar o array e assim utiliza-lo como referência em vez de cópia
-                for(let i = 0; i <= grupos.length; i++) {
-                    grupos.pop()
-                }
-
-                for(let i = 0; i < this.gruposSelecionados.length; i++) {
-                    if(grupos.indexOf(this.gruposSelecionados[i]) === -1) grupos.push(this.gruposSelecionados[i])
-                }
+            gruposSelecionados(novo, velho) {
+                this.$emit("atualizadados", this.gruposSelecionados)
+            },
+            gruposglobais(novo, velho) {
+                if(this.gruposglobais.length === 220) this.gruposSelecionados = []
             }
         }
     }
@@ -352,17 +344,24 @@
                 iconeDropdown: "arrow-down",
                 grupos: [],
                 produtos: [],
-                gruposSelecionados: window.grupos
+                gruposSelecionados: []
             }
         },
         methods: {
             mudaDropdown() {
                 this.iconeDropdown === "arrow-down"? this.iconeDropdown = "arrow-up": this.iconeDropdown = "arrow-down"
+            },
+            atualizaGrupos(dados) {
+                this.gruposSelecionados = dados
             }
         },
         mounted() {
             axios.get(URL+"/grupos/listar")
-            .then(resposta => this.grupos = resposta.data)
+            .then(resposta => {
+                this.grupos = resposta.data.map(item => {
+                    return { text: item.grupo, value: item.grupo }
+                })
+            })
 
             axios.get(URL+"/produtos/listar")
             .then(resposta => this.produtos = resposta.data)
