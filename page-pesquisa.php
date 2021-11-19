@@ -209,8 +209,7 @@
         </b-container>
         <div class="filtros-ativos">
             <b-container class="container-geral">
-                <b-button pill class="me-1">Filtro</b-button>
-                <b-button pill class="me-1">Filtro</b-button>
+                <b-button pill class="me-1" v-if="gruposSelecionados" v-for="grupo of gruposSelecionados" :key="grupo">{{ grupo }}</b-button>
             </b-container>
         </div>
     </section>
@@ -267,6 +266,7 @@
 <script>
 
     const URL = "http://localhost/api-dakhia/dakhia/api/public"
+    window.grupos = []
 
     let filtroCheckBoxComponent = {
         template: `
@@ -274,21 +274,37 @@
                 <div class="area-de-filtros">
                     <h6>{{ titulo }}</h6>
                     <ul class="lista-grupos">
-                        <li v-for="grupo of grupos" v-key="grupo">
+                        <b-form-checkbox-group
+                            v-model="gruposSelecionados"
+                            v-for="grupo of grupos" v-key="grupo"
+                        >
                             <b-form-checkbox
-                                :id="grupo.grupo"
-                                :name="grupo.grupo"
-                                value="accepted"
-                                unchecked-value="not_accepted"
+                                :value="grupo.grupo"
                             >
                                 <p class="ms-2">{{ grupo.grupo }}</p>
                             </b-form-checkbox>
-                        </li>
+                        </b-form-checkbox-group>
                     </ul>
                 </div>
             </b-collapse>
         `,
-        props: ["titulo", "grupos"]
+        props: ["titulo", "grupos"],
+        data() {
+            return {
+                gruposSelecionados: []
+            }
+        },
+        watch: {
+            gruposSelecionados(novo, velho) { // Antony: Utilizado loops para não redeclarar o array e assim utiliza-lo como referência em vez de cópia
+                for(let i = 0; i <= grupos.length; i++) {
+                    grupos.pop()
+                }
+
+                for(let i = 0; i < this.gruposSelecionados.length; i++) {
+                    if(grupos.indexOf(this.gruposSelecionados[i]) === -1) grupos.push(this.gruposSelecionados[i])
+                }
+            }
+        }
     }
 
     let cardItemComponent = {
@@ -335,7 +351,8 @@
             return {
                 iconeDropdown: "arrow-down",
                 grupos: [],
-                produtos: []
+                produtos: [],
+                gruposSelecionados: window.grupos
             }
         },
         methods: {
