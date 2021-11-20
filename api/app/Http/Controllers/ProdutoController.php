@@ -44,10 +44,10 @@ class ProdutoController extends Controller
         return response()->json($produtos);
     }
 
-    public function consultarProdutos($nome)
+    public function procurarProdutos($nomeCodigoOuGrupo)
     {
-        $nome = urldecode($nome);
-        $produtos = app('db')->select("SELECT id, grupo, nome, codigo, caracteristicas FROM produto WHERE nome LIKE '%$nome%' ORDER BY nome;");        
+        $nomeCodigoOuGrupo = urldecode($nomeCodigoOuGrupo);
+        $produtos = app('db')->select("SELECT id, grupo, nome, codigo, caracteristicas FROM produto WHERE (nome LIKE '%$nomeCodigoOuGrupo%' OR codigo LIKE '%$nomeCodigoOuGrupo%' OR grupo LIKE '%$nomeCodigoOuGrupo%') ORDER BY nome;");        
         return response()->json($produtos);
     }
 
