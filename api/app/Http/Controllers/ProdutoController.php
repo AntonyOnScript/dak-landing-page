@@ -36,7 +36,7 @@ class ProdutoController extends Controller
         return response()->json($produto);
     }
 
-    public function filtrarProdutos(Request $request)
+    public function listarProdutos(Request $request)
     {
         try {
             if($request->isMethod('post')) {                
