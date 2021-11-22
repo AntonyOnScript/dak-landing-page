@@ -39,7 +39,7 @@ class ProdutoController extends Controller
     public function listarProdutos(Request $request)
     {
         try {
-            if($request->isMethod('post')) {                
+            if($request->isMethod('get')) {                
                 $post = (object) $request->all();
                 $produtos = DB::table('produto');
                     
