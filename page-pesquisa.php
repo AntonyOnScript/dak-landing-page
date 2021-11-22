@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Example Template */
+/* Template Name: Pesquisa de Produtos */
 ?>
 
 <!DOCTYPE html>
@@ -128,7 +128,7 @@
         padding-top: 5px;
     }
 
-    .itens-de-pesquisa { 
+    .itens-de-pesquisa {
         margin: 30px 0px;
     }
 
@@ -150,50 +150,53 @@
         justify-content: space-between;
         height: 100%;
     }
-    
+
 </style>
 <body>
+<!-- [ANTONY] Menu principal -->
+<div class="menu" menu-fixo>
+    <a href="<?php echo home_url(); ?>" class="logo-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo_colorido.svg"></a>
+    <ul>
+        <li class="link_01"><a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">Home</a></li>
+        <li class="link_02"><a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">Sobre Nós</a></li>
+        <li class="link_03"><a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">Conteúdo</a></li>
+        <li class="link_04"><a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">Nossos Produtos</a></li>
+        <li class="link_05"><a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">Contato</a></li>
+    </ul>
+    <div class="menu-mobile menu-mobile-01">
+        <div class="linha linha-01"></div>
+        <div class="linha linha-02"></div>
+        <div class="linha linha-03"></div>
+    </div>
+</div>
+<!-- [ANTONY] Menu para telas pequenas -->
 <div class="menu-lateral">
-        <div>
-            <ul>
-                <li class="link_01"><a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">Home</a></li>
-                <li class="link_02"><a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">Sobre Nós</a></li>
-                <li class="link_03"><a class="link_03" href="<?= bloginfo("url")."#economia" ?>">Conteúdo</a></li>
-                <li class="link_04"><a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">Nossos Produtos</a></li>
-                <li class="link_05"><a class="link_05" href="<?= bloginfo("url")."#contato" ?>">Contato</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="menu" menu-fixo>
-    <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
+    <div>
         <ul>
-            <li class="link_01"><a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">Home</a></li>
-            <li class="link_02"><a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">Sobre Nós</a></li>
-            <li class="link_03"><a class="link_03" href="<?= bloginfo("url")."#economia" ?>">Conteúdo</a></li>
-            <li class="link_04"><a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">Nossos Produtos</a></li>
-            <li class="link_05"><a class="link_05" href="<?= bloginfo("url")."#contato" ?>">Contato</a></li>
+            <li class="link_01"><a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">Home</a></li>
+            <li class="link_02"><a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">Sobre Nós</a></li>
+            <li class="link_03"><a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">Conteúdo</a></li>
+            <li class="link_04"><a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">Nossos Produtos</a></li>
+            <li class="link_05"><a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">Contato</a></li>
         </ul>
-        <div class="menu-mobile menu-mobile-01">
-            <div class="linha linha-01"></div>
-            <div class="linha linha-02"></div>
-            <div class="linha linha-03"></div>
-        </div>
     </div>
-    <div class="menu" id="menu-topo">
-        <a href="<?php echo home_url();?>" class="logo-container"><img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_colorido.svg"></a>
-        <ul>
-            <li class="link_01"><a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">Home</a></li>
-            <li class="link_02"><a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">Sobre Nós</a></li>
-            <li class="link_03"><a class="link_03" href="<?= bloginfo("url")."#economia" ?>">Conteúdo</a></li>
-            <li class="link_04"><a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">Nossos Produtos</a></li>
-            <li class="link_05"><a class="link_05" href="<?= bloginfo("url")."#contato" ?>">Contato</a></li>
-        </ul>
-        <div class="menu-mobile menu-mobile-02">
-            <div class="linha linha-01"></div>
-            <div class="linha linha-02"></div>
-            <div class="linha linha-03"></div>
-        </div>
+</div>
+<!-- [ANTONY] Menu fixo no topo ao rolar página para baixo -->
+<div class="menu" id="menu-topo">
+    <a href="<?php echo home_url(); ?>" class="logo-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo_colorido.svg"></a>
+    <ul>
+        <li class="link_01"><a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">Home</a></li>
+        <li class="link_02"><a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">Sobre Nós</a></li>
+        <li class="link_03"><a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">Conteúdo</a></li>
+        <li class="link_04"><a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">Nossos Produtos</a></li>
+        <li class="link_05"><a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">Contato</a></li>
+    </ul>
+    <div class="menu-mobile menu-mobile-02">
+        <div class="linha linha-01"></div>
+        <div class="linha linha-02"></div>
+        <div class="linha linha-03"></div>
     </div>
+</div>
 <div id="app">
     <section class="container-area-de-pesquisa">
         <b-container class="container-geral area-de-pesquisa">
@@ -217,38 +220,37 @@
             </b-container>
         </div>
     </section>
-    
     <section class="itens-de-pesquisa">
         <b-container class="p-0 mb-5">
             <div class="container-geral">
                 <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
-                    <card-item v-for="produto of produtos" v-key="produto" :grupo="produto.grupo" :nome="produto.nome" :codigo="produto.codigo" :caracteristicas="produto.caracteristicas" ></card-item>
+                    <card-item v-for="produto of produtos" v-key="produto" :grupo="produto.grupo" :nome="produto.nome" :codigo="produto.codigo" :caracteristicas="produto.caracteristicas"></card-item>
                 </div>
             </div>
         </b-container>
         <div class="d-flex justify-content-center gap-1">
             <b-button pill>
                 <b-icon icon="chevron-double-left"></b-icon>
-            </b-button> 
+            </b-button>
             <b-button pill>
                 <span class="ps-1 pe-1">1</span>
-            </b-button> 
+            </b-button>
             <b-button pill>
                 <span class="ps-1 pe-1">2</span>
-            </b-button>  
-                <span class="mt-1">...</span>
+            </b-button>
+            <span class="mt-1">...</span>
             <b-button pill>
                 <span class="ps-1 pe-1">12</span>
-            </b-button> 
+            </b-button>
             <b-button pill>
                 <b-icon icon="chevron-double-right"></b-icon>
-            </b-button> 
+            </b-button>
         </div>
     </section>
 </div>
 <footer>
     <div class="footer-container">
-        <img src="<?php echo get_template_directory_uri();?>/assets/imgs/logo_gray.svg">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo_gray.svg">
         <div class="endereco">
             <h3>endereço</h3>
             <a>Av. Fabio Eduardo Ramos Esquivel, 2424</a>
@@ -259,17 +261,17 @@
         </div>
         <div class="links">
             <h3>navegação</h3>
-            <span>/<a class="link_01" href="<?= bloginfo("url")."#menu-topo" ?>">&nbsp;&nbsp;Home</a></span>
-            <span>/<a class="link_02" href="<?= bloginfo("url")."#sobre-nos" ?>">&nbsp;&nbsp;Sobre Nós</a></span>
-            <span>/<a class="link_03" href="<?= bloginfo("url")."#economia" ?>">&nbsp;&nbsp;Conteúdo</a></span>
-            <span>/<a class="link_04" href="<?= bloginfo("url")."#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></span>
-            <span>/<a class="link_05" href="<?= bloginfo("url")."#contato" ?>">&nbsp;&nbsp;Contato</a></span>
+            <span>/<a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">&nbsp;&nbsp;Home</a></span>
+            <span>/<a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">&nbsp;&nbsp;Sobre Nós</a></span>
+            <span>/<a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">&nbsp;&nbsp;Conteúdo</a></span>
+            <span>/<a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></span>
+            <span>/<a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">&nbsp;&nbsp;Contato</a></span>
         </div>
     </div>
 </footer>
 <script>
 
-    const URL = "http://localhost/api-dakhia/dakhia/api/public"
+    const URL = "<?php echo get_stylesheet_directory_uri(); ?>/api/public"
 
     let filtroCheckBoxComponent = {
         template: `
@@ -297,7 +299,7 @@
                 this.$emit("atualizadados", this.gruposSelecionados)
             },
             gruposglobais(novo, velho) {
-                if(this.gruposglobais.length === 220) this.gruposSelecionados = []
+                if (this.gruposglobais.length === 220) this.gruposSelecionados = []
             }
         }
     }
@@ -353,7 +355,7 @@
         },
         methods: {
             mudaDropdown() {
-                this.iconeDropdown === "arrow-down"? this.iconeDropdown = "arrow-up": this.iconeDropdown = "arrow-down"
+                this.iconeDropdown === "arrow-down" ? this.iconeDropdown = "arrow-up" : this.iconeDropdown = "arrow-down"
             },
             atualizaGrupos(dados) {
                 this.gruposSelecionados = dados
@@ -367,18 +369,18 @@
                 console.log(this.filtroPesquisa)
                 console.log(this.gruposSelecionados)
 
-                axios.get(URL+"/produtos/listar", {
+                axios.get(URL + "/produtos/listar", {
                     params: {
                         pesquisa: this.filtroPesquisa,
                         grupos: this.gruposSelecionados
                     }
                 })
-                .then(resposta => {
-                    this.produtos = resposta.data
-                })
-                .catch(e => {
-                    console.log(e)
-                })
+                    .then(resposta => {
+                        this.produtos = resposta.data
+                    })
+                    .catch(e => {
+                        console.log(e)
+                    })
             },
             limparFiltros() {
                 this.gruposSelecionados = []
@@ -390,20 +392,20 @@
                 let checkboxes = document.querySelectorAll(".lista-grupos input[type='checkbox']")
 
                 checkboxes.forEach(checkbox => {
-                    if(checkbox.checked === true) checkbox.checked = false
+                    if (checkbox.checked === true) checkbox.checked = false
                 })
             }
         },
         mounted() {
-            axios.get(URL+"/grupos/listar")
-            .then(resposta => {
-                this.grupos = resposta.data.map(item => {
-                    return { text: item.grupo, value: item.grupo }
+            axios.get(URL + "/grupos/listar")
+                .then(resposta => {
+                    this.grupos = resposta.data.map(item => {
+                        return {text: item.grupo, value: item.grupo}
+                    })
                 })
-            })
 
-            axios.get(URL+"/produtos/listar")
-            .then(resposta => this.produtos = resposta.data)
+            axios.get(URL + "/produtos/listar")
+                .then(resposta => this.produtos = resposta.data)
         }
     }).$mount("#app")
 </script>
