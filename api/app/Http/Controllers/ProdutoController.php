@@ -48,13 +48,13 @@ class ProdutoController extends Controller
                         $query->orWhere('nome', 'like', '%'.$post->pesquisa.'%')
                               ->orWhere('codigo', 'like', '%'.$post->pesquisa.'%')
                               ->orWhere('grupo', 'like', '%'.$post->pesquisa.'%');
-                    });                               
+                    });                                                           
                 }                
 
                 if($request->filled('grupos')) {
-                    if(isset($post->grupos) && is_array($post->grupos)) {
-                       $produtos->whereIn('grupo', $post->grupos);                                       
-                    }
+                    if(isset($post->grupos) && !empty($post->grupos) && is_array($post->grupos)) {
+                       $produtos->whereIn('grupo', $post->grupos);                                                              
+                    }                    
                 }
                 
                 $produtos->orderBy('nome');
