@@ -205,12 +205,12 @@
                     <b-icon :icon="iconeDropdown"></b-icon>
                 </b-button>
             </div>
-            <filtros-checkbox titulo="Grupos" :grupos="grupos"></filtros-checkbox>
+            <filtros-checkbox titulo="Grupos" :grupos="grupos" @atualizadados="atualizaGrupos" :gruposglobais="gruposSelecionados"></filtros-checkbox>
         </b-container>
         <div class="filtros-ativos">
             <b-container class="container-geral">
-                <b-button pill class="me-1">Filtro</b-button>
-                <b-button pill class="me-1">Filtro</b-button>
+                <b-button pill @click="gruposSelecionados = []">Limpa Filtros</b-button>
+                <b-button pill class="me-1" v-if="gruposSelecionados" v-for="grupo of gruposSelecionados" :key="grupo">{{ grupo }}</b-button>
             </b-container>
         </div>
     </section>
@@ -274,21 +274,29 @@
                 <div class="area-de-filtros">
                     <h6>{{ titulo }}</h6>
                     <ul class="lista-grupos">
-                        <li v-for="grupo of grupos" v-key="grupo">
-                            <b-form-checkbox
-                                :id="grupo.grupo"
-                                :name="grupo.grupo"
-                                value="accepted"
-                                unchecked-value="not_accepted"
-                            >
-                                <p class="ms-2">{{ grupo.grupo }}</p>
-                            </b-form-checkbox>
-                        </li>
+                        <b-form-checkbox-group
+                            v-model="gruposSelecionados"
+                            :options="grupos"
+                        >
+                        </b-form-checkbox-group>
                     </ul>
                 </div>
             </b-collapse>
         `,
-        props: ["titulo", "grupos"]
+        props: ["titulo", "grupos", "gruposglobais"],
+        data() {
+            return {
+                gruposSelecionados: []
+            }
+        },
+        watch: {
+            gruposSelecionados(novo, velho) {
+                this.$emit("atualizadados", this.gruposSelecionados)
+            },
+            gruposglobais(novo, velho) {
+                if(this.gruposglobais.length === 220) this.gruposSelecionados = []
+            }
+        }
     }
 
     let cardItemComponent = {
@@ -335,17 +343,25 @@
             return {
                 iconeDropdown: "arrow-down",
                 grupos: [],
-                produtos: []
+                produtos: [],
+                gruposSelecionados: []
             }
         },
         methods: {
             mudaDropdown() {
                 this.iconeDropdown === "arrow-down"? this.iconeDropdown = "arrow-up": this.iconeDropdown = "arrow-down"
+            },
+            atualizaGrupos(dados) {
+                this.gruposSelecionados = dados
             }
         },
         mounted() {
             axios.get(URL+"/grupos/listar")
-            .then(resposta => this.grupos = resposta.data)
+            .then(resposta => {
+                this.grupos = resposta.data.map(item => {
+                    return { text: item.grupo, value: item.grupo }
+                })
+            })
 
             axios.get(URL+"/produtos/listar")
             .then(resposta => this.produtos = resposta.data)
