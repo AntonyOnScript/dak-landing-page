@@ -200,7 +200,10 @@
             <h4 class="titulo-inicial">Lorem Ipsum Ispanos</h4>
             <h2 class="mb-4">Encontre o caminho certo</h2>
             <div class="d-flex gap-2">
-                <b-form-input></b-form-input>
+                <b-form-input class="input-pesquisa" v-model="filtroPesquisa" @input="fazerPesquisa($event)"></b-form-input>
+                <b-button pill>
+                    <b-icon icon="search"></b-icon>
+                </b-button>
                 <b-button pill v-b-toggle.filtros @click="mudaDropdown()">
                     <b-icon :icon="iconeDropdown"></b-icon>
                 </b-button>
@@ -209,7 +212,7 @@
         </b-container>
         <div class="filtros-ativos">
             <b-container class="container-geral">
-                <b-button pill @click="gruposSelecionados = []">Limpa Filtros</b-button>
+                <b-button pill @click="limparFiltros()">Limpa Filtros</b-button>
                 <b-button pill class="me-1" v-if="gruposSelecionados" v-for="grupo of gruposSelecionados" :key="grupo">{{ grupo }}</b-button>
             </b-container>
         </div>
@@ -344,7 +347,8 @@
                 iconeDropdown: "arrow-down",
                 grupos: [],
                 produtos: [],
-                gruposSelecionados: []
+                gruposSelecionados: [],
+                filtroPesquisa: ""
             }
         },
         methods: {
@@ -353,6 +357,41 @@
             },
             atualizaGrupos(dados) {
                 this.gruposSelecionados = dados
+                this.atualizarProdutos()
+            },
+            fazerPesquisa(valor) {
+                this.filtroPesquisa = valor
+                this.atualizarProdutos()
+            },
+            atualizarProdutos() {
+                console.log(this.filtroPesquisa)
+                console.log(this.gruposSelecionados)
+
+                axios.get(URL+"/produtos/listar", {
+                    params: {
+                        pesquisa: this.filtroPesquisa,
+                        grupos: this.gruposSelecionados
+                    }
+                })
+                .then(resposta => {
+                    this.produtos = resposta.data
+                })
+                .catch(e => {
+                    console.log(e)
+                })
+            },
+            limparFiltros() {
+                this.gruposSelecionados = []
+                this.filtroPesquisa = ""
+                this.atualizarProdutos()
+                this.limparCheckBoxes()
+            },
+            limparCheckBoxes() {
+                let checkboxes = document.querySelectorAll(".lista-grupos input[type='checkbox']")
+
+                checkboxes.forEach(checkbox => {
+                    if(checkbox.checked === true) checkbox.checked = false
+                })
             }
         },
         mounted() {
