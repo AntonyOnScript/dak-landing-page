@@ -24,15 +24,24 @@ class ProdutoController extends Controller
      * @return Response
      */
     public function listarGrupos()
-    {
-        $grupos = app('db')->select("SELECT DISTINCT grupo FROM produto WHERE grupo IS NOT NULL ORDER BY grupo;");
+    {        
+        $grupos = DB::table('produto')
+                ->select('grupo')
+                ->distinct()
+                ->whereNotNull('grupo')
+                ->orderBy('grupo')
+                ->get();
         return response()->json($grupos);
     }
 
     public function consultarProduto($id)
-    {        
-        $produto = app('db')->select("SELECT id, grupo, nome, codigo, caracteristicas FROM produto WHERE id = $id;");        
-        $produto["propriedades"] = app('db')->select("SELECT id, propriedade, condicao, unidade, norma, seco FROM propriedades WHERE id_produto = $id;");
+    {                
+        $produto = DB::table('produto')
+                ->where('id', $id)
+                ->get();
+        $produto['propriedades'] = DB::table('propriedades')
+                                ->where('id_produto', $id)
+                                ->get();
         return response()->json($produto);
     }
 
