@@ -384,6 +384,14 @@
                 this.gruposSelecionados = []
                 this.filtroPesquisa = ""
                 this.atualizarProdutos()
+                this.limparCheckBoxes()
+            },
+            limparCheckBoxes() {
+                let checkboxes = document.querySelectorAll(".lista-grupos input[type='checkbox']")
+
+                checkboxes.forEach(checkbox => {
+                    if(checkbox.checked === true) checkbox.checked = false
+                })
             }
         },
         mounted() {
