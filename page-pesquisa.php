@@ -211,7 +211,7 @@
                     <b-icon :icon="iconeDropdown"></b-icon>
                 </b-button>
             </div>
-            <filtros-checkbox titulo="Grupos" :grupos="grupos" @atualizadados="atualizaGrupos" :gruposglobais="gruposSelecionados"></filtros-checkbox>
+            <filtros-checkbox titulo="Grupos" :grupos="grupos" @atualizadados="atualizaGrupos" :gruposglobais="gruposSelecionados" :esvaziar="esvaziarLista"></filtros-checkbox>
         </b-container>
         <div class="filtros-ativos">
             <b-container class="container-geral">
@@ -288,7 +288,7 @@
                 </div>
             </b-collapse>
         `,
-        props: ["titulo", "grupos", "gruposglobais"],
+        props: ["titulo", "grupos", "gruposglobais", "esvaziar"],
         data() {
             return {
                 gruposSelecionados: []
@@ -298,8 +298,10 @@
             gruposSelecionados(novo, velho) {
                 this.$emit("atualizadados", this.gruposSelecionados)
             },
-            gruposglobais(novo, velho) {
-                if (this.gruposglobais.length === 220) this.gruposSelecionados = []
+            esvaziar(novo, velho) {
+                if(novo === true) {
+                    this.gruposSelecionados = []
+                }
             }
         }
     }
@@ -350,7 +352,8 @@
                 grupos: [],
                 produtos: [],
                 gruposSelecionados: [],
-                filtroPesquisa: ""
+                filtroPesquisa: "",
+                esvaziarLista: false
             }
         },
         methods: {
@@ -358,6 +361,7 @@
                 this.iconeDropdown === "arrow-down" ? this.iconeDropdown = "arrow-up" : this.iconeDropdown = "arrow-down"
             },
             atualizaGrupos(dados) {
+                this.esvaziarLista = false
                 this.gruposSelecionados = dados
                 this.atualizarProdutos()
             },
@@ -366,9 +370,6 @@
                 this.atualizarProdutos()
             },
             atualizarProdutos() {
-                console.log(this.filtroPesquisa)
-                console.log(this.gruposSelecionados)
-
                 axios.get(URL + "/produtos/listar", {
                     params: {
                         pesquisa: this.filtroPesquisa,
@@ -378,14 +379,12 @@
                     .then(resposta => {
                         this.produtos = resposta.data
                     })
-                    .catch(e => {
-                        console.log(e)
-                    })
             },
             limparFiltros() {
                 this.gruposSelecionados = []
                 this.filtroPesquisa = ""
                 this.atualizarProdutos()
+                this.esvaziarLista = true
                 this.limparCheckBoxes()
             },
             limparCheckBoxes() {
