@@ -6,7 +6,7 @@
 <html>
 <head>
     <!-- ======= VUE begin ======= -->
-    <title>My first Vue app</title>
+    <title>Dakhia - Pesquisa de produtos</title>
     <script src="https://unpkg.com/vue"></script>
     <!-- ======= VUE end ======= -->
 
@@ -70,7 +70,7 @@
     }
 
     .descricao-topo-card {
-        background-color: blue;
+        background-color: #1c547a;
         padding: 5px 10px;
         color: white;
         text-transform: uppercase;
@@ -151,6 +151,18 @@
         height: 100%;
     }
 
+    .custom-checkbox > input, label {
+        cursor: pointer;
+    }
+
+    .custom-control-label {
+        margin-left: 5px;        
+    }
+
+    .filtros-ativos button {
+        font-size: 12px;
+    }
+
 </style>
 <body>
 <!-- [ANTONY] Menu principal -->
@@ -200,13 +212,13 @@
 <div id="app">
     <section class="container-area-de-pesquisa">
         <b-container class="container-geral area-de-pesquisa">
-            <h4 class="titulo-inicial">Lorem Ipsum Ispanos</h4>
-            <h2 class="mb-4">Encontre o caminho certo</h2>
+            <!--h4 class="titulo-inicial">Lorem Ipsum Ispanos</h4-->
+            <h2 class="mb-4">Encontre o produto certo</h2>
             <div class="d-flex gap-2">
-                <b-form-input class="input-pesquisa" v-model="filtroPesquisa" @input="fazerPesquisa($event)"></b-form-input>
-                <b-button pill>
+                <b-form-input class="input-pesquisa" v-model="filtroPesquisa" placeholder="Pesquise por nome, código ou grupo do produto." @input="fazerPesquisa($event)"></b-form-input>
+                <!--b-button pill>
                     <b-icon icon="search"></b-icon>
-                </b-button>
+                </b-button-->
                 <b-button pill v-b-toggle.filtros @click="mudaDropdown()">
                     <b-icon :icon="iconeDropdown"></b-icon>
                 </b-button>
@@ -215,7 +227,7 @@
         </b-container>
         <div class="filtros-ativos">
             <b-container class="container-geral">
-                <b-button pill @click="limparFiltros()">Limpa Filtros</b-button>
+                <b-button pill @click="limparFiltros()">Limpar Filtros</b-button>
                 <b-button pill class="me-1" v-if="gruposSelecionados" v-for="grupo of gruposSelecionados" :key="grupo">{{ grupo }}</b-button>
             </b-container>
         </div>
@@ -321,7 +333,7 @@
                     <div class="descricao-card">
                         <p>{{ caracteristicas }}</p>
                     </div>
-                    <div class="caracteristicas-card">
+                    <!--div class="caracteristicas-card">
                         <div class="caracteristica-geral-card">
                             <div class="linha-cinza-caracteristica-card"></div>
                             <p class="caracteristica-card">TESte</p>
@@ -334,7 +346,7 @@
                             <div class="linha-cinza-caracteristica-card"></div>
                             <p class="caracteristica-card">fórmula</p>
                         </div>
-                    </div>
+                    </div-->
                 </div>
             </div>
         `,
