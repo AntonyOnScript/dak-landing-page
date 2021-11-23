@@ -28,7 +28,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/menu.js" defer></script>
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/menu.css">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/estilo-alternativo.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.map"></script>
 </head>
 <style>
@@ -124,8 +124,10 @@
         text-align: center;
         color: white;
         text-transform: uppercase;
-        font-size: 11px;
+        font-size: 15px;
         padding-top: 5px;
+        font-weight: 600;
+        letter-spacing: 2px;
     }
 
     .itens-de-pesquisa {
@@ -149,6 +151,10 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+    }
+
+    .lista-grupos label span {
+        margin-left: 10px;
     }
 
 </style>
@@ -200,8 +206,8 @@
 <div id="app">
     <section class="container-area-de-pesquisa">
         <b-container class="container-geral area-de-pesquisa">
-            <h4 class="titulo-inicial">Lorem Ipsum Ispanos</h4>
-            <h2 class="mb-4">Encontre o caminho certo</h2>
+            <h3 class="titulo-inicial">Lorem Ipsum Ispanos</h3>
+            <h1 class="mb-4">Encontre o caminho certo</h1>
             <div class="d-flex gap-2">
                 <b-form-input class="input-pesquisa" v-model="filtroPesquisa" @input="fazerPesquisa($event)"></b-form-input>
                 <b-button pill>
