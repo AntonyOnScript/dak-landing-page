@@ -1,4 +1,5 @@
 <?php require_once 'header.php'; ?>
+    <a href="<?= bloginfo('url').'/pesquisa' ?>">
     <div class='lupa'>
         <div class="circulo-01">
             <p>Alguma coisa aqui.</p>
@@ -7,6 +8,7 @@
             <i class="fas fa-search"></i>
         </div>
     </div>
+    </a>
     <div class="modal-box">
         <div class="dialogo">
             <header>
@@ -33,17 +35,6 @@
             </div>
         </div>
     <iframe src="https://www.youtube.com/embed/iABFlxG-kaE?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube-video"></iframe>
-    </div>
-    <div class="modal-pesquisa">
-        <div class="fecha-modal fecha-pesquisa-modal" ativado>
-            <div class="linha linha-01 f-modal f-modal-02"></div>
-            <div class="linha linha-02"></div>
-            <div class="linha linha-03 f-modal f-modal-02"></div>
-        </div>
-        <div class='pesquisa pesquisa-modal'>
-            <input type="text" placeholder="Pesquisar">
-            <i class="fas fa-search"></i>
-        </div>
     </div>
     <div class="menu-lateral">
         <div>
