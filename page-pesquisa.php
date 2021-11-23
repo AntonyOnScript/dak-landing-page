@@ -251,25 +251,7 @@
                     <card-item v-for="produto of produtos" v-key="produto" :grupo="produto.grupo" :nome="produto.nome" :codigo="produto.codigo" :caracteristicas="produto.caracteristicas"></card-item>
                 </div>                
             </div>
-        </b-container>
-        <div class="d-flex justify-content-center gap-1">
-            <b-button pill>
-                <b-icon icon="chevron-double-left"></b-icon>
-            </b-button>
-            <b-button pill>
-                <span class="ps-1 pe-1">1</span>
-            </b-button>
-            <b-button pill>
-                <span class="ps-1 pe-1">2</span>
-            </b-button>
-            <span class="mt-1">...</span>
-            <b-button pill>
-                <span class="ps-1 pe-1">12</span>
-            </b-button>
-            <b-button pill>
-                <b-icon icon="chevron-double-right"></b-icon>
-            </b-button>
-        </div>
+        </b-container>        
     </section>
 </div>
 <footer>
