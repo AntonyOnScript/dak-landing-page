@@ -344,21 +344,7 @@
                 <div class="container-caracteristicas">
                     <div class="descricao-card">
                         <p>{{ caracteristicas }}</p>
-                    </div>
-                    <!--div class="caracteristicas-card">
-                        <div class="caracteristica-geral-card">
-                            <div class="linha-cinza-caracteristica-card"></div>
-                            <p class="caracteristica-card">TESte</p>
-                        </div>
-                        <div class="caracteristica-geral-card">
-                            <div class="linha-cinza-caracteristica-card"></div>
-                            <p class="caracteristica-card">tensão</p>
-                        </div>
-                        <div class="caracteristica-geral-card">
-                            <div class="linha-cinza-caracteristica-card"></div>
-                            <p class="caracteristica-card">fórmula</p>
-                        </div>
-                    </div-->
+                    </div>                    
                 </div>
             </div>
         `,
