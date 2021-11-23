@@ -176,7 +176,7 @@
 <body>
 <!-- [ANTONY] Menu principal -->
 <div class="menu" menu-fixo>
-    <a href="<?php echo home_url(); ?>" class="logo-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo_colorido.svg"></a>
+    <a href="<?php echo get_site_url(); ?>/pesquisa" class="logo-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo_colorido.svg"></a>
     <ul>
         <li class="link_01"><a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">Home</a></li>
         <li class="link_02"><a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">Sobre Nós</a></li>
@@ -204,7 +204,7 @@
 </div>
 <!-- [ANTONY] Menu fixo no topo ao rolar página para baixo -->
 <div class="menu" id="menu-topo">
-    <a href="<?php echo home_url(); ?>" class="logo-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo_colorido.svg"></a>
+    <a href="<?php echo get_site_url(); ?>/pesquisa" class="logo-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo_colorido.svg"></a>
     <ul>
         <li class="link_01"><a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">Home</a></li>
         <li class="link_02"><a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">Sobre Nós</a></li>
@@ -218,39 +218,52 @@
         <div class="linha linha-03"></div>
     </div>
 </div>
-<div id="app">
-    <section class="container-area-de-pesquisa">
-        <b-container class="container-geral area-de-pesquisa">            
-            <h2 class="mb-4">Encontre o produto certo</h2>
-            <div class="d-flex gap-2">
-                <b-form-input class="input-pesquisa" v-model="filtroPesquisa" placeholder="Pesquise por nome, código ou grupo do produto." @input="fazerPesquisa($event)"></b-form-input>
-                <!--b-button pill>
-                    <b-icon icon="search"></b-icon>
-                </b-button-->
-                <b-button pill v-b-toggle.filtros @click="mudaDropdown()">
-                    <b-icon :icon="iconeDropdown"></b-icon>
-                </b-button>
-            </div>
-            <filtros-checkbox titulo="Grupos" :grupos="grupos" @atualizadados="atualizaGrupos" :gruposglobais="gruposSelecionados" :esvaziar="esvaziarLista"></filtros-checkbox>
+<div id="app">    
+    <section class="container-produto">                
+        <br/><br/>
+        <b-container class="bv-example-row" v-if="Object.keys(produto).length != 0">
+            <b-row>
+                <b-col>
+                    <h1>{{ produto.nome }}</h1> 
+                </b-col>
+                <b-col style="text-align: right;">
+                    <h1>{{ produto.codigo }}</h1> 
+                </b-col>                
+            </b-row>
+            <b-row>
+                <p>
+                    {{ produto.caracteristicas }}
+                </p>
+                <hr/>
+            </b-row>
+            <br/>
+            <b-row>
+                <b-col>
+                    <b-table striped hover :items="produto.propriedades"></b-table>
+                </b-col>
+            </b-row>
+            <br/>
+            <b-row>
+                <b-col>
+                    <p>* Seco refere-se a um teor de umidade inferior a 0,25 % em peso</p>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col>
+                    <p style="font-size: 12px;text-align: justify;">
+                        As propriedades deste informativo técnico se baseiam em valores médios obtidos em laboratório que podem apresentar variações. Portanto não devem ser utilizadas como parâmetros para
+                        projetos de engenharia. Todas as informações deste infomativo estão atualizadas até a data de sua impressão.
+                        A Dakhia se reserva o direito de alterar as informações de seus produtos bem como descontinuá-los sem prévio aviso, sem que com isso incorra em responsabilidades de quaisquer espécie. A
+                        Dakhia não se responsabiliza por divergências em valores relacionados a diferentes parâmetros de processamento. Todas as recomendações de processamento podem variar em função do
+                        desenho de cada peça
+                    </p>
+                </b-col>
+            </b-row>
+            <br/>
         </b-container>
-        <div class="filtros-ativos">
-            <b-container class="container-geral">
-                <b-button pill @click="limparFiltros()">Limpar Filtros</b-button>
-                <b-button pill class="me-1" v-if="gruposSelecionados" v-for="grupo of gruposSelecionados" :key="grupo">{{ grupo }}</b-button>
-            </b-container>
-        </div>
-        <div class="contador-produtos">
-            <b-button pill >{{ produtos.length }} {{ produtos.length != 1 ? "Produtos" : "Produto" }}</b-button>
-        </div>
-    </section>
-    <section class="itens-de-pesquisa">
-        <b-container class="p-0 mb-5">
-            <div class="container-geral">
-                <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">                    
-                    <card-item v-for="produto of produtos" v-key="produto" :id="produto.id" :grupo="produto.grupo" :nome="produto.nome" :codigo="produto.codigo" :caracteristicas="produto.caracteristicas"></card-item>                    
-                </div>                
-            </div>
-        </b-container>        
+        <div v-if="Object.keys(produto).length === 0" class="container-geral">
+            <h3>Produto não encontrado.</h3>
+        </div>        
     </section>
 </div>
 <footer>
@@ -278,126 +291,22 @@
 
     const URL = "<?php echo get_stylesheet_directory_uri(); ?>/api/public"
 
-    let filtroCheckBoxComponent = {
-        template: `
-            <b-collapse id="filtros" class="filtros">
-                <div class="area-de-filtros">
-                    <h6>{{ titulo }}</h6>
-                    <ul class="lista-grupos">
-                        <b-form-checkbox-group
-                            v-model="gruposSelecionados"
-                            :options="grupos"
-                        >
-                        </b-form-checkbox-group>
-                    </ul>
-                </div>
-            </b-collapse>
-        `,
-        props: ["titulo", "grupos", "gruposglobais", "esvaziar"],
-        data() {
-            return {
-                gruposSelecionados: []
-            }
-        },
-        watch: {
-            gruposSelecionados(novo, velho) {
-                this.$emit("atualizadados", this.gruposSelecionados)
-            },
-            esvaziar(novo, velho) {
-                if(novo === true) {
-                    this.gruposSelecionados = []
-                }
-            }
-        }
-    }
-
-    let cardItemComponent = {
-        template: `            
-            <div class="item-card">                
-                <a v-bind:href="'<?php echo get_site_url(); ?>/produto?id='+id">
-                    <div class="descricao-topo-card">
-                        <p>{{ grupo }}</p>
-                    </div>
-                    <div class="titulos-container-card">
-                        <h2 class="titulo-card">{{ nome }}</h2>
-                        <p class="subtitulo-card">{{ codigo }}</p>
-                        <div class="linha-azul-card"></div>
-                    </div>
-                    <div class="container-caracteristicas">
-                        <div class="descricao-card">
-                            <p>{{ caracteristicas }}</p>
-                        </div>                    
-                    </div>
-                </a>
-            </div>            
-        `,
-        props: ["id", "grupo", "nome", "codigo", "caracteristicas"]
-    }
-
     new Vue({
         components: {
-            'filtros-checkbox': filtroCheckBoxComponent,
-            'card-item': cardItemComponent
+
         },
         data() {
-            return {
-                iconeDropdown: "arrow-down",
-                grupos: [],
-                produtos: [],
-                gruposSelecionados: [],
-                filtroPesquisa: "",
-                esvaziarLista: false
+            return {                
+                produto: {}                
             }
         },
         methods: {
-            mudaDropdown() {
-                this.iconeDropdown === "arrow-down" ? this.iconeDropdown = "arrow-up" : this.iconeDropdown = "arrow-down"
-            },
-            atualizaGrupos(dados) {
-                this.esvaziarLista = false
-                this.gruposSelecionados = dados
-                this.atualizarProdutos()
-            },
-            fazerPesquisa(valor) {
-                this.filtroPesquisa = valor
-                this.atualizarProdutos()
-            },
-            atualizarProdutos() {
-                axios.get(URL + "/produtos/listar", {
-                    params: {
-                        pesquisa: this.filtroPesquisa,
-                        grupos: this.gruposSelecionados
-                    }
-                })
-                    .then(resposta => {
-                        this.produtos = resposta.data
-                    })
-            },
-            limparFiltros() {
-                this.gruposSelecionados = []
-                this.filtroPesquisa = ""
-                this.atualizarProdutos()
-                this.esvaziarLista = true
-                this.limparCheckBoxes()
-            },
-            limparCheckBoxes() {
-                let checkboxes = document.querySelectorAll(".lista-grupos input[type='checkbox']")
-
-                checkboxes.forEach(checkbox => {
-                    if (checkbox.checked === true) checkbox.checked = false
-                })
-            }
+            
         },
-        mounted() {
-            axios.get(URL + "/grupos/listar")
-                .then(resposta => {
-                    this.grupos = resposta.data.map(item => {
-                        return {text: item.grupo, value: item.grupo}
-                    })
-                })
+        mounted() {            
 
-            axios.get(URL + "/produtos/listar")
-                .then(resposta => this.produtos = resposta.data)
+            axios.get(URL + "/produtos/consultar/<?= isset($_GET['id']) ? $_GET['id'] : ''; ?>")
+                .then(resposta => this.produto = resposta.data)
         }
     }).$mount("#app")
 </script>

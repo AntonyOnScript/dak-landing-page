@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use stdClass;
 
 class ProdutoController extends Controller
 {
@@ -26,22 +27,24 @@ class ProdutoController extends Controller
     public function listarGrupos()
     {        
         $grupos = DB::table('produto')
-                ->select('grupo')
-                ->distinct()
-                ->whereNotNull('grupo')
-                ->orderBy('grupo')
-                ->get();
+                    ->select('grupo')
+                    ->distinct()
+                    ->whereNotNull('grupo')
+                    ->orderBy('grupo')
+                    ->get();
         return response()->json($grupos);
     }
 
     public function consultarProduto($id)
-    {                
-        $produto = DB::table('produto')
-                ->where('id', $id)
-                ->get();
-        $produto['propriedades'] = DB::table('propriedades')
-                                ->where('id_produto', $id)
-                                ->get();
+    {                    
+        $produto = DB::table('produto')                
+                ->find($id);
+        if(isset($produto) && !empty($produto)) {
+            $produto->propriedades = DB::table('propriedades')
+                                    ->where('id_produto', $id)
+                                    ->orderBy('propriedade')
+                                    ->get(['propriedade', 'condicao', 'unidade', 'norma', 'seco AS seco*']);
+        }
         return response()->json($produto);
     }
 
