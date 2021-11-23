@@ -64,8 +64,8 @@
     .item-card {
         display: flex;
         flex-direction: column;
-        max-width: 400px;
-        min-width: 280px;
+        max-width: 300px;
+        min-width: 180px;
         box-shadow: 0px 0px 10px 0px rgb(102 102 102 / 50%);
     }
 
@@ -91,7 +91,7 @@
     .descricao-card {
         padding: 0px 10px;
         padding-bottom: 30px;
-        color: gray;
+        color: gray;        
     }
 
     .linha-azul-card {
@@ -163,6 +163,15 @@
         font-size: 12px;
     }
 
+    .contador-produtos {
+        position: fixed;
+        right: 1px;        
+    }
+
+    .contador-produtos button {        
+        cursor: default !important;
+    }
+
 </style>
 <body>
 <!-- [ANTONY] Menu principal -->
@@ -231,13 +240,16 @@
                 <b-button pill class="me-1" v-if="gruposSelecionados" v-for="grupo of gruposSelecionados" :key="grupo">{{ grupo }}</b-button>
             </b-container>
         </div>
+        <div class="contador-produtos">
+            <b-button pill >{{ produtos.length }} {{ produtos.length != 1 ? "Produtos" : "Produto" }}</b-button>
+        </div>
     </section>
     <section class="itens-de-pesquisa">
         <b-container class="p-0 mb-5">
             <div class="container-geral">
                 <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
                     <card-item v-for="produto of produtos" v-key="produto" :grupo="produto.grupo" :nome="produto.nome" :codigo="produto.codigo" :caracteristicas="produto.caracteristicas"></card-item>
-                </div>
+                </div>                
             </div>
         </b-container>
         <div class="d-flex justify-content-center gap-1">
@@ -325,7 +337,7 @@
                     <p>{{ grupo }}</p>
                 </div>
                 <div class="titulos-container-card">
-                    <h3 class="titulo-card">{{ nome }}</h3>
+                    <h2 class="titulo-card">{{ nome }}</h2>
                     <p class="subtitulo-card">{{ codigo }}</p>
                     <div class="linha-azul-card"></div>
                 </div>
