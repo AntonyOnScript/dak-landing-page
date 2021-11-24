@@ -28,7 +28,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/menu.js" defer></script>
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/menu.css">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/estilo-alternativo.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.map"></script>
 </head>
 <style>
@@ -124,8 +124,10 @@
         text-align: center;
         color: white;
         text-transform: uppercase;
-        font-size: 11px;
+        font-size: 15px;
         padding-top: 5px;
+        font-weight: 600;
+        letter-spacing: 2px;
     }
 
     .itens-de-pesquisa {
@@ -170,6 +172,10 @@
 
     .contador-produtos button {        
         cursor: default !important;
+    }
+    
+    .lista-grupos label span {
+        margin-left: 10px;
     }
 
 </style>
@@ -220,8 +226,9 @@
 </div>
 <div id="app">
     <section class="container-area-de-pesquisa">
-        <b-container class="container-geral area-de-pesquisa">            
-            <h2 class="mb-4">Encontre o produto certo</h2>
+        <b-container class="container-geral area-de-pesquisa">
+            <h3 class="titulo-inicial">Lorem Ipsum Ispanos</h3>
+            <h1 class="mb-4">Encontre o caminho certo</h1>
             <div class="d-flex gap-2">
                 <b-form-input class="input-pesquisa" v-model="filtroPesquisa" placeholder="Pesquise por nome, código ou grupo do produto." @input="fazerPesquisa($event)"></b-form-input>
                 <!--b-button pill>
