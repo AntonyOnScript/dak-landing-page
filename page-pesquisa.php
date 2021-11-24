@@ -28,7 +28,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/menu.js" defer></script>
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/menu.css">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/estilo-alternativo.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.map"></script>
 </head>
 <style>
@@ -124,8 +124,10 @@
         text-align: center;
         color: white;
         text-transform: uppercase;
-        font-size: 11px;
+        font-size: 15px;
         padding-top: 5px;
+        font-weight: 600;
+        letter-spacing: 2px;
     }
 
     .itens-de-pesquisa {
