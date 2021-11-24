@@ -128,7 +128,7 @@
             <br/>
             <b-row>
                 <b-col>
-                    <b-table striped hover :items="produto.propriedades"></b-table>
+                    <b-table striped hover :items="produto.propriedades" :fields="headerTabelaPropriedades"></b-table>
                 </b-col>
             </b-row>
             <br/>
@@ -186,7 +186,31 @@
         },
         data() {
             return {                
-                produto: {}                
+                produto: {},                
+                headerTabelaPropriedades: [
+                    {
+                        key: 'propriedade',                        
+                        label: 'Propriedade'
+                    },
+                    {
+                        key: 'condicao',                        
+                        label: 'Condição'                        
+                    },
+                    {
+                        key: 'unidade',                        
+                        label: 'Unidade',
+                        class: 'text-center'
+                    },
+                    {
+                        key: 'norma',                        
+                        label: 'Norma'
+                    },
+                    {
+                        key: 'seco',                        
+                        label: 'Seco*',
+                        class: 'text-center'                                              
+                    }
+                ]
             }
         },
         methods: {
