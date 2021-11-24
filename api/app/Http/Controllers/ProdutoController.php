@@ -46,8 +46,8 @@ class ProdutoController extends Controller
                                     ->get(['propriedade', 'condicao', 'unidade', 'norma', 'seco']);
         }
 
-        foreach($produto->propriedades as $key => $value) {
-            $value->seco = str_replace(".", ",", $value->seco);
+        foreach($produto->propriedades as $key => $value) {            
+            $value->seco = number_format($value->seco,2,",",".");            
         }
         return response()->json($produto);
     }
