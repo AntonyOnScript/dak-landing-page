@@ -31,147 +31,19 @@
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/menu.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.map"></script>
 </head>
-<style>
-
-    .container-area-de-pesquisa {
-        background-color: #1c547a;
-    }
-
-    .container-geral {
-        padding: 0px 30px;
-    }
-
-    .area-de-pesquisa {
-        padding-top: 80px;
-        padding-bottom: 20px;
-    }
-
-    .area-de-filtros {
-        background-color: lightblue;
-        padding: 15px;
-        margin-top: 10px;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    .filtros-ativos {
-        padding: 10px 0px;
-        background-color: #133a54;
-    }
-
-    .item-card {
-        display: flex;
-        flex-direction: column;
-        max-width: 300px;
-        min-width: 180px;
-        box-shadow: 0px 0px 10px 0px rgb(102 102 102 / 50%);
-    }
-
-    .descricao-topo-card {
-        background-color: #1c547a;
-        padding: 5px 10px;
-        color: white;
-        text-transform: uppercase;
-    }
-
-    .titulos-container-card {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 10px;
-    }
-
-    .titulo-card {
-        font-weight: 600;
-        text-transform: uppercase;
-        color: gray;
-    }
-
-    .descricao-card {
-        padding: 0px 10px;
-        padding-bottom: 30px;
-        color: gray;        
-    }
-
-    .linha-azul-card {
-        background-color: blue;
-        width: 90%;
-        height: 1px;
-        margin-top: 7px;
-    }
-
-    .caracteristicas-card {
-        display: flex;
-        gap: 3px;
-    }
-
-    .caracteristica-geral-card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 10px 10px;
-        background-color: gray;
-    }
-
-    .linha-cinza-caracteristica-card {
-        height: 3px;
-        width: 100%;
-        background-color: lightgray;
-    }
-
-    .caracteristica-card {
-        text-align: center;
-        color: white;
-        text-transform: uppercase;
-        font-size: 11px;
-        padding-top: 5px;
-    }
-
-    .itens-de-pesquisa {
-        margin: 30px 0px;
-    }
-
-    .lista-grupos {
-        columns: 3;
-        column-width: 50px;
-        width: 100%;
-        max-height: 100%;
-        padding: 0;
-    }
-
-    .lista-grupos li {
-        list-style: none;
-    }
-
-    .container-caracteristicas {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-    }
-
-    .custom-checkbox > input, label {
-        cursor: pointer;
-    }
-
-    .custom-control-label {
-        margin-left: 5px;        
-    }
-
-    .filtros-ativos button {
-        font-size: 12px;
-    }
-
+<style>   
     .contador-produtos {
         position: fixed;
         right: 1px;        
     }
 
-    .contador-produtos button {        
-        cursor: default !important;
+    .contador-produtos a {        
+        background: #0d6efd;
+        padding: 10px;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: bold;
     }
-
 </style>
 <body>
 <!-- [ANTONY] Menu principal -->
@@ -222,6 +94,11 @@
     <section class="container-produto">                
         <br/><br/>
         <b-container class="bv-example-row" v-if="Object.keys(produto).length != 0">
+            <div class="contador-produtos">
+                <a v-bind:href="URL + '/produtos/gerarPdf/' + produto.id">
+                    <b-icon icon="download" aria-hidden="true"></b-icon> Baixar PDF
+                </a>
+            </div>
             <b-row>
                 <b-col>
                     <h1>{{ produto.nome }}</h1> 
