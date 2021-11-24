@@ -304,7 +304,6 @@
             
         },
         mounted() {            
-
             axios.get(URL + "/produtos/consultar/<?= isset($_GET['id']) ? $_GET['id'] : ''; ?>")
                 .then(resposta => this.produto = resposta.data)
         }
