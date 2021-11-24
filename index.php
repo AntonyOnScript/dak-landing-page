@@ -2,7 +2,7 @@
     <a href="<?= bloginfo('url').'/pesquisa' ?>">
     <div class='lupa'>
         <div class="circulo-01">
-            <p>Alguma coisa aqui.</p>
+            <p>Encontre o composto certo</p>
         </div>
         <div class="circulo-02">
             <i class="fas fa-search"></i>

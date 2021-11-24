@@ -24,4 +24,4 @@ $router->get('/produtos/listar', 'ProdutoController@listarProdutos');
 $router->get('/produtos/consultar/{id:[0-9]+}', 'ProdutoController@consultarProduto');
 
 //TODO
-$router->get('/produtos/gerarPDF/{id}', 'ProdutoController@gerarPDFProduto');
+$router->get('/produtos/gerarPdf/{id:[0-9]+}', 'ProdutoController@gerarPDFProduto');
