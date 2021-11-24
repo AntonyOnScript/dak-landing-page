@@ -887,7 +887,7 @@ footer{
 .links *{
     margin-bottom: 20px;
 }
-.links span:nth-child(6){
+.links span:nth-child(7){
     margin-bottom: 0px;
 }
 .endereco{
@@ -1188,7 +1188,7 @@ span{
     .links *{
         margin-bottom: 18px;
     }
-    .links span:nth-child(6){
+    .links span:nth-child(7){
         margin-bottom: 0px;
     }
     .footer-container a{

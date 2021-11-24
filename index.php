@@ -44,6 +44,7 @@
                 <li class="link_03"><a class="link_03">Conteúdo</a></li>
                 <li class="link_04"><a class="link_04">Nossos Produtos</a></li>
                 <li class="link_05"><a class="link_05">Contato</a></li>
+                <li class="link_06"><a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">Política de Qualidade</a></li>
             </ul>
         </div> 
         <div class="pesquisa mobile">
@@ -315,6 +316,7 @@
                 <span>/<a class="link_03" href="#economia">&nbsp;&nbsp;Conteúdo</a></span>
                 <span>/<a class="link_04" href="#nossos-produtos">&nbsp;&nbsp;Nossos Produtos</a></span>
                 <span>/<a class="link_05" href="#contato">&nbsp;&nbsp;Contato</a></span>
+                <span>/<a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">&nbsp;&nbsp;Política de Qualidade</a></span>
             </div>
         </div>
     </footer>

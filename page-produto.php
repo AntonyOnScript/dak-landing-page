@@ -211,6 +211,7 @@
             <li class="link_03"><a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">Conteúdo</a></li>
             <li class="link_04"><a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">Nossos Produtos</a></li>
             <li class="link_05"><a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">Contato</a></li>
+            <li class="link_06"><a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">Política de Qualidade</a></li>
         </ul>
     </div>
 </div>
@@ -295,6 +296,7 @@
             <span>/<a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">&nbsp;&nbsp;Conteúdo</a></span>
             <span>/<a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></span>
             <span>/<a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">&nbsp;&nbsp;Contato</a></span>
+            <span>/<a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">&nbsp;&nbsp;Política de Qualidade</a></span>
         </div>
     </div>
 </footer>
