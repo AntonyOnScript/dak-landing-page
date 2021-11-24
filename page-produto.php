@@ -28,7 +28,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/menu.js" defer></script>
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/menu.css">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/estilo-alternativo.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.map"></script>
 </head>
 <style>
@@ -172,6 +172,18 @@
         cursor: default !important;
     }
 
+    .container-geral.vazio {
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-produto {
+        padding-top: 80px;
+    }
+
 </style>
 <body>
 <!-- [ANTONY] Menu principal -->
@@ -219,15 +231,14 @@
     </div>
 </div>
 <div id="app">    
-    <section class="container-produto">                
-        <br/><br/>
+    <section class="container-produto">
         <b-container class="bv-example-row" v-if="Object.keys(produto).length != 0">
             <b-row>
-                <b-col>
-                    <h1>{{ produto.nome }}</h1> 
+                <b-col cols="8">
+                    <h1 style="color: var(--cor-primaria)">{{ produto.nome }}</h1> 
                 </b-col>
                 <b-col style="text-align: right;">
-                    <h1>{{ produto.codigo }}</h1> 
+                    <h1 style="color: var(--cor-primaria)">{{ produto.codigo }}</h1> 
                 </b-col>                
             </b-row>
             <b-row>
@@ -261,8 +272,8 @@
             </b-row>
             <br/>
         </b-container>
-        <div v-if="Object.keys(produto).length === 0" class="container-geral">
-            <h3>Produto não encontrado.</h3>
+        <div v-if="Object.keys(produto).length === 0" class="container-geral vazio">
+            <h1 style="color: var(--cor-primaria)">Produto não encontrado.</h3>
         </div>        
     </section>
 </div>
