@@ -173,6 +173,10 @@
     .contador-produtos button {        
         cursor: default !important;
     }
+    
+    .lista-grupos label span {
+        margin-left: 10px;
+    }
 
 </style>
 <body>
@@ -223,8 +227,9 @@
 </div>
 <div id="app">
     <section class="container-area-de-pesquisa">
-        <b-container class="container-geral area-de-pesquisa">            
-            <h1 class="mb-4">Encontre o composto certo</h1>
+        <b-container class="container-geral area-de-pesquisa">
+            <h3 class="titulo-inicial">Lorem Ipsum Ispanos</h3>
+            <h1 class="mb-4">Encontre o caminho certo</h1>
             <div class="d-flex gap-2">
                 <b-form-input class="input-pesquisa" v-model="filtroPesquisa" placeholder="Pesquise por nome, código ou grupo do produto." @input="fazerPesquisa($event)"></b-form-input>
                 <!--b-button pill>
@@ -269,12 +274,12 @@
         </div>
         <div class="links">
             <h3>navegação</h3>
-            <span>/<a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">&nbsp;&nbsp;Home</a></span>
-            <span>/<a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">&nbsp;&nbsp;Sobre Nós</a></span>
-            <span>/<a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">&nbsp;&nbsp;Conteúdo</a></span>
-            <span>/<a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></span>
-            <span>/<a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">&nbsp;&nbsp;Contato</a></span>
-            <span>/<a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">&nbsp;&nbsp;Política de Qualidade</a></span>
+            <span>/<div class="container-link"><a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">&nbsp;&nbsp;Home</a></div></span>
+            <span>/<div class="container-link"><a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">&nbsp;&nbsp;Sobre Nós</a></div></span>
+            <span>/<div class="container-link"><a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">&nbsp;&nbsp;Conteúdo</a></div></span>
+            <span>/<div class="container-link"><a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></div></span>
+            <span>/<div class="container-link"><a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">&nbsp;&nbsp;Contato</a></div></span>
+            <span>/<div class="container-link"><a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">&nbsp;&nbsp;Política de Qualidade</a></div></span>
         </div>
     </div>
 </footer>

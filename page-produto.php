@@ -169,12 +169,12 @@
         </div>
         <div class="links">
             <h3>navegação</h3>
-            <span>/<a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">&nbsp;&nbsp;Home</a></span>
-            <span>/<a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">&nbsp;&nbsp;Sobre Nós</a></span>
-            <span>/<a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">&nbsp;&nbsp;Conteúdo</a></span>
-            <span>/<a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></span>
-            <span>/<a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">&nbsp;&nbsp;Contato</a></span>
-            <span>/<a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">&nbsp;&nbsp;Política de Qualidade</a></span>
+            <span>/<div class="container-link"><a class="link_01" href="<?= bloginfo("url") . "#menu-topo" ?>">&nbsp;&nbsp;Home</a></div></span>
+            <span>/<div class="container-link"><a class="link_02" href="<?= bloginfo("url") . "#sobre-nos" ?>">&nbsp;&nbsp;Sobre Nós</a></div></span>
+            <span>/<div class="container-link"><a class="link_03" href="<?= bloginfo("url") . "#economia" ?>">&nbsp;&nbsp;Conteúdo</a></div></span>
+            <span>/<div class="container-link"><a class="link_04" href="<?= bloginfo("url") . "#nossos-produtos" ?>">&nbsp;&nbsp;Nossos Produtos</a></div></span>
+            <span>/<div class="container-link"><a class="link_05" href="<?= bloginfo("url") . "#contato" ?>">&nbsp;&nbsp;Contato</a></div></span>
+            <span>/<div class="container-link"><a class="link_06" href="<?= get_stylesheet_directory_uri() . "/politicas.pdf" ?>">&nbsp;&nbsp;Política de Qualidade</a></div></span>
         </div>
     </div>
 </footer>

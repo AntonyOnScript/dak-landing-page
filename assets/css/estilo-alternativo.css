@@ -239,7 +239,7 @@ footer{
     min-width: 170px;
 }
 .links *{
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .links span:nth-child(7){
     margin-bottom: 0px;
@@ -259,12 +259,15 @@ footer{
     color: white;
     font-size: 16px;
     min-width: max-content;
-    font-weight: 300 !important;
-    font: normal 16px "Montserrat";
-    transition: padding-left .3s;
+    font-weight: 300;
 }
-.footer-container .links a:hover{
-    padding-left: 10px;
+.container-link {
+    display: inline-block;
+    transition: all .3s;
+    margin: 0;
+}
+.container-link:hover {
+    transform: translate(6px);
 }
 .footer-container .endereco a:hover{
     text-decoration: none;
