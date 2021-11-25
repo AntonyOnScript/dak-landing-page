@@ -174,9 +174,6 @@
         cursor: default !important;
     }
     
-    .lista-grupos label span {
-        margin-left: 10px;
-    }
 
 </style>
 <body>
