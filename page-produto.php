@@ -7,29 +7,29 @@
 <head>
     <!-- ======= VUE begin ======= -->
     <title>Dakhia - Pesquisa de produtos</title>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libs/vue.js"></script>
     <!-- ======= VUE end ======= -->
 
     <!-- ======= BOOTSTRAP-VUE begin ======= -->
     <!-- Load required Bootstrap and BootstrapVue CSS -->
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+    <link type="text/css" rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libs/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/libs/bootstrap-vue.min.css"/>
 
     <!-- Load polyfills to support older browsers -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libs/polyfill.min.js"></script>
 
     <!-- Load Vue followed by BootstrapVue -->
-    <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libs/vue.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libs/bootstrap-vue.min.js"></script>
 
     <!-- Load the following for BootstrapVueIcons support -->
-    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libs/bootstrap-vue-icons.min.js"></script>
     <!-- ======= BOOTSTRAP-VUE end ======= -->
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/js/menu.js" defer></script>
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/estilo-alternativo.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.map"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libs/axios.min.js"></script>
+    <script src="<?= get_template_directory_uri() ?>/assets/libs/axios.min.map"></script>
 </head>
 <style>   
     .contador-produtos {
