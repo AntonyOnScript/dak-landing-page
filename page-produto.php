@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Pesquisa de Produtos */
+/* Template Name: Produto da Pesquisa */
 ?>
 
 <!DOCTYPE html>
