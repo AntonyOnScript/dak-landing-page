@@ -175,6 +175,6 @@ class ProdutoController extends Controller
 
         $nomePDF = (isset($produto->nome) && !empty($produto->nome)) ? $produto->nome.'.pdf' : 'document.pdf';
         // Output the generated PDF to Browser        
-        $dompdf->stream($nomePDF, array("Attachment" => false));        
+        $dompdf->stream($nomePDF, array("Attachment" => false));exit;
     }
 }
