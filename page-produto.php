@@ -132,10 +132,9 @@
                     <b-table striped hover :items="produto.propriedades" :fields="headerTabelaPropriedades"></b-table>
                 </b-col>
             </b-row>
-            <br/>
             <b-row>
                 <b-col>
-                    <p>* Seco refere-se a um teor de umidade inferior a 0,25 % em peso</p>
+                    <p class="mb-2 mt-2">* Seco refere-se a um teor de umidade inferior a 0,25 % em peso</p>
                 </b-col>
             </b-row>
             <b-row>
