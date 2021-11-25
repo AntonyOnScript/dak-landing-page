@@ -147,7 +147,7 @@
             </b-row>
             <b-row>
                 <b-col>
-                    <p style="font-size: 12px;text-align: justify;">
+                    <p style="font-size: 12px;text-align: justify;line-height: 18px;">
                         As propriedades deste informativo técnico se baseiam em valores médios obtidos em laboratório que podem apresentar variações. Portanto não devem ser utilizadas como parâmetros para
                         projetos de engenharia. Todas as informações deste infomativo estão atualizadas até a data de sua impressão.
                         A Dakhia se reserva o direito de alterar as informações de seus produtos bem como descontinuá-los sem prévio aviso, sem que com isso incorra em responsabilidades de quaisquer espécie. A
