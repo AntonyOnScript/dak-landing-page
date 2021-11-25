@@ -151,9 +151,12 @@
             </b-row>
             <br/>
         </b-container>
-        <div v-if="Object.keys(produto).length === 0" class="container-geral vazio">
+        <div v-if="Object.keys(produto).length === 0 && erro" class="container-geral vazio">
             <h1 style="color: var(--cor-primaria)">Produto não encontrado.</h3>
-        </div>        
+        </div>
+        <div class="d-flex justify-content-center pb-5 pt-5" v-if="erro === false && produto.length === 0">
+            <b-spinner variant="primary"></b-spinner>
+        </div>    
     </section>
 </div>
 <footer>
@@ -212,7 +215,8 @@
                         label: 'Seco*',
                         class: 'text-center'                                              
                     }
-                ]
+                ],
+                erro: false
             }
         },
         methods: {
@@ -221,6 +225,7 @@
         mounted() {            
             axios.get(URL + "/produtos/consultar/<?= isset($_GET['id']) ? $_GET['id'] : ''; ?>")
                 .then(resposta => this.produto = resposta.data)
+                .catch(e => this.erro = !this.erro)
         }
     }).$mount("#app")
 </script>
