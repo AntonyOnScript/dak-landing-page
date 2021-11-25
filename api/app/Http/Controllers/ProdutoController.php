@@ -170,6 +170,8 @@ class ProdutoController extends Controller
 
         // Render the HTML as PDF
         $dompdf->render();
+        
+        header("Content-type:application/pdf");
 
         $nomePDF = (isset($produto->nome) && !empty($produto->nome)) ? $produto->nome.'.pdf' : 'document.pdf';
         // Output the generated PDF to Browser        
