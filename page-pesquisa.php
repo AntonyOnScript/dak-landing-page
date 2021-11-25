@@ -254,7 +254,10 @@
                     <card-item v-for="produto of produtos" v-key="produto" :id="produto.id" :grupo="produto.grupo" :nome="produto.nome" :codigo="produto.codigo" :caracteristicas="produto.caracteristicas"></card-item>                    
                 </div>                
             </div>
-        </b-container>        
+        </b-container>     
+        <div class="d-flex justify-content-center pb-5 pt-0" v-if="carregando">
+            <b-spinner variant="primary"></b-spinner>
+        </div>      
     </section>
 </div>
 <footer>
@@ -351,7 +354,8 @@
                 produtos: [],
                 gruposSelecionados: [],
                 filtroPesquisa: "",
-                esvaziarLista: false
+                esvaziarLista: false,
+                carregando: true
             }
         },
         methods: {
@@ -368,6 +372,7 @@
                 this.atualizarProdutos()
             },
             atualizarProdutos() {
+                this.carregando = true
                 axios.get(URL + "/produtos/listar", {
                     params: {
                         pesquisa: this.filtroPesquisa,
@@ -376,6 +381,7 @@
                 })
                     .then(resposta => {
                         this.produtos = resposta.data
+                        this.carregando = false
                     })
             },
             limparFiltros() {
@@ -402,7 +408,10 @@
                 })
 
             axios.get(URL + "/produtos/listar")
-                .then(resposta => this.produtos = resposta.data)
+                .then(resposta => { 
+                    this.produtos = resposta.data
+                    this.carregando = false
+                })
         }
     }).$mount("#app")
 </script>

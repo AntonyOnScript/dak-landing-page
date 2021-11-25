@@ -161,9 +161,9 @@
         <div v-if="Object.keys(produto).length === 0 && erro" class="container-geral vazio">
             <h1 style="color: var(--cor-primaria)">Produto não encontrado.</h3>
         </div>
-        <div class="d-flex justify-content-center pb-5 pt-5" v-if="erro === false && produto.length === 0">
+        <div class="d-flex justify-content-center pb-5 pt-0" v-if="carregando">
             <b-spinner variant="primary"></b-spinner>
-        </div>    
+        </div>
     </section>
 </div>
 <footer>
@@ -193,9 +193,6 @@
     const URL = "<?php echo get_stylesheet_directory_uri(); ?>/api/public"
 
     new Vue({
-        components: {
-
-        },
         data() {
             return {                
                 produto: {},                
@@ -223,16 +220,20 @@
                         class: 'text-center'                                              
                     }
                 ],
-                erro: false
+                erro: false,
+                carregando: true
             }
-        },
-        methods: {
-            
         },
         mounted() {            
             axios.get(URL + "/produtos/consultar/<?= isset($_GET['id']) ? $_GET['id'] : ''; ?>")
-                .then(resposta => this.produto = resposta.data)
-                .catch(e => this.erro = !this.erro)
+                .then(resposta => {
+                    this.produto = resposta.data
+                    this.carregando = false
+                })
+                .catch(e => {
+                    this.erro = !this.erro
+                    this.carregando = false
+                })
         }
     }).$mount("#app")
 </script>
