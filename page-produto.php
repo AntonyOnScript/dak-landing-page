@@ -108,7 +108,7 @@
     <section class="container-produto">
         <b-container class="bv-example-row" v-if="Object.keys(produto).length != 0">
             <div class="contador-produtos">
-                <a v-bind:href="URL + '/produtos/gerarPdf/' + produto.id">
+                <a v-bind:href="URL + '/produtos/gerarPdf/' + produto.id" target="_blank">
                     <b-icon icon="download" aria-hidden="true"></b-icon> Baixar PDF
                 </a>
             </div>
