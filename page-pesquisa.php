@@ -228,8 +228,7 @@
 <div id="app">
     <section class="container-area-de-pesquisa">
         <b-container class="container-geral area-de-pesquisa">
-            <h3 class="titulo-inicial">Lorem Ipsum Ispanos</h3>
-            <h1 class="mb-4">Encontre o caminho certo</h1>
+            <h1 class="mb-4">Encontre o composto certo</h1>
             <div class="d-flex gap-2">
                 <b-form-input class="input-pesquisa" v-model="filtroPesquisa" placeholder="Pesquise por nome, código ou grupo do produto." @input="fazerPesquisa($event)"></b-form-input>
                 <!--b-button pill>
