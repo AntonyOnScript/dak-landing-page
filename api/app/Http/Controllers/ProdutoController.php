@@ -130,12 +130,14 @@ class ProdutoController extends Controller
             //Linha
             if(isset($propriedades) && !empty($propriedades)) {
                 foreach($propriedades as $key => $propriedade) {
+                    $valorSeco = empty(floatval($propriedade->seco)) ? null : str_replace(".", ",", floatval($propriedade->seco));
+
                     $html .= '<tr>';            
                     $html .= '<td style="text-align: left;width: 40%;">'. $propriedade->propriedade .'</td>';
                     $html .= '<td style="text-align: center;width: 20%;">'. $propriedade->condicao .'</td>';
                     $html .= '<td style="text-align: center;width: 10%;">'. $propriedade->unidade .'</td>';
                     $html .= '<td style="text-align: center;width: 20%;">'. $propriedade->norma .'</td>';
-                    $html .= '<td style="text-align: center;width: 10%;">'. number_format($propriedade->seco, 2, ',', '.') .'</td>';                    
+                    $html .= '<td style="text-align: center;width: 10%;">'. $valorSeco .'</td>';                    
                     $html .= '</tr>';
                 }
             }
@@ -169,9 +171,7 @@ class ProdutoController extends Controller
         $dompdf->setPaper('A4');
 
         // Render the HTML as PDF
-        $dompdf->render();
-        
-        header("Content-type:application/pdf");
+        $dompdf->render();                
 
         $nomePDF = (isset($produto->nome) && !empty($produto->nome)) ? $produto->nome.'.pdf' : 'document.pdf';
         // Output the generated PDF to Browser        
