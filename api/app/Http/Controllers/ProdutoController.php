@@ -8,6 +8,8 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Dompdf\Dompdf;
 
+use function PHPUnit\Framework\isEmpty;
+
 class ProdutoController extends Controller
 {
     /**
@@ -45,8 +47,8 @@ class ProdutoController extends Controller
                                     ->get(['propriedade', 'condicao', 'unidade', 'norma', 'seco']);
         }
 
-        foreach($produto->propriedades as $key => $value) {            
-            $value->seco = number_format($value->seco,2,",",".");            
+        foreach($produto->propriedades as $key => $value) {                 
+            $value->seco = empty(floatval($value->seco)) ? null : str_replace(".", ",", floatval($value->seco));
         }
         return response()->json($produto);
     }
