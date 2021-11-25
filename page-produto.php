@@ -56,6 +56,7 @@
 
     .container-produto {
         padding-top: 80px;
+        min-height: 100vh;
     }
 
     hr {
