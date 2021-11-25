@@ -34,6 +34,7 @@
 <style>   
     .contador-produtos {
         position: fixed;
+        z-index: 997;
         right: 1px;        
     }
 
@@ -55,6 +56,10 @@
 
     .container-produto {
         padding-top: 80px;
+    }
+
+    hr {
+        margin: 0;
     }
 
 </style>
@@ -121,10 +126,12 @@
                 </b-col>                
             </b-row>
             <b-row>
-                <p>
-                    {{ produto.caracteristicas }}
-                </p>
-                <hr/>
+                <b-col>
+                    <p>
+                        {{ produto.caracteristicas }}
+                    </p>
+                    <hr/>
+                </b-col>
             </b-row>
             <br/>
             <b-row>
