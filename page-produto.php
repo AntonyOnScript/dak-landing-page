@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/assets/css/estilo-alternativo.css">
     <script src="<?= get_template_directory_uri() ?>/assets/libs/axios.min.js"></script>
     <script src="<?= get_template_directory_uri() ?>/assets/libs/axios.min.map"></script>
+    <?php wp_head(); ?>
 </head>
 <style>   
     .contador-produtos {
@@ -238,4 +239,5 @@
     }).$mount("#app")
 </script>
 </body>
+<?php wp_footer(); ?>
 </html>
