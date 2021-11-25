@@ -1,14 +1,4 @@
 <?php require_once 'header.php'; ?>
-    <a href="<?= bloginfo('url').'/pesquisa' ?>">
-    <div class='lupa'>
-        <div class="circulo-01">
-            <p>Encontre o composto certo</p>
-        </div>
-        <div class="circulo-02">
-            <i class="fas fa-search"></i>
-        </div>
-    </div>
-    </a>
     <div class="modal-box">
         <div class="dialogo">
             <header>
